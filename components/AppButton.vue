@@ -5,9 +5,6 @@
         flat: Boolean,
         outline: Boolean,
         fullWidth: Boolean,
-        square: Boolean,
-        rounded: Boolean,
-        normal: Boolean,
         tag: {
           type: String,
           default: "button" // 'button', 'a'
