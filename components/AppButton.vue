@@ -45,22 +45,7 @@
             "btn-outline--gradient-pink": this.color === "outline-gradient-pink",
             "btn-outline--gradient-violet": this.color === "outline-gradient-violet",
           };
-    
-        //   const outlineColorClasses = {
-        //     "btn-outline--white": this.color === "outline-white",
-        //     "btn-outline--gradient-yellow": this.color === "outline-gradient-yellow",
-        //     "btn-outline--gradient-pink": this.color === "outline-gradient-pink",
-        //     "btn-outline--gradient-violet": this.color === "outline-gradient-violet",
-        //   };
-    
-    
-        //   if (this.flat) return { ...sizeClasses, "btn--flat": true };
-        //   if (this.outline)
-        //     return {
-        //       ...sizeClasses,
-        //       "btn-outline": true,
-        //       ...outlineColorClasses,
-        //     };
+
           return { ...sizeClasses, ...colorClasses };
         }
       },

@@ -1,0 +1,148 @@
+.footer {
+  background-color: #100418;
+  // padding: 90px 20px 20px 20px;
+  padding-top: 90px;
+  padding-bottom: 20px;
+
+  @media (min-width: 1024px) {
+    // padding: 80px 80px 40px 80px;
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+}
+
+.footer--padding {
+  padding: 0 20px;
+
+  @media (min-width: 1024px) {
+    padding: 0 80px;
+  }
+}
+
+.footer__title {
+  margin-bottom: 111px;
+  @extend .footer--padding;
+
+  p {
+    font-size: 36px;
+
+    @media (min-width: 1024px) {
+      font-size: 52px;
+    }
+  }
+
+  span {
+    font-size: 36px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+    @media (min-width: 1024px) {
+      font-size: 52px;
+    }
+  }
+
+  .title--gardient-common {
+    background: -webkit-linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+  }
+
+  .title--gardient-pink {
+    background: -webkit-linear-gradient(247.69deg, #F5C0BE -4.24%, #A3A5EF 191.1%);
+  }
+
+  .title--gardient-violet {
+    background: linear-gradient(252.6deg, #D1A8D0 -62.78%, #9D9AED 119.63%);
+  }
+}
+
+.timeline-text {
+  @extend .footer--padding;
+  p {
+    font-size: 12px;
+    line-height: 18px;
+    
+    @media (min-width: 1024px) {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+}
+
+.timeline-line {
+  margin-top: 44px;
+  margin-bottom: 48px;
+  position: relative;
+  @extend .footer--padding;
+
+  &::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, #F2B59C, #FFE26E, #AAAEF5, #100418);
+  }
+
+  span {
+    width: 22px;
+    height: 22px;
+    background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+    border-radius: 50px;
+  }
+}
+
+.timeline-img {
+  @extend .footer--padding;
+  margin-bottom: 54px;
+
+  img {
+    vertical-align: top;
+  }
+
+  @media (min-width: 1024px) {
+    margin-bottom: 74px;
+  }
+}
+
+.footer__location {
+  padding-top: 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+  @extend .footer--padding;
+
+  @media (min-width: 1024px) {
+    padding-top: 44px;
+  }
+
+  .footer-logo {
+    margin-bottom: 63px;
+    display: inline-block;
+
+    @media (min-width: 1024px) {
+      margin-bottom: 0;
+    }
+  }
+
+  .location {
+    .location-address {
+      margin-bottom: 20px;
+
+      @media (min-width: 1024px) {
+        margin-bottom: 45px;
+      }
+    }
+  }
+
+  .btn-contact {
+    margin-right: 18px;
+  }
+}
+
+// .air {
+//   .footer__title {
+//     span {
+//       background: linear-gradient(247.69deg, #F5C0BE -4.24%, #A3A5EF 191.1%);
+//     }
+//   }
+// }

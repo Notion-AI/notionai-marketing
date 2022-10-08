@@ -3,12 +3,13 @@
         <div class="header-join">
             Get early access to the next generation of AI-augmented executive intelligence products. <n-link to="">Join the Lab</n-link>
         </div>
-        <div class="header">
+        <div class="header" id="header" :class="{'transparent': scrollUp}">
             <div class="header__logo">
-               <n-link to="/"><img src="~assets/images/logo.png" alt=""></n-link>
+                <n-link to="/" v-if="scrollUp"><img src="~assets/images/logo-black.png" alt=""></n-link>
+                <n-link to="/" v-else><img src="~assets/images/logo.png" alt=""></n-link>
             </div>
 
-            <div class="header__desktop hidden md:flex">
+            <div class="header__desktop hidden lg:flex">
                 <n-link 
                     v-for="(i, idx) in dataHeader" :key="idx"
                     :to="i.route"
@@ -17,13 +18,13 @@
                     {{i.text}}
                 </n-link>
                 <app-button
-                    color="outline-gradient-yellow"
+                    color="outline-white"
                 >
                     <n-link to="/login">Login</n-link>
                 </app-button>
             </div>
 
-            <div class="header__mobile md:hidden">
+            <div class="header__mobile lg:hidden">
                 <n-link to="" @click.native="isMenu = true"><img src="~assets/images/icon-menu.png" alt=""></n-link>
 
                 <div v-if="isMenu" class="mobile-list">
@@ -74,13 +75,32 @@ export default {
                {text: 'About', class: 'about-active', route: '/about'}
            ],
 
-           isMenu: false
+           isMenu: false,
+           prev: null,
+           scrollUp: false
        }
     },
 
-    methods: {
-        openMenuMobile() {
+    mounted() {
+        this.prev = window.scrollY;
+        window.addEventListener('scroll', e => this.handleNavigation(e));
+    },
 
+    methods: {
+        handleNavigation(e) {
+            const window = e.currentTarget;
+
+            if (this.prev > window.scrollY) {
+                this.scrollUp = true
+            } else if (this.prev < window.scrollY) {
+                this.scrollUp = false
+            }
+
+            if(window.scrollY === 0) {
+                this.scrollUp = false
+                document.getElementById('header').classList.remove("transparent")
+            }
+            this.prev = window.scrollY;
         }
     }
 }

@@ -1,7 +1,6 @@
 .header-join {
     background-color: #291E30;
     text-align: center;
-    color: #fff;
     padding: 10px 20px;
 
     a {
@@ -17,9 +16,23 @@
     padding: 16px 20px;
     position: relative;
 
-    screen md {
+    &.transparent {
+        background-color: transparent;
+    }
+
+    @media (min-width: 1024px) {
         padding: 26px 40px;
     }
+}
+
+.transparent .header__desktop a {
+    color: #000000;
+}
+
+.header__logo a img {
+    width: 125px;
+    height: 33px;
+    object-fit: cover;
 }
 
 .header__desktop {
