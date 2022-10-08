@@ -1,11 +1,9 @@
 .footer {
   background-color: #100418;
-  // padding: 90px 20px 20px 20px;
   padding-top: 90px;
   padding-bottom: 20px;
 
-  @media (min-width: 1024px) {
-    // padding: 80px 80px 40px 80px;
+  @screen lg {
     padding-top: 80px;
     padding-bottom: 40px;
   }
@@ -14,7 +12,7 @@
 .footer--padding {
   padding: 0 20px;
 
-  @media (min-width: 1024px) {
+  @screen lg {
     padding: 0 80px;
   }
 }
@@ -23,34 +21,46 @@
   margin-bottom: 111px;
   @extend .footer--padding;
 
-  p {
+  h2 {
     font-size: 36px;
 
-    @media (min-width: 1024px) {
+    @screen lg {
       font-size: 52px;
+    }
+    & p {
+      font-size: 36px;
+
+      @screen lg {
+        font-size: 52px;
+      }
     }
   }
 
-  span {
+  .title--gardient-common, .title--gardient-pink, .title--gardient-violet {
     font-size: 36px;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    font-weight: 500;
 
-    @media (min-width: 1024px) {
+    @screen lg {
       font-size: 52px;
     }
   }
 
   .title--gardient-common {
-    background: -webkit-linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+    background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .title--gardient-pink {
     background: -webkit-linear-gradient(247.69deg, #F5C0BE -4.24%, #A3A5EF 191.1%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .title--gardient-violet {
     background: linear-gradient(252.6deg, #D1A8D0 -62.78%, #9D9AED 119.63%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 
@@ -60,7 +70,7 @@
     font-size: 12px;
     line-height: 18px;
     
-    @media (min-width: 1024px) {
+    @screen lg {
       font-size: 20px;
       line-height: 26px;
     }
@@ -92,6 +102,26 @@
   }
 }
 
+.timeline-line--pink {
+  &::before {
+    background: linear-gradient(to right, #F5C0BE, #A3A5EF, #100418);
+  }
+
+  span {
+    background: linear-gradient(247.69deg, #F5C0BE -4.24%, #A3A5EF 191.1%);
+  }
+}
+
+.timeline-line--violet {
+  &::before {
+    background: linear-gradient(to right, #D1A8D0, #9D9AED, #100418);
+  }
+
+  span {
+    background: linear-gradient(252.6deg, #D1A8D0 -62.78%, #9D9AED 119.63%);
+  }
+}
+
 .timeline-img {
   @extend .footer--padding;
   margin-bottom: 54px;
@@ -100,7 +130,7 @@
     vertical-align: top;
   }
 
-  @media (min-width: 1024px) {
+  @screen lg {
     margin-bottom: 74px;
   }
 }
@@ -111,7 +141,7 @@
   justify-content: space-between;
   @extend .footer--padding;
 
-  @media (min-width: 1024px) {
+  @screen lg {
     padding-top: 44px;
   }
 
@@ -119,7 +149,7 @@
     margin-bottom: 63px;
     display: inline-block;
 
-    @media (min-width: 1024px) {
+    @screen lg {
       margin-bottom: 0;
     }
   }
@@ -128,7 +158,7 @@
     .location-address {
       margin-bottom: 20px;
 
-      @media (min-width: 1024px) {
+      @screen lg {
         margin-bottom: 45px;
       }
     }
@@ -138,11 +168,3 @@
     margin-right: 18px;
   }
 }
-
-// .air {
-//   .footer__title {
-//     span {
-//       background: linear-gradient(247.69deg, #F5C0BE -4.24%, #A3A5EF 191.1%);
-//     }
-//   }
-// }

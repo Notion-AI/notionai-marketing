@@ -1,14 +1,14 @@
 <template>
     <footer class="footer" id="footer">
         <div class="footer__title">
-            <p>
-                We’re 
+            <h2>
+                <p class="inline-block"> We’re </p>
                 <span v-if="$route.path === '/' || $route.path === '/stream' || $route.path === '/plans' || $route.path === '/about'" class="title--gardient-common">trusted</span>
                 <span v-if="$route.path === '/air'" class="title--gardient-pink">trusted</span>
                 <span v-if="$route.path === '/enterprise'" class="title--gardient-violet">trusted</span>
-                by leading
-            </p>
-            <p>professionals and businesses globally.</p>
+                <p class="inline-block">by leading</p>
+            </h2>
+            <h2>professionals and businesses globally.</h2>
         </div>
 
         <div class="footer__timeline">
@@ -18,7 +18,17 @@
                 <p>“A global review of thematics and practices in life insurance advice led to four ideas that informed the design strategy for Advice solutions.”</p>
             </div>
 
-            <div class="timeline-line grid grid-cols-2 gap-4 lg:gap-32">
+            <div v-if="$route.path === '/' || $route.path === '/stream' || $route.path === '/plans' || $route.path === '/about'" class="timeline-line grid grid-cols-2 gap-4 lg:gap-32">
+                <span></span>
+                <span></span>
+            </div>
+
+            <div v-if="$route.path === '/air'" class="timeline-line timeline-line--pink grid grid-cols-2 gap-4 lg:gap-32">
+                <span></span>
+                <span></span>
+            </div>
+
+            <div v-if="$route.path === '/enterprise'" class="timeline-line timeline-line--violet grid grid-cols-2 gap-4 lg:gap-32">
                 <span></span>
                 <span></span>
             </div>
