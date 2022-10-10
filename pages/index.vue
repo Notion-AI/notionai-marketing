@@ -1,10 +1,15 @@
-<template lang="pug">
-  tutorial
+<template>
+  <div>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus esse dolorum ea!
+  </div>
 </template>
 
 <script>
-import Vue from 'vue'
+export default {
 
-export default Vue.extend({
-  name: 'IndexPage'
-})
+}
+</script>
+
+<style lang="scss" scoped>
+
+</style>
