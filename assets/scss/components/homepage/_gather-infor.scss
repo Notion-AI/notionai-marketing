@@ -1,0 +1,50 @@
+.gather-infor {
+    background: #100418;
+    padding: 69px 0 36px 0;
+    text-align: center;
+}
+
+.gather-infor__title {
+    margin-bottom: 30px;
+    p {
+        font-size: 66px;
+        line-height: 70px;
+    }
+
+    p:last-child {
+        background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 600;
+    }
+}
+
+.gather-infor__sub {
+    margin-bottom: 30px;
+    p{
+        color: #BEBEBE;
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
+.gather-infor_btn {
+    margin-bottom: 68px;
+}
+
+
+.gather-infor-2 {
+    padding: 230px 0 0 0;
+
+    .gather-infor__sub {
+        margin-bottom: 128px;
+    }
+}
+
+.gather-infor-3 {
+    padding: 92px 0 0 0;
+
+    .gather-infor__title p, .gather-infor__sub p {
+        opacity: 0.1;
+    }
+}

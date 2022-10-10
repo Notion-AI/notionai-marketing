@@ -1,0 +1,26 @@
+.data-globe {
+    background-color: #100418;
+    
+    @screen lg {
+        padding: 290px 0;
+    }
+}
+
+.data-globe__text-left, .data-globe__text-right {
+    font-size: 30px;
+    line-height: 54px;
+}
+
+.data-globe__text-left {
+    margin: auto 0 auto auto;
+}
+
+.data-globe__text-right {
+    margin: auto auto auto 0;
+
+    span {
+        font-size: 30px;
+        line-height: 54px;
+        font-weight: 600;
+    }
+}

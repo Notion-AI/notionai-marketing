@@ -1,0 +1,14 @@
+.source {
+    background-color: #100418;
+    position: relative;
+}
+
+.source__number {
+    font-weight: 500;
+    font-size: 52px;
+    line-height: 82px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
