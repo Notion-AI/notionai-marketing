@@ -1,7 +1,7 @@
 .header-join {
     background-color: #291E30;
     text-align: center;
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
 
     a {
         text-decoration: underline;
@@ -13,15 +13,15 @@
     align-items: center;
     justify-content: space-between;
     background-color: #100418;
-    padding: 16px 20px;
+    padding: 0.625rem 1.25rem;
     position: relative;
 
     &.transparent {
         background-color: transparent;
     }
 
-    @media (min-width: 1024px) {
-        padding: 26px 40px;
+    @screen lg {
+        padding: 1.625rem 2.5rem;
     }
 }
 
@@ -30,8 +30,8 @@
 }
 
 .header__logo a img {
-    width: 125px;
-    height: 33px;
+    width: 7.8125rem;
+    height: 2.0625rem;
     object-fit: cover;
 }
 
@@ -40,10 +40,10 @@
 
     a {
         display: inline-block;
-        width: 102px;
-        height: 30px;
+        width: 6.375rem;
+        height: 1.875rem;
         color: #fff;
-        margin-right: 2px;
+        margin-right: 0.125rem;
         text-align: center;
         line-height: 1.7;
 
@@ -54,26 +54,26 @@
 
     .stream-activem, .plans-active, .blog-active {
         background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
-        border-radius: 30px;
+        border-radius: 1.875rem;
     }
 
     .air-active {
         background-color: #E9BCC5;
-        border-radius: 30px;
+        border-radius: 1.875rem;
     }
 
     .enterprise-active {
         background-color: #CDA7D2;
-        border-radius: 30px;
+        border-radius: 1.875rem;
     }
 }
 
 .header__mobile {
     .mobile-list {
         position: absolute;
-        width: 300px;
+        width: 18.75rem;
         height: 100vh;
-        padding: 54px 20px;
+        padding: 3.375rem 1.25rem;
         top: 0;
         right: 0;
         background-color: #100418;
@@ -89,22 +89,22 @@
     }
 
     .mobile-list__menu {
-        margin-top: 40px;
+        margin-top: 2.5rem;
         flex: 1;
 
         li {
             background-color: #291E30;
-            padding: 8px 0;
+            padding: 0.5rem 0;
             width: 100%;
-            margin-bottom: 10px;
-            border-radius: 30px;
+            margin-bottom: 0.625rem;
+            border-radius: 1.875rem;
             text-align: center;
             color: #fff;
         }
     }
 
     .mobile-list__login .trial {
-        margin-top: 20px;
+        margin-top: 1.25rem;
         text-align: center;
     }
 }

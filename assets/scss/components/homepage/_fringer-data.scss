@@ -1,18 +1,18 @@
 .fringer-data {
-    padding: 50px 0;
+    padding: 3.125rem 0;
 }
 
 .fringer-data--bg {
     background: url('~assets/images/fringer-data-2.png') no-repeat;
     background-position: center;
     background-size: cover;
-    min-height: 600px;
+    min-height: 37.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
 
     @screen 2xl {
-        min-height: 1189px;
+        min-height: 74.3125rem;
     }
 }
 
@@ -28,13 +28,13 @@
     transform: translate(-70%, -50%);
 
     @screen lg {
-        font-size: 30px;
-        line-height: 54px;
+        font-size: 1.875rem;
+        line-height: 3.375rem;
     }
 
     span {
         font-weight: 500;
-        font-size: 30px;
-        line-height: 54px;
+        font-size: 1.875rem;
+        line-height: 3.375rem;
     }
 }

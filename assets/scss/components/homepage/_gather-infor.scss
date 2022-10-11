@@ -1,14 +1,14 @@
 .gather-infor {
     background: #100418;
-    padding: 69px 0 36px 0;
+    padding: 4.3125rem 0 2.25rem 0;
     text-align: center;
 }
 
 .gather-infor__title {
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
     p {
-        font-size: 66px;
-        line-height: 70px;
+        font-size: 4.125rem;
+        line-height: 4.375rem;
     }
 
     p:last-child {
@@ -20,29 +20,29 @@
 }
 
 .gather-infor__sub {
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
     p{
         color: #BEBEBE;
-        font-size: 20px;
-        line-height: 26px;
+        font-size: 1.25rem;
+        line-height: 1.625rem;
     }
 }
 
 .gather-infor_btn {
-    margin-bottom: 68px;
+    margin-bottom: 4.25rem;
 }
 
 
 .gather-infor-2 {
-    padding: 230px 0 0 0;
+    padding: 14.375rem 0 0 0;
 
     .gather-infor__sub {
-        margin-bottom: 128px;
+        margin-bottom: 8rem;
     }
 }
 
 .gather-infor-3 {
-    padding: 92px 0 0 0;
+    padding: 5.75rem 0 0 0;
 
     .gather-infor__title p, .gather-infor__sub p {
         opacity: 0.1;

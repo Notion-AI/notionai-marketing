@@ -2,13 +2,13 @@
     background-color: #100418;
     
     @screen lg {
-        padding: 290px 0;
+        padding: 18.125rem 0;
     }
 }
 
 .data-globe__text-left, .data-globe__text-right {
-    font-size: 30px;
-    line-height: 54px;
+    font-size: 1.875rem;
+    line-height: 3.375rem;
 }
 
 .data-globe__text-left {
@@ -19,8 +19,8 @@
     margin: auto auto auto 0;
 
     span {
-        font-size: 30px;
-        line-height: 54px;
+        font-size: 1.875rem;
+        line-height: 3.375rem;
         font-weight: 500;
     }
 }
