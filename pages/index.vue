@@ -32,6 +32,38 @@
     <Source />
     <Source :type="2"/>
     <Source :type="3"/>
+
+    <DataCluster :type="1"/>
+    <DataCluster :type="2"/>
+    <DataCluster :type="3"/>
+
+    <FringerData :type="1" />
+    <FringerData :type="2" />
+    <FringerData :type="3" />
+    <FringerData :type="4" />
+    <FringerData :type="5" />
+
+    <Datasets />
+    <Datasets 
+      isText
+      :top="5.3125"
+      :bottom="5.3125"
+    />
+
+    <Ranking image="ranking-1"/>
+    <Ranking 
+      image="ranking-2" 
+      :isText="false"
+      :padding="10.5"
+    />
+    <Ranking 
+      :type="2"
+    />
+    <Ranking 
+      :type="2"
+      :padding="10.5"
+      :opacity="false"
+    />
   </div>
 </template>
 
@@ -42,6 +74,10 @@ import GatherInfor3 from "../components/homepage/GatherInfor3.vue";
 import Globe from "../components/homepage/Globe.vue";
 import DataGlobe from "~/components/homepage/DataGlobe.vue";
 import Source from "~/components/homepage/Source.vue";
+import DataCluster from "~/components/homepage/DataCluster.vue";
+import FringerData from "~/components/homepage/FringerData.vue";
+import Datasets from "~/components/homepage/Datasets.vue";
+import Ranking from "~/components/homepage/Ranking.vue";
 
 export default {
   components: {
@@ -50,7 +86,11 @@ export default {
     GatherInfor3,
     Globe,
     DataGlobe,
-    Source
+    Source,
+    DataCluster,
+    FringerData,
+    Datasets,
+    Ranking
 }
 }
 </script>
