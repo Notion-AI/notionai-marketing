@@ -55,7 +55,7 @@
                     <app-button
                         class="btn-contact"
                         color="outline-white"
-                        style="width: 95px; height: 38px"
+                        style="width: 5.9375rem; height: 2.375rem"
                     ><n-link to="">Contact</n-link></app-button>
                     <n-link to="" class="mr-3.5"><img src="~assets/images/LinkedIn.png" alt=""></n-link>
                     <n-link to=""><img src="~assets/images/Instagram.png" alt=""></n-link>

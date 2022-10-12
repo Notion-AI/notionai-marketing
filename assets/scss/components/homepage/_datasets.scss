@@ -1,0 +1,27 @@
+.datasets {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    @screen md {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+.datasets__text {
+    margin-bottom: 3.375rem;
+    p {
+        font-size: 1.875rem;
+        line-height: 2.125rem;
+        text-align: center;
+
+        &:last-child {
+            font-weight: 500;
+        }
+    }
+
+    p span {
+        font-weight: 500;
+        font-size: 1.875rem;
+        line-height: 2.125rem;
+    }
+}

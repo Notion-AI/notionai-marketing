@@ -1,0 +1,33 @@
+.data-globe {
+    background-color: #100418;
+    padding: 8rem 1rem;
+    
+    @screen lg {
+        padding: 18.125rem 0;
+    }
+}
+
+.data-globe__text-left, .data-globe__text-right {
+    font-size: 1.875rem;
+    line-height: 3.375rem;
+}
+
+.data-globe__text-left {
+    margin: 0 auto 2rem auto;
+    @screen lg {
+        margin: auto 0 auto auto;
+    }
+}
+
+.data-globe__text-right {
+    margin: 2rem auto 0 auto;
+    @screen lg {
+        margin: auto auto auto 0;
+    }
+
+    span {
+        font-size: 1.875rem;
+        line-height: 3.375rem;
+        font-weight: 500;
+    }
+}

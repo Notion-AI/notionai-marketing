@@ -1,0 +1,60 @@
+.gather-infor {
+    background: #100418;
+    padding: 4.3125rem 1rem 2.25rem 1rem;
+    text-align: center;
+
+    @screen md{
+        padding-left:0;
+        padding-right: 0;
+    }
+}
+
+.gather-infor__title {
+    margin-bottom: 1.875rem;
+    p {
+        font-size: 3rem;
+        line-height: 4.375rem;
+
+        @screen md {
+            font-size: 4.125rem;
+            line-height: 4.375rem;
+        }
+    }
+
+    p:last-child {
+        background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 500;
+    }
+}
+
+.gather-infor__sub {
+    margin-bottom: 1.875rem;
+    p{
+        color: #BEBEBE;
+        font-size: 1.25rem;
+        line-height: 1.625rem;
+    }
+}
+
+.gather-infor_btn {
+    margin-bottom: 4.25rem;
+}
+
+
+.gather-infor-2 {
+    padding-top: 14.375rem;
+
+    .gather-infor__sub {
+        margin-bottom: 8rem;
+    }
+}
+
+.gather-infor-3 {
+    padding-top: 5.75rem;
+
+    .gather-infor__title p, .gather-infor__sub p {
+        opacity: 0.1;
+    }
+}

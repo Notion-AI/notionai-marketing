@@ -4,13 +4,13 @@
     justify-content: center;
     align-items: center;
     // padding: 6px 14px;
-    gap: 10px;
-    border-radius: 30px;
+    gap: 0.625rem;
+    border-radius: 1.875rem;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1;
     color: #100418;
-    height: 30px;
+    height: 1.875rem;
     // min-width: 102px;
 }
 
@@ -44,9 +44,9 @@
     a {
         background: #222;
         display: inline-block;
-        border-radius: 30px;
-        height: 27px !important;
-        width: 101px !important;
+        border-radius: 1.875rem;
+        height: 1.6875rem !important;
+        width: 6.3125rem !important;
         // background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
         // background-clip: text !important;
         // color: transparent !important;

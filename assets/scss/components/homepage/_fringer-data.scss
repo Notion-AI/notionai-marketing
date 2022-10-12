@@ -1,0 +1,65 @@
+.fringer-data {
+    padding: 3.125rem 0;
+}
+
+.fringer-data--bg {
+    background: url('~assets/images/fringer-data-2.png') no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 37.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @screen 2xl {
+        min-height: 74.3125rem;
+    }
+}
+
+.fringer-data--dot {
+    @extend .fringer-data--bg;
+    position: relative;
+}
+
+.fringer-data__text {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+
+    @screen xl {
+        font-size: 1.875rem;
+        line-height: 3.375rem;
+    }
+
+    @screen 2xl {
+        width: 31.25rem;
+        top: 50%;
+        left: 78%;
+        transform: translate(-78%, -50%);
+    }
+
+    @media (min-width: 1700px) {
+        top: 50%;
+        left: 75%;
+        transform: translate(-75%, -50%);
+    }
+
+    @media (min-width: 1900px) {
+        top: 50%;
+        left: 72%;
+        transform: translate(-72%, -50%);
+    }
+
+    span {
+        font-weight: 500;
+        font-size: 1.5rem;
+        @screen xl {
+            font-size: 1.875rem;
+            line-height: 3.375rem;
+        }
+    }
+}

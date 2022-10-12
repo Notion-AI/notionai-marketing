@@ -27,26 +27,18 @@
     
       computed: {
         classes() {
-          const sizeClasses = {
-            "btn--size-xs": this.size === "xs",
-            "btn--size-sm": this.size === "sm",
-            "btn--size-md": this.size === "md",
-            "btn--size-lg": this.size === "lg",
-            "btn--full-width": this.fullWidth
-          };
-    
           const colorClasses = {
             "btn--white": this.color === "white",
             "btn--gradient-yellow": this.color === "gradient-yellow",
             "btn--gradient-pink": this.color === "gradient-pink",
             "btn--gradient-violet": this.color === "gradient-violet",
             "btn-outline--white": this.color === "outline-white",
-            "btn-outline--gradient-yellow": this.color === "outline-gradient-yellow",
-            "btn-outline--gradient-pink": this.color === "outline-gradient-pink",
-            "btn-outline--gradient-violet": this.color === "outline-gradient-violet",
+            // "btn-outline--gradient-yellow": this.color === "outline-gradient-yellow",
+            // "btn-outline--gradient-pink": this.color === "outline-gradient-pink",
+            // "btn-outline--gradient-violet": this.color === "outline-gradient-violet",
           };
 
-          return { ...sizeClasses, ...colorClasses };
+          return { ...colorClasses };
         }
       },
     
