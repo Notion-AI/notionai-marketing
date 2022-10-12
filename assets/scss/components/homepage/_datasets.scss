@@ -1,3 +1,12 @@
+.datasets {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    @screen md {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
 .datasets__text {
     margin-bottom: 3.375rem;
     p {

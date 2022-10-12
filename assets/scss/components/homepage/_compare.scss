@@ -1,0 +1,28 @@
+.compare {
+    padding: 9.75rem 1rem 8.5rem 1rem;
+
+    @screen md {
+        padding: 9.75rem 2rem 8.5rem 2rem;
+    }
+}
+
+.compare__title {
+    margin-bottom: 2.5rem;
+    p {
+        font-size: 3rem;
+        line-height: 4rem;
+        text-align: center;
+
+        @screen md {
+            font-size: 3.75rem;
+        }
+
+        span {
+            font-size: 3.75rem;
+            line-height: 4rem;
+            background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}

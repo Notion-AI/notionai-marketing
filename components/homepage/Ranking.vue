@@ -19,11 +19,11 @@
             :style="{paddingTop: padding + 'rem', paddingBottom: padding + 'rem'}"
         >
             <div 
-                class="container container--modify mx-auto flex items-center content-between"
+                class="container container--modify mx-auto"
             >
                 <h2 :class="{'opacity-30': opacity}" class="ranking__left">Straight into your hands</h2>
-                <img v-if="opacity" src="~assets/images/ranking-3.png" alt=""/>
-                <img v-else src="~assets/images/ranking-4.png" alt=""/>
+                <img v-if="opacity" src="~assets/images/ranking-3.png" alt="" class="mx-auto"/>
+                <img v-else src="~assets/images/ranking-4.png" alt="" class="mx-auto"/>
                 <h2 :class="{'opacity-30': opacity}" class="ranking__right">under one subscription</h2>
             </div>
         </div>

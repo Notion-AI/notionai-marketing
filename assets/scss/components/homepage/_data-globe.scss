@@ -1,5 +1,6 @@
 .data-globe {
     background-color: #100418;
+    padding: 8rem 1rem;
     
     @screen lg {
         padding: 18.125rem 0;
@@ -12,11 +13,17 @@
 }
 
 .data-globe__text-left {
-    margin: auto 0 auto auto;
+    margin: 0 auto 2rem auto;
+    @screen lg {
+        margin: auto 0 auto auto;
+    }
 }
 
 .data-globe__text-right {
-    margin: auto auto auto 0;
+    margin: 2rem auto 0 auto;
+    @screen lg {
+        margin: auto auto auto 0;
+    }
 
     span {
         font-size: 1.875rem;

@@ -64,6 +64,12 @@
       :padding="10.5"
       :opacity="false"
     />
+
+    <WhatWould />
+
+    <LearnHow />
+
+    <Compare />
   </div>
 </template>
 
@@ -78,6 +84,9 @@ import DataCluster from "~/components/homepage/DataCluster.vue";
 import FringerData from "~/components/homepage/FringerData.vue";
 import Datasets from "~/components/homepage/Datasets.vue";
 import Ranking from "~/components/homepage/Ranking.vue";
+import WhatWould from "~/components/homepage/WhatWould.vue";
+import LearnHow from "~/components/homepage/LearnHow.vue";
+import Compare from "../components/homepage/Compare.vue";
 
 export default {
   components: {
@@ -90,11 +99,12 @@ export default {
     DataCluster,
     FringerData,
     Datasets,
-    Ranking
+    Ranking,
+    WhatWould,
+    LearnHow,
+    Compare
 }
 }
 </script>
 
-<style lang="scss" scoped>
 
-</style>

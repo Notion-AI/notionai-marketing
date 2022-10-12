@@ -1,14 +1,24 @@
 .gather-infor {
     background: #100418;
-    padding: 4.3125rem 0 2.25rem 0;
+    padding: 4.3125rem 1rem 2.25rem 1rem;
     text-align: center;
+
+    @screen md{
+        padding-left:0;
+        padding-right: 0;
+    }
 }
 
 .gather-infor__title {
     margin-bottom: 1.875rem;
     p {
-        font-size: 4.125rem;
+        font-size: 3rem;
         line-height: 4.375rem;
+
+        @screen md {
+            font-size: 4.125rem;
+            line-height: 4.375rem;
+        }
     }
 
     p:last-child {
@@ -34,7 +44,7 @@
 
 
 .gather-infor-2 {
-    padding: 14.375rem 0 0 0;
+    padding-top: 14.375rem;
 
     .gather-infor__sub {
         margin-bottom: 8rem;
@@ -42,7 +52,7 @@
 }
 
 .gather-infor-3 {
-    padding: 5.75rem 0 0 0;
+    padding-top: 5.75rem;
 
     .gather-infor__title p, .gather-infor__sub p {
         opacity: 0.1;

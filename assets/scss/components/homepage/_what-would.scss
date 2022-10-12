@@ -1,0 +1,62 @@
+.what-would {
+    padding: 10rem 1rem;
+    @screen md {
+        padding: 13.125rem 2rem;
+    }
+}
+
+.what-would__title {
+    margin-bottom: 0.6875rem;
+
+    p {
+        font-size: 3.25rem;
+        line-height: 3.375rem;
+        letter-spacing: -0.02em;
+        color: #000000;
+
+        span {
+            background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 3.25rem;
+            line-height: 3.375rem;
+            font-weight: 500;
+        }
+    }
+}
+
+.what-would__sub {
+    color: #ADADAD;
+    font-size: 1.5rem;
+    line-height: 4.75rem;
+    margin-bottom: 3.75rem;
+}
+
+.what-would__content {
+    margin-bottom: 5rem;
+
+    @screen md {
+        margin-bottom: 7.5rem;
+    }
+    .content-item {
+        margin-bottom: 0.6rem;
+        a {
+            font-size: 1.5rem;
+            line-height: 1.875rem;
+            color: #000000;
+
+            &:last-child span {
+                display: none;
+            }
+    
+            span {
+                display: inline-block;
+                margin: 0 0.625rem;
+                width: 1.125rem;
+                height: 1.125rem;
+                background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+                border-radius: 50px;
+            }
+        }
+    } 
+}

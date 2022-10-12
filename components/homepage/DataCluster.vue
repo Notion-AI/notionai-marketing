@@ -2,9 +2,9 @@
   <div class="data-cluster">
     <div class="container mx-auto">
         <div v-if="type === 1" class="flex items-center content-between">
-            <img src="~assets/images/data-cluster-1.png" alt="" class="mr-auto">
-            <img src="~assets/images/data-cluster-2.png" alt="" class="mx-auto">
-            <img src="~assets/images/data-cluster-3.png" alt="" class="ml-auto">
+            <img src="~assets/images/data-cluster-1.png" alt="" class="w-1/3 lg:w-auto mr-auto">
+            <img src="~assets/images/data-cluster-2.png" alt="" class="w-1/3 lg:w-auto mx-auto">
+            <img src="~assets/images/data-cluster-3.png" alt="" class="w-1/3 lg:w-auto ml-auto">
 
             <div class="data-cluster__text">
                 <p>Analyzed to discover <span>themes</span></p>

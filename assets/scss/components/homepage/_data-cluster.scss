@@ -1,9 +1,10 @@
 .data-cluster {
     background-color: #100418;
     position: relative;
+    padding: 10rem 1rem;
 
     @screen lg {
-        padding: 18rem 0;
+        padding: 18rem 1.25rem;
     }
 }
 
@@ -14,14 +15,22 @@
     transform: translate(-50%, -50%);
 
     p {
-        font-size: 1.875rem;
+        font-size: 1.4rem;
         line-height: 2.25rem;
         text-align: center;
 
+        @screen md {
+            font-size: 1.875rem;
+        }
+
         span {
             font-weight: 500;
-            font-size: 1.875rem;
+            font-size: 1.4rem;
             line-height: 2.25rem;
+
+            @screen md {
+                font-size: 1.875rem;
+            }
         }
 
         &:last-child {
