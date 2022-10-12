@@ -3,15 +3,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // padding: 6px 14px;
     gap: 0.625rem;
     border-radius: 1.875rem;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.6rem;
     line-height: 1;
     color: #100418;
-    height: 1.875rem;
-    // min-width: 102px;
+    height: 3.8rem;
+    
+    @screen lg {
+        font-size: 1rem;
+        height: 2.375rem;
+    }
 }
 
 .btn--white {

@@ -92,6 +92,7 @@
     width: 100%;
     height: 1px;
     background: linear-gradient(to right, #F2B59C, #FFE26E, #AAAEF5, #100418);
+    z-index: 1;
   }
 
   span {
@@ -99,6 +100,7 @@
     height: 1.375rem;
     background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
     border-radius: 3.125rem;
+    z-index: 2;
   }
 }
 

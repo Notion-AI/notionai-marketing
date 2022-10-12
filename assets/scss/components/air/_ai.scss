@@ -1,0 +1,42 @@
+.ai {
+    padding: 6.375rem 1rem 6.375rem 1rem;
+
+    @screen lg {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+}
+
+.ai__title {
+    margin-bottom: 1.875rem;
+    p {
+        font-size: 4.125rem;
+        line-height: 4.375rem;
+        text-align: center;
+    }
+
+    p:first-child {
+        span {
+            background: -webkit-linear-gradient(247.69deg, #F5C0BE -4.24%, #A3A5EF 191.1%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 500;
+            font-size: 4.125rem;
+            line-height: 4.375rem;
+        }
+    }
+}
+
+.ai__sub {
+    margin-bottom: 1rem;
+    p {
+        font-size: 1.25rem;
+        line-height: 1.625rem;
+        color: #BEBEBE;
+        text-align: center;
+    }
+}
+
+.ai__btn {
+    margin-bottom: 4.5rem;
+}

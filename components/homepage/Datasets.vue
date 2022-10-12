@@ -11,7 +11,7 @@
         </h2>
 
         <div class="datasets__img">
-            <img src="~assets/images/datasets.png" alt="" class="mx-auto">
+            <img src="~assets/images/home/datasets.png" alt="" class="mx-auto">
         </div>
     </div>
   </div>

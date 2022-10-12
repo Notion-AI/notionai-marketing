@@ -13,7 +13,7 @@
             </div>
 
             <div class="gather-infor__img">
-                <img src="~assets/images/gather-infor-2.png" alt="" class="mx-auto">
+                <img src="~assets/images/home/gather-infor-2.png" alt="" class="mx-auto">
             </div>
        </div>
     </div>

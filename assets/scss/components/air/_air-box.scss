@@ -1,0 +1,59 @@
+.air-box {
+    padding: 10rem 3.6rem 6rem 3.6rem;
+
+    @screen lg {
+        padding: 9.375rem 1.25rem;
+    }
+}
+
+.air-box__left, .air-box__right {
+    display: flex;
+    align-items: center;
+    .box-title {
+        margin-bottom: 1.125rem;
+        text-align: center;
+
+        @screen lg {
+            margin-bottom: 1.875rem;
+        }
+        p {
+            font-size: 2.25rem;
+            line-height: 2.625rem;
+            color: #000000;
+
+            @screen lg {
+                font-size: 3rem;
+                line-height: 3.375rem;
+            }
+
+            span {
+                background: -webkit-linear-gradient(247.69deg, #F5C0BE -4.24%, #A3A5EF 191.1%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: 500;
+                font-size: 2.25rem;
+                line-height: 2.625rem;
+
+                @screen lg {
+                    font-size: 3rem;
+                    line-height: 3.375rem;
+                }
+            }
+        }
+    }
+
+    .box-sub {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        color: #8B8B8B;
+        text-align: center;
+        margin-bottom: 5.7rem;
+
+        @screen lg {
+            text-align: left;
+            font-size: 1.25rem;
+            line-height: 1.625rem;
+            margin-bottom: 0;
+        }
+    }
+}
