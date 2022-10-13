@@ -6,8 +6,7 @@
 		<template v-slot:left>
 			<div>
 				<h2 class="box-title">
-					<p>Configure and train your</p>
-					<p><span>Strategic</span> AI on the go.</p>
+					<p>Configure and train your <span>Strategic</span> AI on the go.</p>
 				</h2>
 
 				<p class="box-sub">
@@ -29,8 +28,7 @@
 		<template v-slot:right>
 			<div>
 				<h2 class="box-title">
-					<p><span>Synthesise</span> key themes</p>
-					<p>on your strategic topics.</p>
+					<p><span>Synthesise</span> key themes on your strategic topics.</p>
 				</h2>
 
 				<p class="box-sub">
@@ -44,10 +42,7 @@
 		<template v-slot:left>
 			<div>
 				<h2 class="box-title">
-					<p>Track key <span>trends</span> and</p>
-					<p>understand how the world</p>
-					<p>is changing around your</p>
-					<p>strategic topics.</p>
+					<p>Track key <span>trends</span> and understand how the world is changing around your strategic topics.</p>
 				</h2>
 
 				<p class="box-sub">
@@ -70,6 +65,9 @@
 			<img src="~assets/images/air/box-3.png" alt="" class="mx-auto" />
 		</template>
     </Airbox>
+
+	<Compare isAir/>
+	<Aggregate />
   </div>
 </template>
 
@@ -77,9 +75,11 @@
 import Ai from '~/components/air/Ai.vue';
 import Benefits from '~/components/air/Benefits.vue';
 import Airbox from '~/components/air/Airbox.vue';
+import Compare from '~/components/homepage/Compare.vue';
+import Aggregate from '../components/air/Aggregate.vue';
 
 export default {
-  	components: { Ai, Benefits, Airbox },
+  	components: { Ai, Benefits, Airbox, Compare, Aggregate },
   	data() {
         return {
 			window: {

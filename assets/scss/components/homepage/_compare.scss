@@ -18,11 +18,24 @@
         }
 
         span {
-            font-size: 3.75rem;
+            font-weight: 500;
+            font-size: 3rem;
             line-height: 4rem;
             background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+
+            @screen md {
+                font-size: 3.75rem;
+            }
         }
+    }
+}
+
+.compare__title-air {
+    p span {
+        background: -webkit-linear-gradient(247.69deg, #F5C0BE -4.24%, #A3A5EF 191.1%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }

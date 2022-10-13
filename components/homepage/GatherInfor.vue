@@ -16,7 +16,7 @@
                 <app-button
                     class="mx-auto" 
                     color="outline-white"
-                    style="height: 2.375rem; width: 13.875rem"
+                    style="width: 222px"
                 >Start your free trial today</app-button>
             </div>
 

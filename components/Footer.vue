@@ -44,7 +44,7 @@
             <div class="location">
                 <div class="location-address">
                     <p class="mb-1 font-medium">Location</p>
-                    <div>
+                    <div class="location-address__detail">
                         <p>Bay 7, Sydney Harbour Bridge Warehouses,</p>
                         <p>Middlemiss Street, Lavender Bay NSW 2060</p>
                         <p>Australia</p>
@@ -55,9 +55,9 @@
                     <app-button
                         class="btn-contact"
                         color="outline-white"
-                        style="width: 5.9375rem; height: 2.375rem"
+                        style="width: 90px"
                     ><n-link to="">Contact</n-link></app-button>
-                    <n-link to="" class="mr-3.5"><img src="~assets/images/LinkedIn.png" alt=""></n-link>
+                    <n-link to="" class="mr-8 md:mr-5"><img src="~assets/images/LinkedIn.png" alt=""></n-link>
                     <n-link to=""><img src="~assets/images/Instagram.png" alt=""></n-link>
                 </div>
             </div>

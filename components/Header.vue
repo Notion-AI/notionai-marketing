@@ -40,12 +40,12 @@
 
                     <ul class="mobile-list__menu">
                         <li><n-link to="">Start your free trial today</n-link></li>
-                        <li><n-link to="">Stream</n-link></li>
-                        <li><n-link to="">AiR</n-link></li>
-                        <li><n-link to="">Enterprise</n-link></li>
-                        <li><n-link to="">Plans</n-link></li>
-                        <li><n-link to="">Blog</n-link></li>
-                        <li><n-link to="">About</n-link></li>
+                        <li><n-link to="/stream">Stream</n-link></li>
+                        <li><n-link to="/air">AiR</n-link></li>
+                        <li><n-link to="/enterprise">Enterprise</n-link></li>
+                        <li><n-link to="/plans">Plans</n-link></li>
+                        <li><n-link to="/blog">Blog</n-link></li>
+                        <li><n-link to="/about">About</n-link></li>
                     </ul>
 
                     <div class="mobile-list__login">

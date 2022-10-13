@@ -8,11 +8,20 @@
 }
 
 .ai__title {
-    margin-bottom: 1.875rem;
+    margin-bottom: 2.9rem;
+
+    @screen lg {
+        margin-bottom: 1.875rem;
+    }
     p {
-        font-size: 4.125rem;
-        line-height: 4.375rem;
+        font-size: 4.6rem;
+        line-height: 5rem;
         text-align: center;
+
+        @screen lg {
+            font-size: 4.125rem;
+            line-height: 4.375rem;
+        }
     }
 
     p:first-child {
@@ -21,22 +30,41 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: 500;
-            font-size: 4.125rem;
-            line-height: 4.375rem;
+            font-size: 4.6rem;
+            line-height: 5rem;
+    
+            @screen lg {
+                font-size: 4.125rem;
+                line-height: 4.375rem;
+            }
         }
     }
 }
 
 .ai__sub {
-    margin-bottom: 1rem;
+    margin-bottom: 5.9rem;
+
+    @screen lg {
+        margin-bottom: 1rem;
+    }
+    
     p {
-        font-size: 1.25rem;
-        line-height: 1.625rem;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
         color: #BEBEBE;
         text-align: center;
+
+        @screen lg {
+            font-size: 1.25rem;
+            line-height: 1.625rem;
+        }
     }
 }
 
 .ai__btn {
-    margin-bottom: 4.5rem;
+    margin-bottom: 6rem;
+
+    @screen lg {
+        margin-bottom: 4.5rem;
+    }
 }
