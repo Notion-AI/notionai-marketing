@@ -47,5 +47,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/scss/components/air/benefits";
+@import "~/assets/scss/components/common/benefits";
 </style>

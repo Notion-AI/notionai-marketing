@@ -44,6 +44,7 @@
 
 .aggregate__item {
     margin-bottom: 11.8rem;
+    cursor: pointer;
 
     &:last-child {
         margin-bottom: 0;
@@ -56,6 +57,7 @@
 
 .item-text {
     margin-bottom: 5.3rem;
+
     @screen lg {
         margin-bottom: 3.9375rem;
     }
@@ -74,12 +76,11 @@
     }
 }
 
-.item-border-pink {
-    background: linear-gradient(259.25deg, #F5C0BE 37.7%, #A3A5EF 176.87%);
-    height: 7px;
-}
-
-.item-border-gray {
+.item-border {
     background: #F7F7F7;
     height: 7px;
+
+    &.active {
+        background: linear-gradient(259.25deg, #F5C0BE 37.7%, #A3A5EF 176.87%);
+    }
 }

@@ -15,22 +15,22 @@
 			</div>
 
 			<div class="grid grid-cols-1 md:grid-cols-2 md: gap-5">
-				<div class="aggregate__item">
+				<div class="aggregate__item" @click="active = 1">
 					<div class="item-text">
 						<p>Looking to grow your business with</p>
 						<p>data-driven insights for your customers?</p>
 					</div>
 
-					<div class="item-border-pink"></div>
+					<div class="item-border" :class="{'active': active === 1}"></div>
 				</div>
 
-				<div class="aggregate__item">
+				<div class="aggregate__item" @click="active = 2">
 					<div class="item-text">
 						<p>Use our workflow to efficiently</p>
 						<p>curate content and publish to your audience.</p>
 					</div>
 
-					<div class="item-border-gray"></div>
+					<div class="item-border" :class="{'active': active === 2}"></div>
 				</div>
 			</div>
 		</div>
@@ -39,7 +39,11 @@
 
 <script>
 export default {
-
+	data() {
+		return {
+			active: 1
+		}
+	}
 }
 </script>
 
