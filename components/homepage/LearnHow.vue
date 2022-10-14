@@ -21,7 +21,7 @@
                         nuxt
                         to=""
                         color="gradient-yellow"
-                        style="width: 8rem; height: 2.375rem"
+                        style="width: 128px"
                     >Learn More</app-button>
                 </div>
 
@@ -42,7 +42,7 @@
                         nuxt
                         to=""
                         color="gradient-violet"
-                        style="width: 8rem; height: 2.375rem"
+                        style="width: 128px"
                     >Learn More</app-button>
                 </div>
 

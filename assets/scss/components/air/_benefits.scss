@@ -1,0 +1,96 @@
+.benefits {
+    padding: 5.7rem 1rem 8.8rem 1rem;
+
+    @screen lg {
+        padding: 3.625rem 1.25rem 7rem 1.25rem;
+    }
+}
+
+.benefits__title { 
+    margin-bottom: 8.1rem;
+
+    @screen lg {
+        margin-bottom: 7.25rem;
+    }
+    p {
+        text-align: center;
+        font-size: 4rem;
+        line-height: 4.4rem;
+
+        @screen lg {
+            font-size: 4.125rem;
+            line-height: 4.375rem;
+        }
+
+        &:last-child {
+            background: -webkit-linear-gradient(247.69deg, #F5C0BE -4.24%, #A3A5EF 191.1%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 500;
+        }
+    }
+}
+
+.benefits-item {
+    margin-bottom: 6rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &__img {
+        margin-bottom: 6rem;
+
+        @screen lg {
+            margin-bottom: 5.375rem;;
+        }
+        
+        @screen md {
+            height: 120px;
+            display: flex;
+            align-items: center;
+        }
+
+        img {
+            margin: auto;
+        }
+    }
+
+    &__title {
+        line-height: 113%;
+        font-size: 2.6rem;
+        margin-bottom: 1.4375rem;
+        text-align: center;
+
+        @screen lg {
+            font-size: 1.875rem;
+        }
+
+        span {
+            background: -webkit-linear-gradient(247.69deg, #F5C0BE -4.24%, #A3A5EF 191.1%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.6rem;
+            line-height: 113%;
+            font-weight: 500;
+
+            @screen lg {
+                font-size: 1.875rem;
+            }
+        }
+    }
+
+    &__sub {
+        p {
+            color: #BEBEBE;
+            text-align: center;
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+
+            @screen lg {
+                font-size: 1.25rem;
+                line-height: 1.625rem;
+            }
+        }
+    }
+}

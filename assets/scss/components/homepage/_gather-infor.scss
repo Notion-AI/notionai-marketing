@@ -1,9 +1,8 @@
 .gather-infor {
-    background: #100418;
     padding: 4.3125rem 1rem 2.25rem 1rem;
     text-align: center;
 
-    @screen md{
+    @screen lg{
         padding-left:0;
         padding-right: 0;
     }

@@ -16,12 +16,12 @@
                 <app-button
                     class="mx-auto" 
                     color="outline-white"
-                    style="height: 2.375rem; width: 13.875rem"
+                    style="width: 222px"
                 >Start your free trial today</app-button>
             </div>
 
             <div class="gather-infor__img">
-                <img src="~assets/images/gather-infor-1.png" alt="" class="mx-auto">
+                <img src="~assets/images/home/gather-infor-1.png" alt="" class="mx-auto">
             </div>
        </div>
     </div>

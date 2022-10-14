@@ -2,7 +2,7 @@
     padding-left: 1rem;
     padding-right: 1rem;
 
-    @screen md {
+    @screen lg {
         padding: 11.25rem 0 13.25rem 0;
     }
 }
@@ -46,9 +46,14 @@
     .item-text {
         margin-bottom: 1.875rem;
         p {
-            font-size: 1.25rem;
-            line-height: 1.625rem;
+            font-size: 2rem;
+            line-height: 2.6rem;
             color: #000000;
+
+            @screen lg {
+                font-size: 1.25rem;
+                line-height: 1.625rem;
+            }
         }
     }
 

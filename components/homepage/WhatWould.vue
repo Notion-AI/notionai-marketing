@@ -69,7 +69,7 @@
             nuxt
             to=""
             color="gradient-yellow"
-            style="width: 14.25rem; height: 2.375rem"
+            style="width: 228px"
         >Start your free trial today</app-button>
     </div>
   </div>

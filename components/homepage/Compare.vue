@@ -1,7 +1,7 @@
 <template>
     <div class="compare">
         <div class="container mx-auto">
-            <div class="compare__title">
+            <div class="compare__title" :class="{'compare__title-air': isAir}">
                 <p>Compare our products and</p>
                 <p>choose a plan that’s <span>right for you.</span></p>
             </div>
@@ -11,8 +11,8 @@
                     class="mx-auto"
                     nuxt
                     to=""
-                    color="gradient-yellow"
-                    style="width: 7.25rem; height: 2.375rem"
+                    :color="isAir ? 'gradient-pink' : 'gradient-yellow'"
+                    style="width: 116px"
                 >Find a Plan</app-button>
             </div>
         </div>
@@ -21,7 +21,12 @@
 
 <script>
 export default {
-
+    props: {
+        isAir: {
+            type: Boolean,
+            default: false
+        }
+    }
 }
 </script>
 

@@ -22,13 +22,14 @@
   @extend .footer--padding;
 
   h2 {
-    font-size: 2.25rem;
+    font-size: 3.6rem;
 
     @screen lg {
       font-size: 3.25rem;
     }
+
     & p {
-      font-size: 2.25rem;
+      font-size: 3.6rem;
 
       @screen lg {
         font-size: 3.25rem;
@@ -37,7 +38,7 @@
   }
 
   .title--gardient-common, .title--gardient-pink, .title--gardient-violet {
-    font-size: 2.25rem;
+    font-size: 3.6rem;
     font-weight: 600;
 
     @screen lg {
@@ -67,8 +68,8 @@
 .timeline-text {
   @extend .footer--padding;
   p {
-    font-size: 0.75rem;
-    line-height: 1.125rem;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
     
     @screen lg {
       font-size: 1.25rem;
@@ -92,6 +93,7 @@
     width: 100%;
     height: 1px;
     background: linear-gradient(to right, #F2B59C, #FFE26E, #AAAEF5, #100418);
+    z-index: 1;
   }
 
   span {
@@ -99,6 +101,7 @@
     height: 1.375rem;
     background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
     border-radius: 3.125rem;
+    z-index: 2;
   }
 }
 
@@ -161,10 +164,37 @@
       @screen lg {
         margin-bottom: 2.8125rem;
       }
+
+      p {
+        font-size: 1.6rem;
+
+        @screen lg {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .location-address__detail p{
+      font-size: 1.6rem;
+
+      @screen lg {
+        font-size: 1rem;
+      }
     }
   }
 
   .btn-contact {
-    margin-right: 1.125rem;
+    margin-right: 1.8rem;
+
+    @screen lg {
+      margin-right: 1.125rem;
+    }
+    a{
+      font-size: 1.6rem;
+  
+      @screen lg {
+        font-size: 1rem;
+      }
+    }
   }
 }
