@@ -13,9 +13,12 @@
         margin-bottom: 1.125rem;
         text-align: center;
 
+        @screen md {
+            text-align: left;
+        }
+
         @screen lg {
             margin-bottom: 1.875rem;
-            text-align: left;
         }
 
         span {
@@ -29,6 +32,10 @@
                 line-height: 3.375rem;
                 text-align: left;
             }
+        }
+
+        .text-white {
+            color: #fff;
         }
 
         .gradient {

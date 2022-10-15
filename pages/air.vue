@@ -76,8 +76,8 @@
 </template>
 
 <script>
-import Compare from '~/components/homepage/Compare.vue'
-import Aggregate from '../components/air/Aggregate.vue'
+import Compare from '~/components/Compare.vue'
+import Aggregate from '../components/Aggregate.vue'
 
 import caculatorwidth from '~/utils/caculator-width'
 

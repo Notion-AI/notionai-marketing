@@ -69,6 +69,9 @@
         <img src="~assets/images/stream/stream-box-3.png" alt="" class="mx-auto" />
       </template>
     </Box>
+
+    <Compare />
+    <Aggregate type="stream"/>
   </div>
 </template>
 

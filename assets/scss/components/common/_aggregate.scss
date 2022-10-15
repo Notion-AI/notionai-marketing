@@ -58,8 +58,13 @@
 .item-text {
     margin-bottom: 5.3rem;
 
+    @screen md {
+        height: 7.8rem;
+    }
+
     @screen lg {
         margin-bottom: 3.9375rem;
+        height: unset;
     }
 
     p {
@@ -82,5 +87,21 @@
 
     &.active {
         background: linear-gradient(259.25deg, #F5C0BE 37.7%, #A3A5EF 176.87%);
+    }
+}
+
+.stream {
+    .aggregate__title {
+        span {
+            background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .item-border {
+        &.active {
+            background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+        }
     }
 }
