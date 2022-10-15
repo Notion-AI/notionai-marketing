@@ -1,6 +1,7 @@
+import sm from './sm.json'
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  target: 'static',
   head: {
     title: 'notionai-marketing',
     htmlAttrs: {
@@ -33,6 +34,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/prismic'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -40,6 +42,12 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
   ],
+
+  prismic: {
+    endpoint: sm.apiEndpoint,
+    modern: true,
+    apiOptions: {}
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
@@ -49,5 +57,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    transpile: ["@prismicio/vue"],
   }
 }
