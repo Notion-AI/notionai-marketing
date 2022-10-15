@@ -1,0 +1,116 @@
+{
+  "id": "mock-doc-id",
+  "url": null,
+  "type": "layout",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "navigator": [
+      {
+        "name": [
+          {
+            "type": "paragraph",
+            "text": "Minim non tempor consequat incididunt eiusmod aute ad exercitation eu nulla minim in. Ad Lorem eiusmod do eiusmod.",
+            "spans": []
+          }
+        ],
+        "routers_name": "plans",
+        "is_active": true,
+        "link": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        },
+        "color": "#555555"
+      }
+    ],
+    "logo": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1"
+    },
+    "alert": [
+      {
+        "title": [
+          {
+            "type": "paragraph",
+            "text": "Officia labore cupidatat proident duis officia Lorem consectetur dolore laborum voluptate enim ad.",
+            "spans": []
+          }
+        ],
+        "link": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        },
+        "title_link": [
+          {
+            "type": "paragraph",
+            "text": "Amet sit eu sint magna ut adipisicing deserunt. Ex qui mollit exercitation reprehenderit ex occaecat quis occaecat laboris nisi exercitation laborum eiusmod.",
+            "spans": []
+          }
+        ],
+        "is_active": false
+      }
+    ],
+    "location": [
+      {
+        "title": [
+          {
+            "type": "paragraph",
+            "text": "Culpa excepteur nulla duis elit anim. Deserunt adipisicing proident tempor consequat velit laborum elit enim exercitation amet in consectetur et.",
+            "spans": []
+          }
+        ],
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Commodo excepteur qui culpa reprehenderit anim id dolor deserunt aute sunt. Magna in nisi excepteur eu aliqua. Lorem laborum eu quis id anim sint consequat pariatur.",
+            "spans": []
+          }
+        ]
+      }
+    ],
+    "socials": [
+      {
+        "name": [
+          {
+            "type": "paragraph",
+            "text": "Excepteur nostrud occaecat incididunt. Consectetur cupidatat ut laborum officia ipsum sunt cillum.",
+            "spans": []
+          }
+        ],
+        "icon_image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118"
+        },
+        "icon_media": {
+          "link_type": "Media",
+          "name": "mock",
+          "kind": "image",
+          "url": "https://source.unsplash.com/random",
+          "size": "10kB"
+        },
+        "link": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        },
+        "is_active": true
+      }
+    ],
+    "email_contact": "tropical"
+  }
+}

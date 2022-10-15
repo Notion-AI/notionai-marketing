@@ -1,6 +1,35 @@
 {
   "_cts": {
     "product_page": {},
-    "home_page": {}
+    "home_page": {},
+    "layout": {
+      "alert": {
+        "title": {
+          "config": {
+            "patternType": "HEADING",
+            "blocks": 1
+          }
+        },
+        "title_link": {
+          "config": {
+            "patternType": "HEADING",
+            "blocks": 1
+          }
+        }
+      },
+      "socials": {
+        "name": {
+          "config": {
+            "patternType": "PARAGRAPH",
+            "blocks": 1
+          }
+        }
+      },
+      "navigator": {
+        "color": {
+          "content": "#555555"
+        }
+      }
+    }
   }
 }
