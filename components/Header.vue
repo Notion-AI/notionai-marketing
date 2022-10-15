@@ -1,7 +1,7 @@
 <template>
     <header>
-        <div class="header-join">
-            Get early access to the next generation of AI-augmented executive intelligence products. <n-link to="">Join the Lab</n-link>
+        <div v-if="isShowAlert" class="header-join">
+            {{ alertTitle }} <a :href="alertLink.url" :target="alertLink.target">{{alertTitleLink}}</a>
         </div>
         <div class="header" id="header" :class="{'transparent': scrollUp}">
             <div class="header__logo">
@@ -10,17 +10,17 @@
             </div>
 
             <div class="header__desktop hidden lg:flex">
-                <n-link 
-                    v-for="(i, idx) in dataHeader" :key="idx"
-                    :to="i.route"
-                    :class="i.route === $route.path ? i.class : ''"
+                <n-link
+                    v-for="(item, idx) in navigator" :key="idx"
+                    :to="{ name: item.routers_name }"
+                    :class="item.routers_name === $route.name ? `${item.routers_name}-active` : ''"
                 >
-                    {{i.text}}
+                    {{ item.name[0]?.text || '' }}
                 </n-link>
                 <app-button
                     color="outline-white"
                 >
-                    <n-link to="/login">Login</n-link>
+                    <a :href="alertLink.url" :target="alertLink.target">Login</a>
                 </app-button>
             </div>
 
@@ -39,22 +39,25 @@
                     </div>
 
                     <ul class="mobile-list__menu">
-                        <li><n-link to="">Start your free trial today</n-link></li>
-                        <li><n-link to="/stream">Stream</n-link></li>
-                        <li><n-link to="/air">AiR</n-link></li>
-                        <li><n-link to="/enterprise">Enterprise</n-link></li>
-                        <li><n-link to="/plans">Plans</n-link></li>
-                        <li><n-link to="/blog">Blog</n-link></li>
-                        <li><n-link to="/about">About</n-link></li>
+                        <li><a :href="alertLink.url" :target="alertLink.target">Start your free trial today</a></li>
+                        <li v-for="(item, idx) in navigator" :key="idx">
+                          <n-link :to="{ name: item.routers_name }">
+                            {{ item.name[0]?.text || '' }}
+                          </n-link>
+                        </li>
                     </ul>
 
                     <div class="mobile-list__login">
                         <app-button 
-                            class="w-full"
-                            color="outline-white"
-                        >Login</app-button>
+                          class="w-full"
+                          color="outline-white"
+                        >
+                          <a :href="alertLink.url" :target="alertLink.target">Login</a>
+                        </app-button>
 
-                        <p class="trial text-white"><n-link to="">Start your free trial today</n-link></p>
+                        <p class="trial text-white">
+                          <a :href="alertLink.url" :target="alertLink.target">Start your free trial today</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -63,22 +66,38 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
     data() {
        return {
-           dataHeader: [
-               {text: 'Stream', class: 'stream-active', route: '/stream'},
-               {text: 'AiR', class: 'air-active', route: '/air'},
-               {text: 'Enterprise', class: 'enterprise-active', route: '/enterprise'},
-               {text: 'Plans', class: 'plans-active', route: '/plans'},
-               {text: 'Blog', class: 'blog-active', route: '/blog'},
-               {text: 'About', class: 'about-active', route: '/about'}
-           ],
-
            isMenu: false,
            prev: null,
            scrollUp: false
        }
+    },
+
+    computed: {
+      ...mapGetters([
+        'navigator',
+        'alert',
+      ]),
+
+      isShowAlert () {
+        return this.alert?.is_active || false
+      },
+
+      alertTitle () {
+        return this.alert?.title[0]?.text || ''
+      },
+
+      alertTitleLink () {
+        return this.alert?.title_link[0]?.text || ''
+      },
+
+      alertLink () {
+        return this.alert?.link || {}
+      }
     },
 
     mounted() {
