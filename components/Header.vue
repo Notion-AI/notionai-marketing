@@ -18,6 +18,7 @@
                     {{ item.name[0]?.text || '' }}
                 </n-link>
                 <app-button
+                    class="login-btn"
                     color="outline-white"
                 >
                     <a :href="alertLink.url" :target="alertLink.target">Login</a>
@@ -40,7 +41,7 @@
 
                     <ul class="mobile-list__menu">
                         <li><a :href="alertLink.url" :target="alertLink.target">Start your free trial today</a></li>
-                        <li v-for="(item, idx) in navigator" :key="idx">
+                        <li v-for="(item, idx) in navigator" :key="idx" @click="handleClickMenu()">
                           <n-link :to="{ name: item.routers_name }">
                             {{ item.name[0]?.text || '' }}
                           </n-link>
@@ -120,6 +121,10 @@ export default {
                 document.getElementById('header').classList.remove("transparent")
             }
             this.prev = window.scrollY;
+        },
+
+        handleClickMenu() {
+            this.isMenu = false
         }
     }
 }

@@ -1,4 +1,4 @@
-.ai {
+.slogan {
     padding: 6.375rem 1rem 6.375rem 1rem;
 
     @screen lg {
@@ -7,7 +7,8 @@
     }
 }
 
-.ai__title {
+
+.slogan__title {
     margin-bottom: 2.9rem;
 
     @screen lg {
@@ -41,7 +42,27 @@
     }
 }
 
-.ai__sub {
+.slogan__title.air {
+    p:first-child {
+        span {
+            background: -webkit-linear-gradient(247.69deg, #F5C0BE -4.24%, #A3A5EF 191.1%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+.slogan__title.stream {
+    p:first-child {
+        span {
+            background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+.slogan__sub {
     margin-bottom: 5.9rem;
 
     @screen lg {
@@ -61,7 +82,7 @@
     }
 }
 
-.ai__btn {
+.slogan__btn {
     margin-bottom: 6rem;
 
     @screen lg {

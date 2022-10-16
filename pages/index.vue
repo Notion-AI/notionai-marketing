@@ -86,7 +86,7 @@ import Datasets from "~/components/homepage/Datasets.vue";
 import Ranking from "~/components/homepage/Ranking.vue";
 import WhatWould from "~/components/homepage/WhatWould.vue";
 import LearnHow from "~/components/homepage/LearnHow.vue";
-import Compare from "../components/homepage/Compare.vue";
+import Compare from "../components/Compare.vue";
 
 export default {
   components: {
