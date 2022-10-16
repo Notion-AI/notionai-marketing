@@ -18,20 +18,26 @@
         </div>
       </div>
 
-      <div class="swiper timeline-enter__item grid grid-cols-3 gap-4 lg:gap-32">
+      <!-- <div class="swiper timeline-enter__item grid grid-cols-3 gap-4 lg:gap-32">
         <div
           class="swiper-wrapper"
           v-for="(item, idx) in data" :key="idx"
         >
           <div class="swiper-content">
-            <h3 class="item-title">
-              {{ item.title }}
-            </h3>
-
-            <p>{{ item.sub }}</p>
+            
           </div>
         </div>
-      </div>
+      </div> -->
+
+      <swiper ref="mySwiper"  :slides-per-view="3" class="columns-3">
+        <swiper-slide v-for="(item,key) in data" :key="key" class="timeline-enter__item">
+          <h3 class="item-title">
+            {{ item.title }}
+          </h3>
+
+          <p>{{ item.sub }}</p>
+        </swiper-slide>
+      </swiper>
     </div>
 </template>
 
@@ -43,6 +49,16 @@ export default {
       default: () => []
     }
   },
+
+  data() {
+    return {
+      swiperOptions: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        freeMode: true
+      },
+    }
+  }
 }
 </script>
 

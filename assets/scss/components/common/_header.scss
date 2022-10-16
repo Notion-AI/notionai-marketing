@@ -92,12 +92,13 @@
         height: 100vh;
         padding: 3.375rem 1.25rem;
         top: 0;
-        right: 0;
+        left: 0;
         background-color: #100418;
         transition: all 0.4s ease-in-out;
         display: flex;
         flex-direction: column;
         overflow-y: hidden;
+        z-index: 99;
     }
 
     .mobile-list__action {

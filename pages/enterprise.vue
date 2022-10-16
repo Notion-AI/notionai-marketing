@@ -1,7 +1,8 @@
 <template>
   <div class="enterprise">
     <SloganEnterprise />
-    <TimelineEnterprise>
+
+    <TimelineEnterprise :data="data">
       <p class="gradient">Stream for enterprise</p>
       <p>lorem ipsum dolor sit amet</p>
     </TimelineEnterprise>
@@ -85,7 +86,16 @@ import caculatorwidth from '~/utils/caculator-width'
 
 export default {
   components: { SloganEnterprise, TimelineEnterprise },
-  mixins: [caculatorwidth]
+  mixins: [caculatorwidth],
+  data() {
+    return {
+      data: [
+        {title: 'Media Monitoring', sub:'Corporate Communications, Affairs, and Marketing'},
+        {title: 'Global Practices', sub:'Innovation, Product Development'},
+        {title: 'Commercial Platforms', sub:'Sales & Distribution, Intitutional Point of Entry Platforms, Intranet'}
+      ]
+    }
+  }
 }
 </script>
 
