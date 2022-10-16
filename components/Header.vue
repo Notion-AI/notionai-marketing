@@ -18,6 +18,7 @@
                     {{i.text}}
                 </n-link>
                 <app-button
+                    class="login-btn"
                     color="outline-white"
                 >
                     <n-link to="/login">Login</n-link>
@@ -39,13 +40,13 @@
                     </div>
 
                     <ul class="mobile-list__menu">
-                        <li><n-link to="">Start your free trial today</n-link></li>
-                        <li><n-link to="/stream">Stream</n-link></li>
-                        <li><n-link to="/air">AiR</n-link></li>
-                        <li><n-link to="/enterprise">Enterprise</n-link></li>
-                        <li><n-link to="/plans">Plans</n-link></li>
-                        <li><n-link to="/blog">Blog</n-link></li>
-                        <li><n-link to="/about">About</n-link></li>
+                        <li @click="handleClickMenu()"><n-link to="">Start your free trial today</n-link></li>
+                        <li @click="handleClickMenu('/stream')"><n-link to="">Stream</n-link></li>
+                        <li @click="handleClickMenu('/air')"><n-link to="">AiR</n-link></li>
+                        <li @click="handleClickMenu('/enterprise')"><n-link to="">Enterprise</n-link></li>
+                        <li @click="handleClickMenu('/plans')"><n-link to="">Plans</n-link></li>
+                        <li @click="handleClickMenu('/blog')"><n-link to="">Blog</n-link></li>
+                        <li @click="handleClickMenu('/about')"><n-link to="">About</n-link></li>
                     </ul>
 
                     <div class="mobile-list__login">
@@ -101,6 +102,11 @@ export default {
                 document.getElementById('header').classList.remove("transparent")
             }
             this.prev = window.scrollY;
+        },
+
+        handleClickMenu(route) {
+            this.$router.push(route)
+            this.isMenu = false
         }
     }
 }

@@ -1,0 +1,45 @@
+.slogan-enterprise {
+  padding: 6.375rem 1rem 6.375rem 1rem;
+
+  @screen lg {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+.slogan-enterprise__title {
+  font-size: 4.6rem;
+  line-height: 5rem; 
+  margin-bottom: 3rem;
+
+  p {
+    font-size: 4.6rem;
+    line-height: 5rem;
+    text-align: center;
+
+    @screen lg {
+      font-size: 4.125rem;
+      line-height: 4.375rem;
+    }
+  }
+
+  p:first-child {
+    span {
+      background: linear-gradient(252.6deg, #D1A8D0 -62.78%, #9D9AED 119.63%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 500;
+      font-size: 4.6rem;
+      line-height: 5rem;
+
+      @screen lg {
+        font-size: 4.125rem;
+        line-height: 4.375rem;
+      }
+    }
+  }
+}
+
+.slogan-enterprise__btn {
+  margin-bottom: 3.375rem;
+}

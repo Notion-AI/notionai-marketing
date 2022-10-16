@@ -14,19 +14,36 @@
     justify-content: space-between;
     background-color: #100418;
     padding: 2rem 1rem;
-    position: relative;
-
-    &.transparent {
-        background-color: transparent;
-    }
 
     @screen lg {
         padding: 1.625rem 2.5rem;
     }
 }
 
-.transparent .header__desktop a {
-    color: #000000;
+.header.transparent {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(8px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    transition: all 0.4s ease-in;
+}
+
+.transparent {
+    .header__desktop a {
+        color: #000000;
+    }
+
+    .header__logo a img {
+        width: unset;
+        height: unset;
+    }
+
+    .login-btn {
+        border-color: #100418;
+    }
 }
 
 .header__logo a img {
@@ -52,7 +69,7 @@
         }
     }
 
-    .stream-activem, .plans-active, .blog-active {
+    .stream-active, .plans-active, .blog-active {
         background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
         border-radius: 1.875rem;
     }

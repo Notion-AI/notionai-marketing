@@ -31,5 +31,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/scss/components/homepage/_compare.scss";
+@import "~/assets/scss/components/common/_compare.scss";
 </style>
