@@ -2,18 +2,20 @@
     <div class="compare">
         <div class="container mx-auto">
             <div class="compare__title" :class="{'compare__title-air': isAir}">
-                <p>Compare our products and</p>
-                <p>choose a plan that’s <span>right for you.</span></p>
+                <p>
+                  {{campare_title_normal}}
+                  <span>{{campare_title_highlight}}</span>
+                </p>
             </div>
 
             <div class="compare__btn">
                 <app-button
                     class="mx-auto"
-                    nuxt
-                    to=""
                     :color="isAir ? 'gradient-pink' : 'gradient-yellow'"
                     style="width: 116px"
-                >Find a Plan</app-button>
+                >
+                  <a :href="campare_btn_link.url" :target="campare_btn_link.target">{{campare_btn_text}}</a>
+                </app-button>
             </div>
         </div>
     </div>
@@ -25,6 +27,25 @@ export default {
         isAir: {
             type: Boolean,
             default: false
+        },
+        campare_title_normal: {
+          type: String,
+          default: ''
+        },
+        campare_title_highlight: {
+          type: String,
+          default: ''
+        },
+        campare_btn_text: {
+          type: String,
+          default: ''
+        },
+        campare_btn_link: {
+          type: Object,
+          default: {
+            url: 'https://app.notion.ai/login',
+            target: '_blank'
+          }
         }
     }
 }

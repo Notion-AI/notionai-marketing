@@ -2,7 +2,7 @@
     <div :class="type" class="aggregate">
 			<div class="container mx-auto">
 				<h2 class="aggregate__title">
-					Aggregate multiple licenses under one organisation and empower employees to <span>collaborate on content.</span>
+					{{organisation_title_normal}} <span>{{organisation_title_highlight}}</span>
 				</h2>
 
 				<div class="aggregate__btn">
@@ -12,15 +12,14 @@
 						:color="type === 'stream' ? 'gradient-yellow' : 'gradient-pink'"
 						style="width: 148px;"
 					>
-						Visit Enterprise
+						{{organisation_btn_enterprise_text}}
 					</app-button>
 				</div>
 
 				<div class="grid grid-cols-1 md:grid-cols-2 md: gap-5">
 					<div class="aggregate__item" @click="active = 1">
 						<div class="item-text">
-							<p>Looking to grow your business with</p>
-							<p>data-driven insights for your customers?</p>
+							<p>{{organisation_tab_left_text}}</p>
 						</div>
 
 						<div class="item-border" :class="{'active': active === 1}"></div>
@@ -28,8 +27,7 @@
 
 					<div class="aggregate__item" @click="active = 2">
 						<div class="item-text">
-							<p>Use our workflow to efficiently</p>
-							<p>curate content and publish to your audience.</p>
+							<p>{{organisation_tab_right_text}}</p>
 						</div>
 
 						<div class="item-border" :class="{'active': active === 2}"></div>
@@ -48,8 +46,30 @@ export default {
 	},
 
 	props: {
-		type: String,
-		default: ''
+    type: {
+      type: String,
+      default: 'air'
+    },
+    organisation_title_normal: {
+      type: String,
+      default: ''
+    },
+    organisation_title_highlight: {
+      type: String,
+      default: ''
+    },
+    organisation_btn_enterprise_text: {
+      type: String,
+      default: ''
+    },
+    organisation_tab_left_text: {
+      type: String,
+      default: ''
+    },
+    organisation_tab_right_text: {
+      type: String,
+      default: ''
+    }
 	}
 }
 </script>

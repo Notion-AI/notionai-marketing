@@ -4,6 +4,270 @@
   "repeatable": true,
   "status": true,
   "json": {
-    "Main": {}
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "uid",
+          "placeholder": ""
+        }
+      },
+      "slogan_text_line_1_highlight": {
+        "type": "Text",
+        "config": {
+          "label": "slogan_text_line_1_highlight",
+          "placeholder": ""
+        }
+      },
+      "slogan_text_line_1_normal": {
+        "type": "Text",
+        "config": {
+          "label": "slogan_text_line_1_normal",
+          "placeholder": ""
+        }
+      },
+      "slogan_text_line_2_normal": {
+        "type": "Text",
+        "config": {
+          "label": "slogan_text_line_2_normal",
+          "placeholder": ""
+        }
+      },
+      "slogan_text_description": {
+        "type": "Text",
+        "config": {
+          "label": "slogan_text_description",
+          "placeholder": ""
+        }
+      },
+      "slogan_text_btn": {
+        "type": "Text",
+        "config": {
+          "label": "slogan_text_btn",
+          "placeholder": ""
+        }
+      },
+      "slogan_btn_link": {
+        "type": "Link",
+        "config": {
+          "label": "slogan_btn_link",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null
+        }
+      },
+      "slogan_image": {
+        "type": "Image",
+        "config": {
+          "label": "slogan_image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "benefit_title_highlight": {
+        "type": "Text",
+        "config": {
+          "label": "benefit_title_highlight",
+          "placeholder": ""
+        }
+      },
+      "benefit_title_normal": {
+        "type": "Text",
+        "config": {
+          "label": "benefit_title_normal",
+          "placeholder": ""
+        }
+      },
+      "benefits": {
+        "type": "Group",
+        "config": {
+          "label": "benefits",
+          "fields": {
+            "image": {
+              "type": "Image",
+              "config": {
+                "label": "image",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "title_highlight": {
+              "type": "Text",
+              "config": {
+                "label": "title_highlight",
+                "placeholder": ""
+              }
+            },
+            "title_normal": {
+              "type": "Text",
+              "config": {
+                "label": "title_normal",
+                "placeholder": ""
+              }
+            },
+            "description": {
+              "type": "Text",
+              "config": {
+                "label": "description",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
+      "services": {
+        "type": "Group",
+        "config": {
+          "label": "services",
+          "fields": {
+            "title_normal_before": {
+              "type": "Text",
+              "config": {
+                "label": "title_normal_before",
+                "placeholder": ""
+              }
+            },
+            "title_highlight": {
+              "type": "Text",
+              "config": {
+                "label": "title_highlight",
+                "placeholder": ""
+              }
+            },
+            "title_normal_after": {
+              "type": "Text",
+              "config": {
+                "label": "title_normal_after",
+                "placeholder": ""
+              }
+            },
+            "description": {
+              "type": "Text",
+              "config": {
+                "label": "description",
+                "placeholder": ""
+              }
+            },
+            "image": {
+              "type": "Image",
+              "config": {
+                "label": "image",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
+        }
+      },
+      "campare_title_normal": {
+        "type": "Text",
+        "config": {
+          "label": "campare_title_normal",
+          "placeholder": ""
+        }
+      },
+      "campare_title_highlight": {
+        "type": "Text",
+        "config": {
+          "label": "campare_title_highlight",
+          "placeholder": ""
+        }
+      },
+      "campare_btn_text": {
+        "type": "Text",
+        "config": {
+          "label": "campare_btn_text",
+          "placeholder": ""
+        }
+      },
+      "campare_btn_link": {
+        "type": "Link",
+        "config": {
+          "label": "campare_btn_link",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null
+        }
+      },
+      "organisation_title_normal": {
+        "type": "Text",
+        "config": {
+          "label": "organisation_title_normal",
+          "placeholder": ""
+        }
+      },
+      "organisation_title_highlight": {
+        "type": "Text",
+        "config": {
+          "label": "organisation_title_highlight",
+          "placeholder": ""
+        }
+      },
+      "organisation_btn_enterprise_text": {
+        "type": "Text",
+        "config": {
+          "label": "organisation_btn_enterprise_text",
+          "placeholder": ""
+        }
+      },
+      "organisation_tab_left_text": {
+        "type": "Text",
+        "config": {
+          "label": "organisation_tab_left_text",
+          "placeholder": ""
+        }
+      },
+      "organisation_tab_right_text": {
+        "type": "Text",
+        "config": {
+          "label": "organisation_tab_right_text",
+          "placeholder": ""
+        }
+      },
+      "feedback_title_normal_before": {
+        "type": "Text",
+        "config": {
+          "label": "feedback_title_normal_before",
+          "placeholder": ""
+        }
+      },
+      "feedback_highlight": {
+        "type": "Text",
+        "config": {
+          "label": "feedback_highlight",
+          "placeholder": ""
+        }
+      },
+      "feedback_normal_after": {
+        "type": "Text",
+        "config": {
+          "label": "feedback_normal_after",
+          "placeholder": ""
+        }
+      },
+      "feedbacks": {
+        "type": "Group",
+        "config": {
+          "label": "feedbacks",
+          "fields": {
+            "content": {
+              "type": "Text",
+              "config": {
+                "label": "content",
+                "placeholder": ""
+              }
+            },
+            "logo_company": {
+              "type": "Image",
+              "config": {
+                "label": "logo_company",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
