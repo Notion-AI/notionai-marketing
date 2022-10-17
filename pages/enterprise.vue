@@ -2,7 +2,7 @@
   <div class="enterprise">
     <SloganEnterprise />
 
-    <TimelineEnterprise :data="data">
+    <TimelineEnterprise :data="data1">
       <p class="gradient">Stream for enterprise</p>
       <p>lorem ipsum dolor sit amet</p>
     </TimelineEnterprise>
@@ -71,11 +71,13 @@
       </template>
     </Box>
 
-    <TimelineEnterprise>
+    <TimelineEnterprise :data="data2">
       <p>Security, control and</p>
       <p>compliance that you expect from</p>
       <p class="gradient">enterprise-grade platforms.</p>
     </TimelineEnterprise>
+
+    <Trusted />
   </div>
 </template>
 
@@ -83,17 +85,24 @@
 import SloganEnterprise from '~/components/enterprise/SloganEnterprise.vue'
 import TimelineEnterprise from '~/components/enterprise/TimelineEnterprise.vue'
 import caculatorwidth from '~/utils/caculator-width'
+import Trusted from '~/components/Trusted.vue'
 
 export default {
-  components: { SloganEnterprise, TimelineEnterprise },
+  components: { SloganEnterprise, TimelineEnterprise, Trusted },
   mixins: [caculatorwidth],
   data() {
     return {
-      data: [
+      data1: [
         {title: 'Media Monitoring', sub:'Corporate Communications, Affairs, and Marketing'},
         {title: 'Global Practices', sub:'Innovation, Product Development'},
         {title: 'Commercial Platforms', sub:'Sales & Distribution, Intitutional Point of Entry Platforms, Intranet'}
-      ]
+      ],
+
+      data2: [
+        {title: 'Secure integration', sub:'Maintain full control of data that arrives and leaves the organisation'},
+        {title: 'Service-level agreement', sub:'Fully aligned to your established procurement standards'},
+        {title: 'Service', sub:'Dedicated consultant and data scientist'}
+      ],
     }
   }
 }

@@ -4,40 +4,33 @@
         <slot />
       </h2>
 
-      <div class="timeline-enter__dot grid grid-cols-3 gap-4 lg:gap-32">
+      <div class="timeline-enter__dot grid grid-cols-3 lg:gap-14">
         <div class="dot-item">
-          <span></span>
+          <span class="hidden lg:inline-block"></span>
         </div>
 
         <div class="dot-item">
-          <span></span>
+          <span class="inline-block"></span>
         </div>
 
         <div class="dot-item">
-          <span></span>
+          <span class="hidden lg:inline-block"></span>
         </div>
       </div>
 
-      <!-- <div class="swiper timeline-enter__item grid grid-cols-3 gap-4 lg:gap-32">
-        <div
-          class="swiper-wrapper"
-          v-for="(item, idx) in data" :key="idx"
-        >
-          <div class="swiper-content">
-            
-          </div>
-        </div>
-      </div> -->
+      <div class="carousel">
+        <client-only>
+          <carousel v-bind="options">
+            <slide v-for="(item,key) in data" :key="key" class="timeline-enter__item">
+              <h3 class="item-title">
+                {{ item.title }}
+              </h3>
 
-      <swiper ref="mySwiper"  :slides-per-view="3" class="columns-3">
-        <swiper-slide v-for="(item,key) in data" :key="key" class="timeline-enter__item">
-          <h3 class="item-title">
-            {{ item.title }}
-          </h3>
-
-          <p>{{ item.sub }}</p>
-        </swiper-slide>
-      </swiper>
+              <p>{{ item.sub }}</p>
+            </slide>
+          </carousel>
+        </client-only>
+      </div>
     </div>
 </template>
 
@@ -52,11 +45,13 @@ export default {
 
   data() {
     return {
-      swiperOptions: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        freeMode: true
-      },
+      options: {
+        autoplay: true,
+        autoplayHoverPause: true,
+        perPage: 1,
+        paginationEnabled: false,
+        perPageCustom: [[768, 3]]
+      }
     }
   }
 }
