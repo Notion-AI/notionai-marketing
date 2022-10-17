@@ -1,37 +1,29 @@
 <template>
     <div class="slogan">
         <div class="container mx-auto">
-            <h2 v-if="type === 'air'" class="slogan__title air">
-                <p><span>AiR,</span></p>
-                <p>AI Research for teams</p>
+            <h2 :class="`slogan__title ${type}`">
+                <p><span>{{slogan_text_line_1_highlight}}</span>{{slogan_text_line_1_normal}}</p>
+                <p>{{slogan_text_line_2_normal}}</p>
             </h2>
 
-            <h2 v-if="type === 'stream'" class="slogan__title stream">
-                <p><span>Stream,</span> dynamically</p>
-                <p>personalised briefing for you.</p>
-            </h2>
-
-            <div v-if="type === 'air'" class="slogan__sub">
-                <p>Radically improve your research process with</p>
-                <p>an AI-augmented research workflow.</p>
+            <div class="slogan__sub">
+                <p>{{slogan_text_description}}</p>
             </div>
-
-            <div v-if="type === 'stream'" class="slogan__sub">
-                <p>A platform designed to give you direct access to a global source of content and</p>
-                <p>help you synthsise the themes, trends and changes affecting your organisation.</p>
-            </div>
-
+          
             <div class="slogan__btn">
                 <app-button
                     class="mx-auto"
                     color="outline-white"
                     style="width: 190px;"
-                >Sign up for free trial</app-button>
+                >
+                  <a :href="slogan_btn_link.url" :target="slogan_btn_link.target">
+                    {{slogan_text_btn}}
+                  </a>
+                </app-button>
             </div>
 
             <div class="slogan__img">
-                <img v-if="type === 'air'" src="~assets/images/air/ai.png" alt="" class="mx-auto" />
-                <img v-if="type === 'stream'" src="~assets/images/stream/stream-dynamic-1.png" alt="" class="mx-auto" />
+                <img :src="slogan_image.url" :alt="slogan_image.alt" class="mx-auto" />
             </div>
         </div>
     </div>
@@ -43,7 +35,41 @@ export default {
         type: {
             type: String,
             default: 'air'
-        }
+        },
+        slogan_text_line_1_highlight: {
+          type: String,
+          default: ''
+        },
+        slogan_text_line_1_normal: {
+          type: String,
+          default: ''
+        },
+        slogan_text_line_2_normal: {
+          type: String,
+          default: ''
+        },
+        slogan_text_description: {
+          type: String,
+          default: '',
+        },
+        slogan_text_btn: {
+          type: String,
+          default: '',
+        },
+        slogan_btn_link: {
+          type: Object,
+          default: {
+            url: 'https://app.notion.ai/login',
+            target: '_blank'
+          }
+        },
+        slogan_image: {
+          type: Object,
+          default: {
+            url: '',
+            alt: null,
+          }
+        },
     }
 }
 </script>

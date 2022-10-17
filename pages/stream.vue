@@ -1,62 +1,72 @@
 <template>
   <div class="stream">
-    <Slogan type="stream"/>
-    <Benefits type="stream" />
+    <Slogan
+      type="stream"
+      :slogan_text_line_1_highlight="dataStream.slogan_text_line_1_highlight"
+      :slogan_text_line_1_normal="dataStream.slogan_text_line_1_normal"
+      :slogan_text_line_2_normal="dataStream.slogan_text_line_2_normal"
+      :slogan_text_description="dataStream.slogan_text_description"
+      :slogan_text_btn="dataStream.slogan_text_btn"
+      :slogan_btn_link="dataStream.slogan_btn_link"
+      :slogan_image="dataStream.slogan_image"
+    />
+    <Benefits
+      type="stream"
+      :benefit_title_highlight="dataStream.benefit_title_highlight"
+      :benefit_title_normal="dataStream.benefit_title_normal"
+      :benefits="dataStream.benefits"
+    />
 
-    <Box :class="'stream-box'">
+    <Box v-if="services.length >= 1" :class="'stream-box'">
       <template v-slot:left>
         <div>
           <h2 class="box-title">
-            <span>AI-generated summaries inside regular briefings to quickly</span> <span class="gradient">inform you.</span>
+            <span>{{services[0].title_normal_before}} </span> <span class="gradient">{{services[0].title_highlight}} </span> <span>{{services[0].title_normal_after}}</span>
           </h2>
 
           <p class="box-sub">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            {{services[0].description}}
           </p>
         </div>
       </template>
 
       <template v-slot:right>
-        <img src="~assets/images/stream/stream-box-1.png" alt="" class="mx-auto" />
+        <img :src="services[0].image.url" :alt="services[0].image.alt" class="mx-auto" />
       </template>
     </Box>
 
-    <Box :class="'stream-box'" background="#F7F7F7" :reverse="window.width < 768 ? true : false">
+    <Box v-if="services.length >= 2" background="#F7F7F7" :reverse="window.width < 768 ? true : false">
       <template v-slot:left>
-        <img src="~assets/images/stream/stream-box-2.png" alt="" class="mx-auto" />
+        <img :src="services[1].image.url" :alt="services[1].image.alt" class="mx-auto" />
       </template>
 
       <template v-slot:right>
         <div>
           <h2 class="box-title">
-            <span>Drill-down with AI analytics to understand trends and fringe concepts behind</span> <span class="gradient"> big issues.</span>
+            <span class="gradient">{{services[1].title_highlight}} </span> <span>{{services[1].title_normal_after}} </span>
           </h2>
 
-          <p class="box-sub">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
+          <p class="box-sub">{{services[1].description}}</p>
         </div>
       </template>
     </Box>
 
-    <Box :class="'stream-box'" isBtn>
+    <Box v-if="services.length >= 3" isBtn>
       <template v-slot:left>
         <div>
           <h2 class="box-title">
-            <span>Every big issue dynamically personalised to</span> <span class="gradient">your company and industry in an instant.</span>
+            <span>{{services[2].title_normal_before}} </span> <span class="gradient">{{services[2].title_highlight}} </span>
+						<span>{{services[2].title_normal_after}}</span>
           </h2>
 
           <p class="box-sub">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            {{services[2].description}}
           </p>
 
           <app-button
             nuxt
             to=""
-            :color="$route.path === '/air' ? 'gradient-pink' : 'gradient-yellow'"
+            color="gradient-pink"
             style="width: 232px; height: 38px"
             class="mb-28 md:mb-0 mx-auto md:ml-0"
           >
@@ -66,19 +76,42 @@
       </template>
 
       <template v-slot:right>
-        <img src="~assets/images/stream/stream-box-3.png" alt="" class="mx-auto" />
+        <img :src="services[2].image.url" :alt="services[2].image.alt" class="mx-auto" />
       </template>
     </Box>
 
-    <Compare />
-    <Aggregate type="stream"/>
+    <Compare
+      :campare_title_normal="dataStream.campare_title_normal"
+      :campare_title_highlight="dataStream.campare_title_highlight"
+      :campare_btn_text="dataStream.campare_btn_text"
+      :campare_btn_link="dataStream.campare_btn_link"
+    />
+    <Aggregate
+      type="stream"
+      :organisation_title_normal="dataStream.organisation_title_normal"
+      :organisation_title_highlight="dataStream.organisation_title_highlight"
+      :organisation_btn_enterprise_text="dataStream.organisation_btn_enterprise_text"
+      :organisation_tab_left_text="dataStream.organisation_tab_left_text"
+      :organisation_tab_right_text="dataStream.organisation_tab_right_text"
+    />
   </div>
 </template>
 
 <script>
 import caculatorwidth from '~/utils/caculator-width'
+import { mapState } from 'vuex'
 export default {
-  mixins: [caculatorwidth]
+  mixins: [caculatorwidth],
+  async fetch ({ $prismic, store, params }) {
+    const { data: streamResulst }= await $prismic.api.getByUID('product_page', 'stream_page')
+    store.commit('product/SET_DATA_STREAM', streamResulst)
+  },
+  computed: {
+    ...mapState('product', ['dataStream']),
+    services() {
+      return this.dataStream.services || []
+    }
+  }
 }
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="data-globe">
-    <div class="container mx-auto">
+    
         <div class="grid grid-cols-1 lg:grid-cols-3">
             <p class="data-globe__text-left text-center lg:text-right">
                 {{textLeft}}
@@ -13,7 +13,7 @@
                 <span>{{textStrong}}</span>
             </p>
         </div>
-    </div>
+   
   </div>
 </template>
 
