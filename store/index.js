@@ -18,14 +18,12 @@ const getters = {
 const actions = {
   async nuxtServerInit(ctx, { store, $prismic }) {
     const layout = await $prismic.api.getSingle('layout')
-    console.log('[layout]', layout)
     store.commit('SET_LAYOUT', layout)
   },
 }
 
 const mutations = {
   SET_LAYOUT (state, layout) {
-    console.log('layout', layout)
     state.layout = layout
   }
 }

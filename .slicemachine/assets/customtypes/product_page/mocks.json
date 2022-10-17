@@ -10,5 +10,88 @@
   "linked_documents": [],
   "lang": "en-us",
   "alternate_languages": [],
-  "data": {}
+  "data": {
+    "slogan_text_line_1_highlight": "happened",
+    "slogan_text_line_1_normal": "try",
+    "slogan_text_line_2_normal": "vast",
+    "slogan_text_description": "establish",
+    "slogan_text_btn": "deal",
+    "slogan_btn_link": {
+      "link_type": "Web",
+      "url": "https://prismic.io"
+    },
+    "slogan_image": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+    },
+    "benefit_title_highlight": "fog",
+    "benefit_title_normal": "slip",
+    "benefits": [
+      {
+        "image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa"
+        },
+        "title_highlight": "whispered",
+        "title_normal": "meat",
+        "description": "wrote"
+      }
+    ],
+    "services": [
+      {
+        "title_normal_before": "only",
+        "title_highlight": "further",
+        "title_normal_after": "activity",
+        "description": "thrown",
+        "image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e"
+        }
+      }
+    ],
+    "campare_title_normal": "eaten",
+    "campare_title_highlight": "this",
+    "campare_btn_text": "sister",
+    "campare_btn_link": {
+      "link_type": "Web",
+      "url": "https://slicemachine.dev"
+    },
+    "organisation_title_normal": "sit",
+    "organisation_title_highlight": "most",
+    "organisation_btn_enterprise_text": "how",
+    "organisation_tab_left_text": "syllable",
+    "organisation_tab_right_text": "further",
+    "feedback_title_normal_before": "orbit",
+    "feedback_highlight": "each",
+    "feedback_normal_after": "airplane",
+    "feedbacks": [
+      {
+        "content": "design",
+        "logo_company": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43"
+        }
+      }
+    ]
+  }
 }
