@@ -21,7 +21,16 @@
 .slogan,
 .benefits,
 .slogan-enterprise,
-.timeline-enter
+.timeline-enter,
+.trusted,
+.intro
 {
   background-color: #100418;
+}
+
+.text-gradient-yellow {
+  background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
 }

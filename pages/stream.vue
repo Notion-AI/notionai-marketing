@@ -94,24 +94,28 @@
       :organisation_tab_left_text="dataStream.organisation_tab_left_text"
       :organisation_tab_right_text="dataStream.organisation_tab_right_text"
     />
+
+    <Trusted />
   </div>
 </template>
 
 <script>
 import caculatorwidth from '~/utils/caculator-width'
 import { mapState } from 'vuex'
+import Trusted from '~/components/Trusted.vue'
 export default {
-  mixins: [caculatorwidth],
-  async fetch ({ $prismic, store, params }) {
-    const { data: streamResulst }= await $prismic.api.getByUID('product_page', 'stream_page')
-    store.commit('product/SET_DATA_STREAM', streamResulst)
-  },
-  computed: {
-    ...mapState('product', ['dataStream']),
-    services() {
-      return this.dataStream.services || []
-    }
-  }
+    mixins: [caculatorwidth],
+    async fetch({ $prismic, store, params }) {
+        const { data: streamResulst } = await $prismic.api.getByUID("product_page", "stream_page");
+        store.commit("product/SET_DATA_STREAM", streamResulst);
+    },
+    computed: {
+        ...mapState("product", ["dataStream"]),
+        services() {
+            return this.dataStream.services || [];
+        }
+    },
+    components: { Trusted }
 }
 </script>
 

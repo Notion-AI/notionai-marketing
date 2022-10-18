@@ -22,6 +22,11 @@
         },
         exact: {
           type: Boolean // Vue-router prop. Exactly match the link. Without this, '/' will match every route.
+        },
+        
+        border: {
+          type: Boolean,
+          default: true
         }
       },
     
@@ -38,7 +43,11 @@
             // "btn-outline--gradient-violet": this.color === "outline-gradient-violet",
           };
 
-          return { ...colorClasses };
+          const borderClasses = {
+            "border--none": this.border === false
+          }
+
+          return { ...colorClasses, ...borderClasses };
         }
       },
     
