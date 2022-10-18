@@ -13,10 +13,10 @@
     align-items: center;
     justify-content: space-between;
     background-color: #100418;
-    padding: 2rem 1rem;
+    padding: 2rem 2rem;
 
     @screen lg {
-        padding: 1.625rem 2.5rem;
+        padding: 1.625rem 5rem;
     }
 }
 
@@ -47,9 +47,12 @@
 }
 
 .header__logo a img {
-    width: 7.8125rem;
-    height: 2.0625rem;
     object-fit: cover;
+
+    @screen lg {
+        width: 7.8125rem;
+        height: 2.0625rem;
+    }
 }
 
 .header__desktop {

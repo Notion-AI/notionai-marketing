@@ -26,7 +26,12 @@
             </div>
 
             <div class="header__mobile lg:hidden">
-                <n-link to="" @click.native="isMenu = true"><img src="~assets/images/icon-menu.png" alt=""></n-link>
+                <n-link v-if="scrollUp" to="" @click.native="isMenu = true">
+                    <img src="~assets/images/menu-black.png" alt="">
+                </n-link>
+                <n-link v-else to="" @click.native="isMenu = true">
+                    <img src="~assets/images/icon-menu.png" alt="">
+                </n-link>
 
                 <div v-if="isMenu" class="mobile-list">
                     <div class="mobile-list__action">

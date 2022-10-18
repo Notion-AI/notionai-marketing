@@ -70,6 +70,8 @@
     <LearnHow />
 
     <Compare />
+
+    <Trusted />
   </div>
 </template>
 
@@ -87,6 +89,7 @@ import Ranking from "~/components/homepage/Ranking.vue";
 import WhatWould from "~/components/homepage/WhatWould.vue";
 import LearnHow from "~/components/homepage/LearnHow.vue";
 import Compare from "../components/Compare.vue";
+import Trusted from "~/components/Trusted.vue";
 
 export default {
   components: {
@@ -102,7 +105,8 @@ export default {
     Ranking,
     WhatWould,
     LearnHow,
-    Compare
+    Compare,
+    Trusted
 }
 }
 </script>

@@ -91,6 +91,8 @@
       :organisation_tab_left_text="data.organisation_tab_left_text"
       :organisation_tab_right_text="data.organisation_tab_right_text"
     />
+
+    <Trusted />
   </div>
 </template>
 
