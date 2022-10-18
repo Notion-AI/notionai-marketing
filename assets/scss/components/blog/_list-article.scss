@@ -1,0 +1,153 @@
+.list-article-wrapper {
+    padding: 4rem 2rem 5rem 2rem;
+    @screen lg {
+        padding: 4.75rem 5rem 5.625rem 5rem;
+    }
+}
+
+.list-article {
+    @screen lg {
+        display: flex;
+    }
+}
+
+.list-article__category {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 3rem;
+
+    @screen md {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    @screen lg {
+        display: block;
+        margin-bottom: 0;
+        width: 18%;
+        margin-right: 5.375rem;
+    }
+
+    a {
+        font-size: 1.6rem;
+        line-height: 136%;
+        margin-bottom: 2rem;
+        color: #000;
+        display: block;
+
+        @screen lg {
+            font-size: 1.25rem;
+            margin-bottom: 1.625rem;
+        }
+    }
+}
+
+.list-article__blog {
+    width: 100%;
+
+    @screen lg {
+        width: 82%;
+    }
+
+    .blog-img {
+        margin-bottom: 2rem;
+
+        @screen lg {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .blog-btn {
+        padding: 7px 15px;
+        margin-bottom: 1rem;
+
+        @screen lg {
+            margin-bottom: 1.125rem;
+        }
+    }
+
+    .blog-title {
+        color: #000;
+        font-weight: 500;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+
+        @screen lg {
+            font-size: 1.5rem;
+            line-height: 1.875rem;
+        }
+    }
+
+    .blog-subtext {
+        margin-bottom: 3rem;
+        color: #8B8B8B;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
+        font-size: 1.6rem;
+
+        @screen md {
+            height: 5rem;
+        }
+        
+
+        @screen lg {
+            font-size: 1rem;
+            line-height: 1.375rem;
+            margin-bottom: 2.75rem;
+            height: 4rem;
+        }
+
+        @screen xl {
+            height: 4.375rem;
+        }
+    }
+
+    .blog-time {
+        display: flex;
+        align-items: center;
+        
+        .logo-mini {
+            display: flex;
+            align-items: center;
+            margin-right: 1.6rem;
+        
+            @screen lg {
+                margin-right: 1.875rem;
+            }
+
+            img {
+                margin-right: 1rem;
+            }
+
+            span {
+                color: #8B8B8B;
+                font-size: 1.6rem;
+                @screen lg {
+                    font-size: 1rem;
+                    line-height: 1.625rem;
+                }
+            }
+        }
+
+        .date {
+            color: #8B8B8B;
+            font-size: 1.6rem;
+
+            @screen lg {
+                font-size: 1rem;
+                line-height: 1.625rem;
+            }
+        }
+    }
+}
+
+.blog-pagintion {
+    width: 100%;
+
+    @screen lg {
+        width: 82%;
+    }
+}
