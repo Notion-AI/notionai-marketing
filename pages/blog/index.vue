@@ -7,7 +7,7 @@
 
 <script>
 import Sentences from '~/components/blog/Sentences.vue';
-import ListArticle from '../components/blog/ListArticle.vue';
+import ListArticle from '~/components/blog/ListArticle.vue';
 export default {
     components: { Sentences, ListArticle },
     data() {
