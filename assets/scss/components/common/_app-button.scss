@@ -22,20 +22,27 @@
     border:unset
 }
 
+.btn--gray {
+    background: #D4D4D4;
+}
+
 .btn--white {
     background: #fff;
 }
 
 .btn--gradient-yellow {
     background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+    border: unset;
 }
 
 .btn--gradient-pink {
     background: linear-gradient(247.69deg, #F5C0BE -4.24%, #A3A5EF 191.1%);
+    border: unset;
 }
 
 .btn--gradient-violet {
     background: linear-gradient(252.6deg, #D1A8D0 -62.78%, #9D9AED 119.63%);
+    border: unset;
 }
 
 .btn-outline--white {

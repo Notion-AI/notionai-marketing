@@ -1,0 +1,123 @@
+.plans-package {
+    padding: 6rem 2rem 4rem 2rem;
+    @screen lg {
+        padding: 6rem 5rem 5rem 5rem;
+    }
+}
+
+.plans-package__title {
+    margin-bottom: 6rem;
+
+    @screen lg {
+        margin-bottom: 5.125rem;
+    }
+    p {
+        font-size: 4rem;
+        text-align: center;
+
+        @screen lg {
+            font-size: 4.125rem;
+            line-height: 4.375rem;
+        }
+    }
+
+    span {
+        font-size: 4rem;
+
+        @screen lg {
+            font-size: 4.125rem;
+            line-height: 4.375rem;
+        }
+    }
+}
+
+.package-item-wrapper {
+    padding: 1px;
+    border-radius: 20px;
+    margin-bottom: 4rem;
+
+    @screen lg {
+        margin-bottom: 0;
+    }
+}
+
+.wrapper-gradient-yellow {
+    background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+}
+
+.wrapper-gradient-pink {
+    background: -webkit-linear-gradient(247.69deg, #F5C0BE -4.24%, #A3A5EF 191.1%);
+}
+
+.wrapper-gradient-violet {
+    background: linear-gradient(252.6deg, #D1A8D0 -62.78%, #9D9AED 119.63%);
+}
+
+.package-item {
+    padding: 5rem 3rem;
+    background: #100418;
+    height: 100%;
+    border-radius: 20px;
+
+    @screen lg {
+        padding: 3.25rem 2.25rem;
+    }
+}
+
+.package-item__title {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 2rem;
+
+    @screen lg {
+        font-size: 1.25rem;
+        line-height: 113%;
+        margin-bottom: 1.625rem;
+    }
+}
+
+.package-item__price {
+    margin-bottom: 2rem;
+    text-align: center;
+    .usd {
+        font-weight: 500;
+        font-size: 3rem;
+        letter-spacing: -0.022em;
+
+        @screen lg {
+            font-size: 2.5rem;
+            line-height: 1.875rem;
+        }
+    }
+
+    .monthly {
+        font-size: 1.6rem;
+        text-align: center;
+        color: #8B8B8B;
+
+        @screen lg {
+            font-size: 1.25rem;
+            line-height: 1.625rem;
+        }
+    }
+}
+
+.package-item__text {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #8B8B8B;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+
+    @screen lg {
+        font-size: 1.25rem;
+        line-height: 1.625rem;
+    }
+}
+
+.package-item__btn {
+
+}

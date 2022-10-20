@@ -33,6 +33,7 @@
       computed: {
         classes() {
           const colorClasses = {
+            "btn--gray": this.color === "gray",
             "btn--white": this.color === "white",
             "btn--gradient-yellow": this.color === "gradient-yellow",
             "btn--gradient-pink": this.color === "gradient-pink",
