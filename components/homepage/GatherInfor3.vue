@@ -2,14 +2,12 @@
     <div class="gather-infor-3 gather-infor">
        <div class="container mx-auto">
             <h2 class="gather-infor__title">
-                <p>Gather information</p>
-                <p>faster, cheaper and better.</p>
+                <p>{{data.section_3_title_normal}}</p>
+                <p>{{data.section_3_title_highlight}}</p>
             </h2>
 
             <div class="gather-infor__sub">
-                <p>Notion Ai instantly analyses content on a global scale using Ai.</p>
-                <p>It provides you with self-service tools under a subscription model to</p>
-                <p>economically tranform your information gathering processes.</p>
+                <p>{{data.section_2_description}}</p>
             </div>
 
             <div class="gather-infor__img">
@@ -20,8 +18,12 @@
 </template>
 
 <script>
-export default {
+import { mapState } from 'vuex'
 
+export default {
+  computed: {
+    ...mapState('home', ['data'])
+  },
 }
 </script>
 
