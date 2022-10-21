@@ -98,7 +98,7 @@
 
 <script>
 import Compare from '~/components/Compare.vue'
-import Aggregate from '../components/Aggregate.vue'
+import Aggregate from '~/components/Aggregate.vue'
 
 import caculatorwidth from '~/utils/caculator-width'
 import { mapState } from 'vuex'

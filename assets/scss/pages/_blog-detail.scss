@@ -1,0 +1,121 @@
+.blog-detail {
+    padding: 6rem 2rem 0 2rem;
+    @screen lg {
+        padding: 10rem 5rem 0 5rem;
+    }
+}
+
+.blog-detail__title {
+    margin-bottom: 2.625rem;
+
+    span {
+        font-size: 4rem;
+        line-height: 4.4rem;
+        color: #000000;
+
+        @screen lg {
+            font-size: 4.125rem;
+            line-height: 4.375rem;
+        }
+    }
+}
+
+.detail-text {
+    margin-top: 5rem;
+    margin-bottom: 6rem;
+
+    @screen lg {
+        margin-top: 4.625rem;
+        margin-bottom: 5.25rem;
+    }
+
+    & p:first-child {
+        font-weight: 500;
+    }
+
+    & p {
+        margin-bottom: 1rem;
+        color: #000000;
+        font-size: 2rem;
+
+        @screen lg {
+            font-size: 1.5rem;
+            line-height: 150%;
+
+        }
+    }
+}
+
+.detail-title {
+    margin: 6rem 0;
+
+    @screen lg {
+        margin: 5.375rem 0 5.375rem -6.75rem;
+    }
+
+    p {
+        font-size: 2.5rem;
+        color: #000000;
+        font-weight: 500;
+
+        @screen lg {
+            font-size: 3.25rem;
+            line-height: 3.5rem;
+        }
+    }
+}
+
+.detail-infor {
+    @screen md {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.detail-infor__time, .detail-infor__name-logo {
+    color: #ADADAD;
+    font-size: 1.6rem;
+
+    @screen lg {
+        font-size: 1.25rem;
+        line-height: 2.25rem;
+    }
+}
+
+.detail-infor__name-logo {
+    color: #000000;
+}
+
+.detail-divide {
+    height: 1px;
+    background-color: #000000;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+
+    @screen lg {
+        margin-top: 5.125rem;
+        margin-bottom: 3.875rem;
+    }
+}
+
+.detail-note__title {
+    color: #000000;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+
+    @screen lg {
+        font-size: 1.5rem;
+        line-height: 150%;
+    }
+}
+
+.detail-note__list {
+    margin-bottom: 9rem;
+
+    li {
+       @extend .detail-note__title;
+       font-weight: 400 !important;
+       margin-left: 0.5rem;
+    }
+}

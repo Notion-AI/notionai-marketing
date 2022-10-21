@@ -12,7 +12,7 @@
 
         <div v-if="type === 3" class="fringer-data--dot">
             <img src="~assets/images/home/cycle-data.png" alt="" />
-            <p class="fringer-data__text">To quickly find the <span>1% that matters</span></p>
+            <p class="fringer-data__text">{{dataText}} <span>{{dataTextHighlight}}</span></p>
         </div>
 
         <div v-if="type === 4">
@@ -31,6 +31,14 @@ export default {
         type: {
             type: Number,
             default: 1
+        },
+        dataText: {
+          type: String,
+          default: 'To quickly find the '
+        },
+        dataTextHighlight: {
+          type: String,
+          default: '1% that matters'
         }
     }
 }

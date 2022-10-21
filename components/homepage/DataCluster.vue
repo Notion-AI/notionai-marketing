@@ -7,8 +7,8 @@
             <img src="~assets/images/home/data-cluster-3.png" alt="" class="w-1/3 lg:w-auto ml-auto">
 
             <div class="data-cluster__text">
-                <p>Analyzed to discover <span>themes</span></p>
-                <p>and connections between them</p>
+                <p>{{clusterText}} <span>{{clusterTextHighlight}}</span></p>
+                <!-- <p>and connections between them</p> -->
             </div>
         </div>
 
@@ -29,7 +29,15 @@ export default {
         type: {
             type: Number,
             default: 1
-        }
+        },
+        clusterText: {
+          type: String,
+          default: 'Analyzed to discover '
+        },
+        clusterTextHighlight: {
+          type: String,
+          default: 'themes and connections between them'
+        },
     }
 }
 </script>

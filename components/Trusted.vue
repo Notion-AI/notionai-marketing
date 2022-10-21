@@ -4,7 +4,7 @@
             <h2>
                 <p class="inline-block"> We’re </p>
                 <span v-if="$route.path === '/' || $route.path === '/stream' || $route.path === '/plans' || $route.path === '/about'" class="title--gardient-common">trusted</span>
-                <span v-if="$route.path === '/air'" class="title--gardient-pink">trusted</span>
+                <span v-if="$route.path === '/air'" class="title--gradient-pink">trusted</span>
                 <span v-if="$route.path === '/enterprise'" class="title--gardient-violet">trusted</span>
                 <p class="inline-block">by leading</p>
             </h2>

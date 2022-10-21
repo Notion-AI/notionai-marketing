@@ -4,6 +4,407 @@
   "repeatable": false,
   "status": true,
   "json": {
-    "Main": {}
+    "Main": {
+      "section_1_title_highlight": {
+        "type": "Text",
+        "config": {
+          "label": "section_1_title_highlight",
+          "placeholder": ""
+        }
+      },
+      "section_1_title_normal": {
+        "type": "Text",
+        "config": {
+          "label": "section_1_title_normal",
+          "placeholder": ""
+        }
+      },
+      "section_1_description": {
+        "type": "Text",
+        "config": {
+          "label": "section_1_description",
+          "placeholder": ""
+        }
+      },
+      "section_1_btn_text": {
+        "type": "Text",
+        "config": {
+          "label": "section_1_btn_text",
+          "placeholder": ""
+        }
+      },
+      "section_1_btn_link": {
+        "type": "Link",
+        "config": {
+          "label": "section_1_btn_link",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null
+        }
+      },
+      "section_1_image": {
+        "type": "Image",
+        "config": {
+          "label": "section_1_image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "section_2_title_highlight": {
+        "type": "Text",
+        "config": {
+          "label": "section_2_title_highlight",
+          "placeholder": ""
+        }
+      },
+      "section_2_title_normal": {
+        "type": "Text",
+        "config": {
+          "label": "section_2_title_normal",
+          "placeholder": ""
+        }
+      },
+      "section_2_description": {
+        "type": "Text",
+        "config": {
+          "label": "section_2_description",
+          "placeholder": ""
+        }
+      },
+      "section_3_title_highlight": {
+        "type": "Text",
+        "config": {
+          "label": "section_3_title_highlight",
+          "placeholder": ""
+        }
+      },
+      "section_3_title_normal": {
+        "type": "Text",
+        "config": {
+          "label": "section_3_title_normal",
+          "placeholder": ""
+        }
+      },
+      "section_3_description": {
+        "type": "Text",
+        "config": {
+          "label": "section_3_description",
+          "placeholder": ""
+        }
+      },
+      "section_4_left_text": {
+        "type": "Text",
+        "config": {
+          "label": "section_4_left_text",
+          "placeholder": ""
+        }
+      },
+      "section_4_right_text": {
+        "type": "Text",
+        "config": {
+          "label": "section_4_right_text",
+          "placeholder": ""
+        }
+      },
+      "section_4_right_text_bold": {
+        "type": "Text",
+        "config": {
+          "label": "section_4_right_text_bold",
+          "placeholder": ""
+        }
+      },
+      "section_5_left_text": {
+        "type": "Text",
+        "config": {
+          "label": "section_5_left_text",
+          "placeholder": ""
+        }
+      },
+      "section_5_right_text": {
+        "type": "Text",
+        "config": {
+          "label": "section_5_right_text",
+          "placeholder": ""
+        }
+      },
+      "section_5_right_text_bold": {
+        "type": "Text",
+        "config": {
+          "label": "section_5_right_text_bold",
+          "placeholder": ""
+        }
+      },
+      "section_5_bottom_left_text": {
+        "type": "Text",
+        "config": {
+          "label": "section_5_bottom_left_text",
+          "placeholder": ""
+        }
+      },
+      "section_5_bottom_right_text": {
+        "type": "Text",
+        "config": {
+          "label": "section_5_bottom_right_text",
+          "placeholder": ""
+        }
+      },
+      "section_5_bottom_right_text_bold": {
+        "type": "Text",
+        "config": {
+          "label": "section_5_bottom_right_text_bold",
+          "placeholder": ""
+        }
+      },
+      "section_6_sources_number": {
+        "type": "Text",
+        "config": {
+          "label": "section_6_sources_number",
+          "placeholder": ""
+        }
+      },
+      "section_7_title_highlight": {
+        "type": "Text",
+        "config": {
+          "label": "section_7_title_highlight",
+          "placeholder": ""
+        }
+      },
+      "section_7_title_normal": {
+        "type": "Text",
+        "config": {
+          "label": "section_7_title_normal",
+          "placeholder": ""
+        }
+      },
+      "section_8_title_highlight": {
+        "type": "Text",
+        "config": {
+          "label": "section_8_title_highlight",
+          "placeholder": ""
+        }
+      },
+      "section_8_title_normal": {
+        "type": "Text",
+        "config": {
+          "label": "section_8_title_normal",
+          "placeholder": ""
+        }
+      },
+      "section_9_title_highlight": {
+        "type": "Text",
+        "config": {
+          "label": "section_9_title_highlight",
+          "placeholder": ""
+        }
+      },
+      "section_9_title_normal": {
+        "type": "Text",
+        "config": {
+          "label": "section_9_title_normal",
+          "placeholder": ""
+        }
+      },
+      "section_10_title_highlight": {
+        "type": "Text",
+        "config": {
+          "label": "section_10_title_highlight",
+          "placeholder": ""
+        }
+      },
+      "section_10_title_normal": {
+        "type": "Text",
+        "config": {
+          "label": "section_10_title_normal",
+          "placeholder": ""
+        }
+      },
+      "section_11_left_title": {
+        "type": "Text",
+        "config": {
+          "label": "section_11_left_title",
+          "placeholder": ""
+        }
+      },
+      "section_11_right_title": {
+        "type": "Text",
+        "config": {
+          "label": "section_11_right_title",
+          "placeholder": ""
+        }
+      },
+      "section_12_title_highlight": {
+        "type": "Text",
+        "config": {
+          "label": "section_12_title_highlight",
+          "placeholder": ""
+        }
+      },
+      "section_12_title_normal": {
+        "type": "Text",
+        "config": {
+          "label": "section_12_title_normal",
+          "placeholder": ""
+        }
+      },
+      "section_12_sub_title": {
+        "type": "Text",
+        "config": {
+          "label": "section_12_sub_title",
+          "placeholder": ""
+        }
+      },
+      "section_12_list_topics": {
+        "type": "Group",
+        "config": {
+          "label": "section_12_list_topics",
+          "fields": {
+            "name": {
+              "type": "Text",
+              "config": {
+                "label": "name",
+                "placeholder": ""
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "link",
+                "placeholder": "",
+                "select": null
+              }
+            }
+          }
+        }
+      },
+      "section_12_btn_text": {
+        "type": "Text",
+        "config": {
+          "label": "section_12_btn_text",
+          "placeholder": ""
+        }
+      },
+      "section_12_btn_link": {
+        "type": "Text",
+        "config": {
+          "label": "section_12_btn_link",
+          "placeholder": ""
+        }
+      },
+      "section_13_title": {
+        "type": "Text",
+        "config": {
+          "label": "section_13_title",
+          "placeholder": ""
+        }
+      },
+      "section_list_products": {
+        "type": "Group",
+        "config": {
+          "label": "section_list_products",
+          "fields": {
+            "title": {
+              "type": "Text",
+              "config": {
+                "label": "title",
+                "placeholder": ""
+              }
+            },
+            "description": {
+              "type": "Text",
+              "config": {
+                "label": "description",
+                "placeholder": ""
+              }
+            },
+            "button_text": {
+              "type": "Text",
+              "config": {
+                "label": "button_text",
+                "placeholder": ""
+              }
+            },
+            "button_link": {
+              "type": "Text",
+              "config": {
+                "label": "button_link",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
+      "section_14_title_highlight": {
+        "type": "Text",
+        "config": {
+          "label": "section_14_title_highlight",
+          "placeholder": ""
+        }
+      },
+      "section_14_title_normal": {
+        "type": "Text",
+        "config": {
+          "label": "section_14_title_normal",
+          "placeholder": ""
+        }
+      },
+      "section_14_btn_text": {
+        "type": "Text",
+        "config": {
+          "label": "section_14_btn_text",
+          "placeholder": ""
+        }
+      },
+      "section_14_btn_link": {
+        "type": "Text",
+        "config": {
+          "label": "section_14_btn_link",
+          "placeholder": ""
+        }
+      },
+      "section_15_title_before": {
+        "type": "Text",
+        "config": {
+          "label": "section_15_title_before",
+          "placeholder": ""
+        }
+      },
+      "section_15_title_highlight": {
+        "type": "Text",
+        "config": {
+          "label": "section_15_title_highlight",
+          "placeholder": ""
+        }
+      },
+      "section_15_title_after": {
+        "type": "Text",
+        "config": {
+          "label": "section_15_title_after",
+          "placeholder": ""
+        }
+      },
+      "section_15_list_feedback": {
+        "type": "Group",
+        "config": {
+          "label": "section_15_list_feedback",
+          "fields": {
+            "content": {
+              "type": "Text",
+              "config": {
+                "label": "content",
+                "placeholder": ""
+              }
+            },
+            "logo": {
+              "type": "Image",
+              "config": {
+                "label": "logo",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

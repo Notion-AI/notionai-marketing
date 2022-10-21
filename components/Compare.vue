@@ -41,10 +41,12 @@ export default {
           default: ''
         },
         campare_btn_link: {
-          type: Object,
-          default: {
-            url: 'https://app.notion.ai/login',
-            target: '_blank'
+          type: Object || String,
+          default: () => {
+            return {
+              url: 'https://app.notion.ai/login',
+              target: '_blank'
+            }
           }
         }
     }

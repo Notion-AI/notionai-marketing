@@ -2,7 +2,7 @@
   <div class="source">
     <div class="container mx-auto" v-if="type === 1">
       <img class="mx-auto w-8/12" src="~/assets/images/home/source.png" alt=""/>
-      <p class="source__number">74,356 sources</p>
+      <p class="source__number">{{sourceNumber}}</p>
     </div>
 
     <img v-if="type === 2" class="mx-auto w-full" src="~/assets/images/home/source-2.png" alt=""/>
@@ -17,6 +17,10 @@ export default {
     type: {
       type: Number,
       default: 1
+    },
+    sourceNumber: {
+      type: String,
+      default: '74,356 sources'
     }
   }
 }

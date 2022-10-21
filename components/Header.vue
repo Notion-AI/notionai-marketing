@@ -9,7 +9,7 @@
                 <n-link to="/" v-else><img src="~assets/images/logo.png" alt=""></n-link>
             </div>
 
-            <div class="header__desktop hidden lg:flex">
+            <div class="header__desktop hidden xl:flex">
                 <n-link
                     v-for="(item, idx) in navigator" :key="idx"
                     :to="{ name: item.routers_name }"
@@ -25,7 +25,7 @@
                 </app-button>
             </div>
 
-            <div class="header__mobile lg:hidden">
+            <div class="header__mobile xl:hidden">
                 <n-link v-if="scrollUp" to="" @click.native="isMenu = true">
                     <img src="~assets/images/menu-black.png" alt="">
                 </n-link>
