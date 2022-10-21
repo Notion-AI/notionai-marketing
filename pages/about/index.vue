@@ -8,7 +8,7 @@
 
 <script>
 import Intro from '~/components/about/Intro.vue';
-import ThreePillar from '../components/about/ThreePillar.vue';
+import ThreePillar from '~/components/about/ThreePillar.vue';
 import Trusted from '~/components/Trusted.vue';
 
 export default {
