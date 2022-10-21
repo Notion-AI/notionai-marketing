@@ -44,6 +44,9 @@ data() {
 
     dataDetail: [
       {
+        paddingTop: 11.375,
+        paddingBottom: 11,
+        background: '#fff',
         mode: 'light',
         gradient: 'yellow',
         slogan: '<p>We empower</p> <p><span class="text-gradient-yellow">professionals</span></p> <p>to get the edge with AI Research.</p>',
@@ -63,9 +66,12 @@ data() {
       },
 
       {
+        paddingTop: 11.375,
+        paddingBottom: 8.125,
+        background: '#F7F7F7',
         mode: 'light',
         gradient: 'pink',
-        slogan: '<p>Help<span class="text-gradient-pink">your team</span</p>> <p>efficiently collaborate</p> <p>in the research process.</p>',
+        slogan: '<p>Help<span class="text-gradient-pink"> your team</span</p> <p>efficiently collaborate</p> <p>in the research process.</p>',
         title: 'AiR, perfect for teams',
         subTitle: '<p>An Ai process on top of 100,000 content sources for efficient strategic research.</p> <p>Everything in Stream +</p>',
         benefits: [
@@ -82,6 +88,9 @@ data() {
       },
 
       {
+        paddingTop: 19.5,
+        paddingBottom: 9.5,
+        background: '#100418',
         mode: 'dark',
         gradient: 'violet',
         slogan: '<p>A bespoke solution that integrates  into your</p> <p>in the research process. <span class="text-gradient-violet">Enterprise for 100+ users.</span></p>',
