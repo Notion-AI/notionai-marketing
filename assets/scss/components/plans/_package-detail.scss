@@ -1,0 +1,133 @@
+.package-detail {
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  @screen lg {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  &.light {
+    .des__slogan p,
+    .des__slogan span,
+    .des__title, 
+    .des__sub p, 
+    .des__benefit, 
+    .des__benefit-list li, 
+    .des__price p span {
+      color: #000000;
+    }
+  }
+}
+
+.des {
+  display: flex;
+  flex-direction: column;
+
+  &:first-child {
+    margin-bottom: 6rem;
+
+    @screen xl {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.des__slogan {
+  margin-bottom: 2rem;
+
+  @screen xl {
+    margin-bottom: 0;
+  }
+
+  p {
+    display: inline;
+
+    @screen xl {
+      display: block;
+    }
+  }
+
+  p, span {
+    font-size: 3.6rem;
+    letter-spacing: -0.02em;
+    
+    @screen lg {
+      font-size: 3.25rem;
+      line-height: 3.5rem;
+    }
+  }
+}
+
+.des__sign-up {
+  margin-top: auto;
+}
+
+
+
+.des__title {
+  font-weight: 500;
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+
+  @screen lg {
+    font-size: 1.875rem;
+    line-height: 2.5rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.des__sub {
+  font-size: 1.6rem;
+  margin-bottom: 3.5rem;
+
+  @screen lg {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+.des__benefit {
+  @extend .des__sub;
+  font-weight: 500;
+  margin-bottom: 2.25rem;
+}
+
+.des__benefit-list {
+  margin-bottom: 5rem;
+
+  @screen lg {
+    margin-bottom: 4.375rem;
+  }
+
+  li{
+    @extend .des__sub;
+    margin-bottom: 1.25rem;
+  
+    img {
+      margin-right: 1.75rem;
+      display: inline-block;
+    }
+  }
+}
+
+.des__price {
+  display: flex;
+  .usd {
+    font-weight: 500;
+    font-size: 2rem;
+
+    @screen lg {
+      font-size: 2.5rem;
+      line-height: 3.125rem;
+    }
+  }
+
+  .monthly {
+
+  }
+}
+
+.dark {
+
+}
