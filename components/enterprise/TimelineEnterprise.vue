@@ -23,10 +23,10 @@
           <carousel v-bind="options">
             <slide v-for="(item,key) in data" :key="key" class="timeline-enter__item">
               <h3 class="item-title">
-                {{ item.title }}
+                {{ item.title[0].text }}
               </h3>
 
-              <p>{{ item.sub }}</p>
+              <p>{{ item.description }}</p>
             </slide>
           </carousel>
         </client-only>

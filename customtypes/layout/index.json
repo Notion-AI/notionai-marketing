@@ -198,6 +198,59 @@
           "label": "email_contact",
           "placeholder": ""
         }
+      },
+      "feedback_title_normal_before": {
+        "type": "Text",
+        "config": {
+          "label": "feedback_title_normal_before",
+          "placeholder": ""
+        }
+      },
+      "feedback_title_test": {
+        "type": "StructuredText",
+        "config": {
+          "label": "feedback_title_test",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "feedback_title_highlight": {
+        "type": "Text",
+        "config": {
+          "label": "feedback_title_highlight",
+          "placeholder": ""
+        }
+      },
+      "feedback_title_normal_after": {
+        "type": "Text",
+        "config": {
+          "label": "feedback_title_normal_after",
+          "placeholder": ""
+        }
+      },
+      "feedback": {
+        "type": "Group",
+        "config": {
+          "label": "feedback",
+          "fields": {
+            "logo_company": {
+              "type": "Image",
+              "config": {
+                "label": "logo_company",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "content": {
+              "type": "Text",
+              "config": {
+                "label": "content",
+                "placeholder": ""
+              }
+            }
+          }
+        }
       }
     }
   }

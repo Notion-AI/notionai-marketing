@@ -1,5 +1,939 @@
 {
   "slices": {
-    "components": {}
+    "components": {
+      "benefits": {
+        "library": "slices",
+        "id": "benefits",
+        "name": "Benefits",
+        "description": "Benefits",
+        "model": {
+          "id": "benefits",
+          "type": "SharedSlice",
+          "name": "Benefits",
+          "description": "Benefits",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Benefits",
+              "primary": {
+                "is_active": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "Is Active",
+                    "placeholder_false": "false",
+                    "placeholder_true": "true",
+                    "default_value": true
+                  }
+                },
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": false,
+                    "single": "paragraph,strong"
+                  }
+                }
+              },
+              "items": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "",
+                    "allowTargetBlank": false,
+                    "single": "paragraph,strong"
+                  }
+                },
+                "description": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": ""
+                  }
+                },
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            },
+            {
+              "id": "enterprise1",
+              "name": "enterprise_1",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Benefits",
+              "primary": {
+                "is_active": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "Is Active",
+                    "placeholder_false": "false",
+                    "placeholder_true": "true",
+                    "default_value": true
+                  }
+                },
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": false,
+                    "multi": "paragraph,strong"
+                  }
+                }
+              },
+              "items": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "",
+                    "allowTargetBlank": false,
+                    "single": "paragraph,strong"
+                  }
+                },
+                "description": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": ""
+                  }
+                },
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            },
+            {
+              "id": "enterprise2",
+              "name": "enterprise_2",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Benefits",
+              "primary": {
+                "is_active": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "Is Active",
+                    "placeholder_false": "false",
+                    "placeholder_true": "true",
+                    "default_value": true
+                  }
+                },
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": false,
+                    "multi": "paragraph,strong"
+                  }
+                }
+              },
+              "items": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "",
+                    "allowTargetBlank": false,
+                    "single": "paragraph,strong"
+                  }
+                },
+                "description": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": ""
+                  }
+                },
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "title": [
+                  {
+                    "type": "paragraph",
+                    "text": "Do magna mollit officia velit fugiat. Nulla sint culpa est reprehenderit irure tempor ut. Nostrud cillum enim proident cupidatat culpa est proident dolor.",
+                    "spans": []
+                  }
+                ],
+                "description": "tail",
+                "image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118"
+                }
+              }
+            ],
+            "primary": {
+              "is_active": false,
+              "title": [
+                {
+                  "type": "paragraph",
+                  "text": "Deserunt elit laborum qui deserunt quis duis. Ad ea reprehenderit eiusmod nulla id veniam ea anim voluptate quis incididunt esse ut mollit ut. Consequat do nostrud adipisicing in cillum nostrud ex laborum non sunt.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "benefits"
+          },
+          "enterprise1": {
+            "variation": "enterprise1",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "title": [
+                  {
+                    "type": "paragraph",
+                    "text": "Occaecat reprehenderit aute laborum sunt non cupidatat sit. Aliqua laboris aliqua ad do sunt irure magna consequat dolor ad. Eu cillum dolore in nisi anim.",
+                    "spans": []
+                  }
+                ],
+                "description": "unknown",
+                "image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869"
+                }
+              }
+            ],
+            "primary": {
+              "is_active": true,
+              "title": [
+                {
+                  "type": "paragraph",
+                  "text": "Nostrud minim deserunt irure ea in enim aliqua nisi ut incididunt deserunt amet amet voluptate. Irure ipsum non qui laboris aliqua commodo. Laboris ex tempor enim culpa.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "benefits"
+          },
+          "enterprise2": {
+            "variation": "enterprise2",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "title": [
+                  {
+                    "type": "paragraph",
+                    "text": "Ex do aute veniam culpa in.",
+                    "spans": []
+                  }
+                ],
+                "description": "actual",
+                "image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db"
+                }
+              }
+            ],
+            "primary": {
+              "is_active": false,
+              "title": [
+                {
+                  "type": "paragraph",
+                  "text": "Duis magna fugiat laborum nostrud sit cupidatat dolore dolore amet quis velit reprehenderit non. Fugiat dolore aute ea eiusmod velit minim consequat nostrud voluptate. Cillum Lorem qui consequat nostrud Lorem nostrud sunt reprehenderit.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "benefits"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/hoangnguyen/Desktop/notionAI/notionai-marketing/slices/Benefits/default/preview.png",
+            "width": 551,
+            "height": 247
+          },
+          "enterprise1": {
+            "path": "/Users/hoangnguyen/Desktop/notionAI/notionai-marketing/slices/Benefits/enterprise1/preview.png",
+            "width": 1205,
+            "height": 531
+          },
+          "enterprise2": {
+            "path": "/Users/hoangnguyen/Desktop/notionAI/notionai-marketing/slices/Benefits/enterprise2/preview.png",
+            "width": 783,
+            "height": 443
+          }
+        }
+      },
+      "introduction": {
+        "library": "slices",
+        "id": "introduction",
+        "name": "Introduction",
+        "description": "Introduction",
+        "model": {
+          "id": "introduction",
+          "type": "SharedSlice",
+          "name": "Introduction",
+          "description": "Introduction",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Introduction",
+              "primary": {
+                "is_active": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "Is Active",
+                    "placeholder_false": "false",
+                    "placeholder_true": "true",
+                    "default_value": true
+                  }
+                },
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": false,
+                    "multi": "paragraph,strong,rtl,preformatted"
+                  }
+                },
+                "description": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": ""
+                  }
+                },
+                "button_link": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Button Link",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "select": null
+                  }
+                },
+                "button_text": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Button Text",
+                    "placeholder": ""
+                  }
+                },
+                "media": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Media",
+                    "placeholder": "",
+                    "select": "media"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            },
+            {
+              "id": "enterprise",
+              "name": "Enterprise",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Introduction",
+              "primary": {
+                "is_active": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "Is Active",
+                    "placeholder_false": "false",
+                    "placeholder_true": "true",
+                    "default_value": true
+                  }
+                },
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": false,
+                    "multi": "paragraph,strong"
+                  }
+                },
+                "description": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": ""
+                  }
+                },
+                "button_link": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Button Link",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "select": null
+                  }
+                },
+                "button_text": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Button Text",
+                    "placeholder": ""
+                  }
+                },
+                "media": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Media",
+                    "placeholder": "",
+                    "select": "media"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "is_active": false,
+              "title": [
+                {
+                  "type": "paragraph",
+                  "text": "Non sint voluptate pariatur. Culpa mollit sit esse adipisicing tempor irure laboris cillum aliquip minim dolore exercitation velit dolore.",
+                  "spans": []
+                }
+              ],
+              "description": "written",
+              "button_link": {
+                "link_type": "Web",
+                "url": "http://google.com"
+              },
+              "button_text": "explain",
+              "media": {
+                "link_type": "Media",
+                "name": "mock",
+                "kind": "image",
+                "url": "https://source.unsplash.com/random",
+                "size": "10kB"
+              }
+            },
+            "slice_type": "introduction"
+          },
+          "enterprise": {
+            "variation": "enterprise",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "is_active": false,
+              "title": [
+                {
+                  "type": "paragraph",
+                  "text": "Reprehenderit aliquip eu reprehenderit culpa aliqua ad dolor culpa. Consequat et sit laboris laborum. Reprehenderit mollit anim deserunt aliquip fugiat.",
+                  "spans": []
+                }
+              ],
+              "description": "way",
+              "button_link": {
+                "link_type": "Web",
+                "url": "https://prismic.io"
+              },
+              "button_text": "mistake",
+              "media": {
+                "link_type": "Media",
+                "name": "mock",
+                "kind": "image",
+                "url": "https://source.unsplash.com/random",
+                "size": "10kB"
+              }
+            },
+            "slice_type": "introduction"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/hoangnguyen/Desktop/notionAI/notionai-marketing/slices/Introduction/default/preview.png",
+            "width": 523,
+            "height": 454
+          },
+          "enterprise": {
+            "path": "/Users/hoangnguyen/Desktop/notionAI/notionai-marketing/slices/Introduction/enterprise/preview.png",
+            "width": 523,
+            "height": 454
+          }
+        }
+      },
+      "service": {
+        "library": "slices",
+        "id": "service",
+        "name": "Service",
+        "description": "Service",
+        "model": {
+          "id": "service",
+          "type": "SharedSlice",
+          "name": "Service",
+          "description": "Service",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Service",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": false,
+                    "single": "paragraph,strong"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": "A nice description of your product",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,strong"
+                  }
+                },
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "paragraph",
+                  "text": "Proident duis ad commodo aute est sunt.",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Aliqua ad esse qui exercitation pariatur aliqua esse fugiat excepteur esse.",
+                  "spans": []
+                }
+              ],
+              "image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb"
+              }
+            },
+            "slice_type": "service"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/hoangnguyen/Desktop/notionAI/notionai-marketing/slices/Service/default/preview.png",
+            "width": 1151,
+            "height": 661
+          }
+        }
+      },
+      "services": {
+        "library": "slices",
+        "id": "services",
+        "name": "Services",
+        "description": "Services",
+        "model": {
+          "id": "services",
+          "type": "SharedSlice",
+          "name": "Services",
+          "description": "Services",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Services",
+              "primary": {},
+              "items": {
+                "is_active": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "Is Active",
+                    "placeholder_false": "false",
+                    "placeholder_true": "true",
+                    "default_value": true
+                  }
+                },
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "",
+                    "allowTargetBlank": false,
+                    "single": "paragraph,strong"
+                  }
+                },
+                "description": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": ""
+                  }
+                },
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "Background Color",
+                    "placeholder": ""
+                  }
+                },
+                "button_text": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Button Text",
+                    "placeholder": ""
+                  }
+                },
+                "button_link": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Button Link",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "select": null
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            },
+            {
+              "id": "enterprise",
+              "name": "Enterprise",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Services",
+              "primary": {},
+              "items": {
+                "is_active": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "Is Active",
+                    "placeholder_false": "false",
+                    "placeholder_true": "true",
+                    "default_value": true
+                  }
+                },
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "",
+                    "allowTargetBlank": false,
+                    "single": "paragraph,strong"
+                  }
+                },
+                "description": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": ""
+                  }
+                },
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "Background Color",
+                    "placeholder": ""
+                  }
+                },
+                "button_text": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Button Text",
+                    "placeholder": ""
+                  }
+                },
+                "button_link": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Button Link",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "select": null
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "is_active": true,
+                "title": [
+                  {
+                    "type": "paragraph",
+                    "text": "Elit ex consectetur mollit minim sint fugiat ipsum consectetur fugiat tempor.",
+                    "spans": []
+                  }
+                ],
+                "description": "smaller",
+                "image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468"
+                },
+                "background_color": "#ab3e78",
+                "button_text": "process",
+                "button_link": {
+                  "link_type": "Web",
+                  "url": "http://google.com"
+                }
+              }
+            ],
+            "primary": {},
+            "slice_type": "services"
+          },
+          "enterprise": {
+            "variation": "enterprise",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "is_active": true,
+                "title": [
+                  {
+                    "type": "paragraph",
+                    "text": "Irure voluptate nostrud laboris incididunt in. Mollit dolor incididunt officia aliqua. Voluptate proident deserunt deserunt.",
+                    "spans": []
+                  }
+                ],
+                "description": "label",
+                "image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869"
+                },
+                "background_color": "#28d937",
+                "button_text": "identity",
+                "button_link": {
+                  "link_type": "Web",
+                  "url": "https://prismic.io"
+                }
+              }
+            ],
+            "primary": {},
+            "slice_type": "services"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/hoangnguyen/Desktop/notionAI/notionai-marketing/slices/Services/default/preview.png",
+            "width": 304,
+            "height": 570
+          },
+          "enterprise": {
+            "path": "/Users/hoangnguyen/Desktop/notionAI/notionai-marketing/slices/Services/enterprise/preview.png",
+            "width": 304,
+            "height": 570
+          }
+        }
+      },
+      "title_primary": {
+        "library": "slices",
+        "id": "title_primary",
+        "name": "TitlePrimary",
+        "description": "TitlePrimary",
+        "model": {
+          "id": "title_primary",
+          "type": "SharedSlice",
+          "name": "TitlePrimary",
+          "description": "TitlePrimary",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "TitlePrimary",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                }
+              },
+              "items": {
+                "test": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "test",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "test": [
+                  {
+                    "type": "paragraph",
+                    "text": "Laboris dolore voluptate esse eu.",
+                    "spans": []
+                  }
+                ]
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Every",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "title_primary"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/hoangnguyen/Desktop/notionAI/notionai-marketing/slices/TitlePrimary/default/preview.png",
+            "width": 574,
+            "height": 132
+          }
+        }
+      }
+    }
   }
 }
