@@ -5,7 +5,7 @@
                 <p class="inline-block"> {{ data.feedback_title_normal_before }} </p>
                 <span v-if="$route.path === '/' || $route.path === '/stream' || $route.path === '/plans' || $route.path === '/about'" class="title--gardient-common">{{ data.feedback_title_highlight }}</span>
                 <span v-if="$route.path === '/air'" class="title--gradient-pink">{{ data.feedback_title_highlight }}</span>
-                <span v-if="$route.path === '/enterprise'" class="title--gardient-violet">{{ data.feedback_title_highlight }}</span>
+                <span v-if="$route.path === '/enterprise'" class="title--gradient-violet">{{ data.feedback_title_highlight }}</span>
                 <p class="inline-block">{{ data.feedback_title_normal_after }}</p>
             </h2>
         </div>
@@ -16,7 +16,7 @@
                     <slide
                       v-for="(feedback, idx) in feedbacks"
                       :key="idx"
-                      :class="{ 'carousel-item': idx === 0 }"
+                      class="carousel-item"
                     >
                         <p class="text-feedback">{{ feedback?.content || ''}}</p>
                         <div v-if="$route.path === '/' || $route.path === '/stream' || $route.path === '/plans' || $route.path === '/about'" class="trusted-line">

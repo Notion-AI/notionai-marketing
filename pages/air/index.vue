@@ -8,6 +8,7 @@
       :slogan_text_btn="data.slogan_text_btn"
       :slogan_btn_link="data.slogan_btn_link"
       :slogan_image="data.slogan_image"
+      :class="`slogan-${$route.name}`"
     />
     <Benefits
       :benefit_title_highlight="data.benefit_title_highlight"
