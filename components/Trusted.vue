@@ -13,6 +13,7 @@
         <div class="trusted__carousel">
             <client-only>
                 <carousel v-bind="options">
+<<<<<<< HEAD
                     <slide class="carousel-item">
                         <p class="text-feedback">“Notion provides us with strategically relevant information that allows us to develop greater insights for decision-making for both emerging strategic trends and current events. It's a service that is strategically aligned and a useful tool for leaders.”</p>
                         <div v-if="$route.path === '/' || $route.path === '/stream' || $route.path === '/plans' || $route.path === '/about'" class="trusted-line">
@@ -24,6 +25,14 @@
                             <span></span>
                             <!-- <span class="hidden lg:block"></span> -->
                         </div>
+=======
+                    <slide v-for="(feedback,idx) in feedbacks" :key="idx" class="carousel-item">
+                        <p class="text-xs lg: text-xl">{{ feedback.content }}</p>
+                    </slide>
+                </carousel>
+            </client-only>
+        </div>
+>>>>>>> a39788d18f6e2c73efcbdaa0752ae10a2c8b404e
 
                         <div v-if="$route.path === '/enterprise'" class="trusted-line trusted-line--violet">
                             <span></span>
@@ -49,12 +58,22 @@
                             <span></span>
                         </div>
 
+<<<<<<< HEAD
                         <div class="trusted-img">
                             <img src="~assets/images/anz.png" alt="">
                         </div>
                     </slide>
                 </carousel>
             </client-only>
+=======
+        <div class="trusted-img grid grid-cols-2 gap-4 lg:gap-32">
+            <img
+              v-for="(feedback,idx) in feedbacks"
+              :key="idx"
+              :src="feedback.logo_company.url"
+              :alt="feedback.logo_company.alt"
+            >
+>>>>>>> a39788d18f6e2c73efcbdaa0752ae10a2c8b404e
         </div>
     </div>
 </template>
