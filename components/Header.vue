@@ -55,7 +55,7 @@
 
                     <div class="mobile-list__login">
                         <app-button 
-                          class="w-full"
+                          class="w-full md:w-6/12 mx-auto"
                           color="outline-white"
                         >
                           <a :href="alertLink.url" :target="alertLink.target">Login</a>
