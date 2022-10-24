@@ -381,29 +381,6 @@
           "label": "section_15_title_after",
           "placeholder": ""
         }
-      },
-      "section_15_list_feedback": {
-        "type": "Group",
-        "config": {
-          "label": "section_15_list_feedback",
-          "fields": {
-            "content": {
-              "type": "Text",
-              "config": {
-                "label": "content",
-                "placeholder": ""
-              }
-            },
-            "logo": {
-              "type": "Image",
-              "config": {
-                "label": "logo",
-                "constraint": {},
-                "thumbnails": []
-              }
-            }
-          }
-        }
       }
     }
   }
