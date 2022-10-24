@@ -2,13 +2,12 @@
     <div class="trusted">
         <div class="trusted__title">
             <h2>
-                <p class="inline-block"> We’re </p>
-                <span v-if="$route.path === '/' || $route.path === '/stream' || $route.path === '/plans' || $route.path === '/about'" class="title--gardient-common">trusted</span>
-                <span v-if="$route.path === '/air'" class="title--gradient-pink">trusted</span>
-                <span v-if="$route.path === '/enterprise'" class="title--gardient-violet">trusted</span>
-                <p class="inline-block">by leading</p>
+                <p class="inline-block"> {{ data.feedback_title_normal_before }} </p>
+                <span v-if="$route.path === '/' || $route.path === '/stream' || $route.path === '/plans' || $route.path === '/about'" class="title--gardient-common">{{ data.feedback_title_highlight }}</span>
+                <span v-if="$route.path === '/air'" class="title--gradient-pink">{{ data.feedback_title_highlight }}</span>
+                <span v-if="$route.path === '/enterprise'" class="title--gardient-violet">{{ data.feedback_title_highlight }}</span>
+                <p class="inline-block">{{ data.feedback_title_normal_after }}</p>
             </h2>
-            <h2>professionals and businesses globally.</h2>
         </div>
 
         <div class="trusted__carousel">
@@ -61,6 +60,8 @@
 </template>
 
 <script>
+import { mapState, mapGetters } from 'vuex'
+
 export default {
     data() {
         return {
@@ -72,6 +73,19 @@ export default {
                 perPageCustom: [[768, 2]],
             }
         }
+    },
+    computed: {
+      ...mapGetters([
+        'feedbacks'
+      ]),
+
+      ...mapState([
+        'layout'
+      ]),
+
+      data () {
+        return this.layout?.data || {}
+      }
     }
 }
 </script>

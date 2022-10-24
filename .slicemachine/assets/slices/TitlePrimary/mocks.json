@@ -1,0 +1,27 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {
+        "test": [
+          {
+            "type": "paragraph",
+            "text": "Laboris dolore voluptate esse eu.",
+            "spans": []
+          }
+        ]
+      }
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Every",
+          "spans": []
+        }
+      ]
+    },
+    "slice_type": "title_primary"
+  }
+]
