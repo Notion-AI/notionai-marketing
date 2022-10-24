@@ -13,8 +13,12 @@
         <div class="trusted__carousel">
             <client-only>
                 <carousel v-bind="options">
-                    <slide class="carousel-item">
-                        <p class="text-feedback">“Notion provides us with strategically relevant information that allows us to develop greater insights for decision-making for both emerging strategic trends and current events. It's a service that is strategically aligned and a useful tool for leaders.”</p>
+                    <slide
+                      v-for="(feedback, idx) in feedbacks"
+                      :key="idx"
+                      :class="{ 'carousel-item': idx === 0 }"
+                    >
+                        <p class="text-feedback">{{ feedback?.content || ''}}</p>
                         <div v-if="$route.path === '/' || $route.path === '/stream' || $route.path === '/plans' || $route.path === '/about'" class="trusted-line">
                             <span></span>
                             <!-- <span class="hidden lg:block"></span> -->
@@ -30,11 +34,10 @@
                         </div>
 
                         <div class="trusted-img">
-                            <img src="~assets/images/craig-walker.png" alt="">
+                            <img :src="feedback?.logo_company?.url" :alt="feedback?.logo_company?.alt">
                         </div>
                     </slide>
-
-                    <slide>
+                    <!-- <slide>
                         <p class="text-feedback">“A global review of thematics and practices in life insurance advice led to four ideas that informed the design strategy for Advice solutions.”</p>
                         
                         <div v-if="$route.path === '/' || $route.path === '/stream' || $route.path === '/plans' || $route.path === '/about'" class="trusted-line">
@@ -52,7 +55,7 @@
                         <div class="trusted-img">
                             <img src="~assets/images/anz.png" alt="">
                         </div>
-                    </slide>
+                    </slide> -->
                 </carousel>
             </client-only>
         </div>
