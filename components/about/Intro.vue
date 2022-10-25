@@ -1,24 +1,14 @@
 <template>
     <div class="intro">
         <div class="container-mx-auto">
-            <h1 class="intro__title lg:hidden">
+            <h1 class="intro__title">
                 We are an enterprise software
                 service company helping professionals
                 and businesses manage reputation, risks
-                and revenues through <span class="gradient">faster, cheaper and</span>
-                <span class="gradient">better information on their customers</span>
-                <span class="gradient">and stakeholders with the power of</span>
-                <span class="gradient">artificial intelligence.</span>
-            </h1>
-
-            <h1 class="intro__title hidden lg:block">
-                <p>We are an enterprise software</p>
-                <p>service company helping professionals</p>
-                <p>and businesses manage reputation, risks</p>
-                <p>and revenues through <span class="gradient">faster, cheaper and</span></p>
-                <p class="gradient">better information on their customers</p>
-                <p class="gradient">and stakeholders with the power of</p>
-                <p class="gradient">artificial intelligence.</p>
+                and revenues through <span class="text-gradient-yellow">faster, cheaper and</span>
+                <span class="text-gradient-yellow">better information on their customers</span>
+                <span class="text-gradient-yellow">and stakeholders with the power of</span>
+                <span class="text-gradient-yellow">artificial intelligence.</span>
             </h1>
 
             <div class="intro__content">

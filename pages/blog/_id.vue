@@ -3,7 +3,7 @@
         <div class="blog-detail">
             <h2 class="blog-detail__title">
                 <span class="text-gradient-yellow">Article title goes here.</span> 
-                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</span>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             </h2>
     
             <div class="blog-detail__img">

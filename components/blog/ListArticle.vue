@@ -10,7 +10,11 @@
             </div>
 
             <div class="list-article__blog grid grid-cols-1 gap-2.5 md:grid-cols-2 md:gap-5">
-                <div v-for="(item, index) in data" :key="index" class="mx-auto mb-14 md:mb-11">
+                <div 
+                    v-for="(item, index) in data" :key="index" 
+                    class="mx-auto mb-14 md:mb-11"
+                    @click="$router.push(`/blog/${item.id}`)"
+                >
                     <img :src="item.img" alt="" class="blog-img">
                     <app-button class="blog-btn">{{ item.textBtn }}</app-button>
 

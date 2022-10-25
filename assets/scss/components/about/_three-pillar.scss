@@ -7,22 +7,25 @@
 
 .three-pillar__title {
     margin-bottom: 4rem;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    color: #000000;
+
+    @screen lg {
+        font-size: 3.25rem;
+    }
 
     @screen lg {
         margin-bottom: 3.25rem;
     }
 
-    p, .text-gradient-yellow {
+    .text-gradient-yellow {
         font-size: 2.5rem;
         line-height: 3.5rem;
 
         @screen lg {
             font-size: 3.25rem;
         }
-    }
-
-    p {
-        color: #000000
     }
 }
 

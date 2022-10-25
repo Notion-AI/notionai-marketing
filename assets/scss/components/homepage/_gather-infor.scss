@@ -34,6 +34,11 @@
         color: #BEBEBE;
         font-size: 1.25rem;
         line-height: 1.625rem;
+
+        @media (min-width: 1440px) {
+            width: 51.5%;
+            margin: 0 auto;
+        } 
     }
 }
 

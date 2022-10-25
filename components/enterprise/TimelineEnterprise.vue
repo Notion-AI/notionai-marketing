@@ -4,29 +4,19 @@
         <slot />
       </h2>
 
-      <div class="timeline-enter__dot grid grid-cols-3 lg:gap-14">
-        <div class="dot-item">
-          <span class="hidden lg:inline-block"></span>
-        </div>
-
-        <div class="dot-item">
-          <span class="inline-block"></span>
-        </div>
-
-        <div class="dot-item">
-          <span class="hidden lg:inline-block"></span>
-        </div>
-      </div>
-
       <div class="carousel">
         <client-only>
           <carousel v-bind="options">
             <slide v-for="(item,key) in data" :key="key" class="timeline-enter__item">
+               <div class="item-dot">
+                  <span></span>
+                </div>
+
               <h3 class="item-title">
-                {{ item.title }}
+                {{ item.title[0].text }}
               </h3>
 
-              <p>{{ item.sub }}</p>
+              <p>{{ item.description }}</p>
             </slide>
           </carousel>
         </client-only>

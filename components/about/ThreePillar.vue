@@ -2,8 +2,7 @@
     <div class="three-pillar">
         <div class="container mx-auto">
             <h2 class="three-pillar__title">
-                <p>Notion Ai's products and capabilities are</p>
-                <p>anchored in three pillars: <span class="text-gradient-yellow">strategy, data and design.</span></p>
+                Notion Ai's products and capabilities are anchored in three pillars: <span class="text-gradient-yellow">strategy, data and design.</span>
             </h2>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 lg:gap-5">

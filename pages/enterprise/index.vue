@@ -1,10 +1,17 @@
 <template>
   <div class="enterprise">
-    <SloganEnterprise />
+    <SloganEnterprise v-if="intruduction?.primary?.is_active || false"/>
 
-    <TimelineEnterprise :data="data1">
-      <p class="gradient">Stream for enterprise</p>
-      <p>lorem ipsum dolor sit amet</p>
+    <TimelineEnterprise
+      v-if="benefitsIntro?.primary?.is_active || false"
+      :data="itemsBenefitsIntro"
+    >
+      <p
+        v-for="(title, idx) in benefitsIntro?.primary?.title"
+        :key="idx"
+        v-html="$textConvert(title)"
+      >
+      </p>
     </TimelineEnterprise>
 
     <Box background="#100418">
@@ -71,7 +78,9 @@
       </template>
     </Box>
 
-    <TimelineEnterprise :data="data2">
+    <TimelineEnterprise
+      :data="itemsBenefitsIntro"
+    >
       <p>Security, control and</p>
       <p>compliance that you expect from</p>
       <p class="gradient">enterprise-grade platforms.</p>
@@ -86,10 +95,16 @@ import SloganEnterprise from '~/components/enterprise/SloganEnterprise.vue'
 import TimelineEnterprise from '~/components/enterprise/TimelineEnterprise.vue'
 import caculatorwidth from '~/utils/caculator-width'
 import Trusted from '~/components/Trusted.vue'
+import { mapState, mapGetters } from 'vuex'
+import { filter } from 'lodash'
 
 export default {
   components: { SloganEnterprise, TimelineEnterprise, Trusted },
   mixins: [caculatorwidth],
+  async fetch ({ $prismic, store }) {
+    const { data: enterpriseResulst }= await $prismic.api.getSingle('enterprise')
+    store.commit('enterprise/SET_DATA', enterpriseResulst)
+  },
   data() {
     return {
       data1: [
@@ -103,6 +118,18 @@ export default {
         {title: 'Service-level agreement', sub:'Fully aligned to your established procurement standards'},
         {title: 'Service', sub:'Dedicated consultant and data scientist'}
       ],
+    }
+  },
+  computed: {
+    ...mapState('enterprise', ['data']),
+
+    ...mapGetters('enterprise', [
+      'benefitsIntro',
+      'intruduction'
+    ]),
+
+    itemsBenefitsIntro () {
+      return this.benefitsIntro?.items || []
     }
   }
 }

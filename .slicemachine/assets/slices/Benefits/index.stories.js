@@ -1,0 +1,64 @@
+import MyComponent from '../../../../slices/Benefits';
+import SliceZone from 'vue-slicezone'
+
+export default {
+  title: 'slices/Benefits'
+}
+
+
+export const _Default = () => ({
+  components: {
+    MyComponent,
+    SliceZone
+  },
+  methods: {
+    resolve() {
+      return MyComponent
+    }
+  },
+  data() {
+    return {
+      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{"title":[{"type":"paragraph","text":"Do magna mollit officia velit fugiat. Nulla sint culpa est reprehenderit irure tempor ut. Nostrud cillum enim proident cupidatat culpa est proident dolor.","spans":[]}],"description":"tail","image":{"dimensions":{"width":900,"height":500},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1560457079-9a6532ccb118"}}],"primary":{"is_active":false,"title":[{"type":"paragraph","text":"Deserunt elit laborum qui deserunt quis duis. Ad ea reprehenderit eiusmod nulla id veniam ea anim voluptate quis incididunt esse ut mollit ut. Consequat do nostrud adipisicing in cillum nostrud ex laborum non sunt.","spans":[]}]},"slice_type":"benefits","id":"_Default"}
+    }
+  },
+  template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
+})
+_Default.storyName = ''
+
+export const _Enterprise1 = () => ({
+  components: {
+    MyComponent,
+    SliceZone
+  },
+  methods: {
+    resolve() {
+      return MyComponent
+    }
+  },
+  data() {
+    return {
+      mock: {"variation":"enterprise1","version":"sktwi1xtmkfgx8626","items":[{"title":[{"type":"paragraph","text":"Occaecat reprehenderit aute laborum sunt non cupidatat sit. Aliqua laboris aliqua ad do sunt irure magna consequat dolor ad. Eu cillum dolore in nisi anim.","spans":[]}],"description":"unknown","image":{"dimensions":{"width":900,"height":500},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1600804931749-2da4ce26c869"}}],"primary":{"is_active":true,"title":[{"type":"paragraph","text":"Nostrud minim deserunt irure ea in enim aliqua nisi ut incididunt deserunt amet amet voluptate. Irure ipsum non qui laboris aliqua commodo. Laboris ex tempor enim culpa.","spans":[]}]},"slice_type":"benefits","id":"_Enterprise1"}
+    }
+  },
+  template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
+})
+_Enterprise1.storyName = ''
+
+export const _Enterprise2 = () => ({
+  components: {
+    MyComponent,
+    SliceZone
+  },
+  methods: {
+    resolve() {
+      return MyComponent
+    }
+  },
+  data() {
+    return {
+      mock: {"variation":"enterprise2","version":"sktwi1xtmkfgx8626","items":[{"title":[{"type":"paragraph","text":"Ex do aute veniam culpa in.","spans":[]}],"description":"actual","image":{"dimensions":{"width":900,"height":500},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1537498425277-c283d32ef9db"}}],"primary":{"is_active":false,"title":[{"type":"paragraph","text":"Duis magna fugiat laborum nostrud sit cupidatat dolore dolore amet quis velit reprehenderit non. Fugiat dolore aute ea eiusmod velit minim consequat nostrud voluptate. Cillum Lorem qui consequat nostrud Lorem nostrud sunt reprehenderit.","spans":[]}]},"slice_type":"benefits","id":"_Enterprise2"}
+    }
+  },
+  template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
+})
+_Enterprise2.storyName = ''

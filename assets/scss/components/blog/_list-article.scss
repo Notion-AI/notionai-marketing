@@ -72,6 +72,10 @@
         font-weight: 500;
         font-size: 2rem;
         margin-bottom: 1rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
 
         @screen lg {
             font-size: 1.5rem;
