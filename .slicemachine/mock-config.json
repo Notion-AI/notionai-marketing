@@ -34,7 +34,8 @@
         }
       }
     },
-    "enterprise": {}
+    "enterprise": {},
+    "plans": {}
   },
   "slices": {
     "Service": {
@@ -127,6 +128,38 @@
         "primary": {},
         "items": {
           "title": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "PlansIntroduction": {
+      "default": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {}
+      }
+    },
+    "PlanDetails": {
+      "default": {
+        "primary": {},
+        "items": {
+          "slogan": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "benefits": {
             "config": {
               "patternType": "PARAGRAPH",
               "blocks": 1

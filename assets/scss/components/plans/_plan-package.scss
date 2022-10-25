@@ -7,6 +7,10 @@
 
 .plans-package__title {
     margin-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     @screen lg {
         margin-bottom: 5.125rem;
@@ -18,6 +22,7 @@
         @screen lg {
             font-size: 4.125rem;
             line-height: 4.375rem;
+            max-width: 60rem;
         }
     }
 
@@ -29,6 +34,15 @@
             line-height: 4.375rem;
         }
     }
+
+    ::v-deep(span) {
+      font-size: 4rem;
+
+      @screen lg {
+          font-size: 4.125rem;
+          line-height: 4.375rem;
+      }
+  }
 }
 
 .package-item-wrapper {

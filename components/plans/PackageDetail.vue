@@ -5,13 +5,20 @@
             class="package-detail grid grid-cols-1 xl:grid-cols-2 lg:gap-16"
             :class="item.mode"
             :style="{
-                paddingTop: item.paddingTop + 'rem', 
-                paddingBottom: item.paddingBottom +'rem',
-                background: item.background
+                paddingTop: item.padding_top + 'rem', 
+                paddingBottom: item.padding_bottom +'rem',
+                background: item.background_color
             }"
         >
             <div class="des">
-                <h2 class="des__slogan" v-html="item.slogan"></h2>
+                <h2 class="des__slogan">
+                  <p
+                    v-for="(text, idx) in item.slogan"
+                    :key="idx"
+                    v-html="$textConvert(text, '', `text-gradient-${item.gradient}`)"
+                  >
+                  </p>
+                </h2>
                 <app-button
                     class="des__sign-up"
                     style="width: 100px"
@@ -22,7 +29,7 @@
             <div class="des">
                 <h4 class="des__title">{{ item.title }}</h4>
 
-                <p class="des__sub" v-html="item.subTitle"></p>
+                <p class="des__sub">{{ item.subTitle }}</p>
 
                 <div class="des__benefit">How you’ll benefit</div>
 
@@ -30,13 +37,13 @@
                     <li v-for="(i, idx) in item.benefits" :key="idx">
                         <img v-if="item.gradient === 'yellow' || item.gradient === 'pink'" src="~assets/images/plans/check.png" alt="" />
                         <img v-else src="~assets/images/plans/check-violet.png" alt="" />
-                        {{ i.name }}
+                        {{ i.text }}
                     </li>
                 </ul>
 
                 <div class="des__price">
-                    <p v-if="item.priceUSD && item.monthly">
-                        <span class="usd">{{ item.priceUSD }}</span>
+                    <p v-if="item.price_usd && item.monthly">
+                        <span class="usd">{{ item.price_usd }}</span>
                         <span class="monthly"> / {{ item.monthly }}</span>
                     </p>
                     <div v-if="item.users && item.topics" class="flex items-center ml-11">
