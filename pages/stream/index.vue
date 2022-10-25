@@ -9,6 +9,7 @@
       :slogan_text_btn="dataStream.slogan_text_btn"
       :slogan_btn_link="dataStream.slogan_btn_link"
       :slogan_image="dataStream.slogan_image"
+      :class="`slogan-${$route.name}`"
     />
     <Benefits
       type="stream"

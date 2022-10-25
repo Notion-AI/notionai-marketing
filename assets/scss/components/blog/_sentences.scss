@@ -7,10 +7,17 @@
 
 .sentences__title {
     margin-bottom: 4rem;
+    font-size: 4rem;
+    line-height: 4.125rem;
+    color: #000000;
+    text-align: center;
+
     @screen lg {
+        font-size: 4.125rem;
         margin-bottom: 5rem;
     }
-    p, span {
+
+    span {
         font-size: 4rem;
         line-height: 4.125rem;
         color: #000000;

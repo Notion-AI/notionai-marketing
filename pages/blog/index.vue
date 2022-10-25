@@ -14,6 +14,7 @@ export default {
         return {
             list: [
                 {
+                    id: 1,
                     img: '/images/blog-1.png', 
                     textBtn: 'Social', 
                     title: 'Build a team dashboard to measure your startup team’s performance',
@@ -22,6 +23,7 @@ export default {
                 },
 
                 {
+                    id: 2,
                     img: '/images/blog-2.png', 
                     textBtn: 'Resources', 
                     title: 'Save senior leaders time by providing fit-for-person media monitoring.',
@@ -30,6 +32,7 @@ export default {
                 },
 
                 {
+                    id: 3,
                     img: '/images/blog-3.png', 
                     textBtn: 'Resources', 
                     title: 'Build a team dashboard to measure your startup team’s performance',
@@ -38,6 +41,7 @@ export default {
                 },
 
                 {
+                    id: 4,
                     img: '/images/blog-4.png', 
                     textBtn: 'Events', 
                     title: 'Save senior leaders time by providing fit-for-person media monitoring.',
@@ -46,6 +50,7 @@ export default {
                 },
 
                 {
+                    id: 5,
                     img: '/images/blog-5.png', 
                     textBtn: 'Press', 
                     title: 'Build a team dashboard to measure your startup team’s performance',
@@ -54,6 +59,7 @@ export default {
                 },
 
                 {
+                    id: 6,
                     img: '/images/blog-6.png', 
                     textBtn: 'Social', 
                     title: 'Save senior leaders time by providing fit-for-person media monitoring.',

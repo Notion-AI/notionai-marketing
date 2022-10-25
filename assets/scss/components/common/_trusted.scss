@@ -115,21 +115,21 @@
         background: linear-gradient(270deg, #100418 43.23%, rgba(16, 4, 24, 0) 100%);
 
         @screen lg {
-            width: 12rem;
+            width: 18rem;
         }
     }
 
     .carousel-item {
         @screen md {
-            margin-right: 4rem;
+            padding-right: 4rem;
         }
 
-        @screen lg {
-            margin-right: 8rem;
+        @screen xl {
+            padding-right: 8rem;
         }
 
         &:last-child {
-            margin-right: 0;
+            padding-right: 0;
         }
     }
 }

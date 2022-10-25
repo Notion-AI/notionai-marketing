@@ -17,6 +17,10 @@
     line-height: 3.375rem;
     margin-bottom: 0;
   }
+
+  @media (min-width: 1440px) {
+    width: 24.5rem;
+  }
 }
 
 .faq-item {

@@ -2,6 +2,10 @@
     padding: 8rem 2rem;
     
     @screen lg {
+        padding: 18.125rem 2rem;
+    }
+
+    @screen 2xl {
         padding: 18.125rem 5rem;
     }
 }
@@ -9,6 +13,7 @@
 .data-globe__text-left, .data-globe__text-right {
     font-size: 1.875rem;
     line-height: 3.375rem;
+    letter-spacing: -0.02em;
 }
 
 .data-globe__text-left {

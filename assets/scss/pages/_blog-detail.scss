@@ -7,6 +7,14 @@
 
 .blog-detail__title {
     margin-bottom: 2.625rem;
+    font-size: 4rem;
+    line-height: 4.4rem;
+    color: #000000;
+
+    @screen lg {
+        font-size: 4.125rem;
+        line-height: 4.375rem;
+    }
 
     span {
         font-size: 4rem;

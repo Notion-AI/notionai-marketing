@@ -82,6 +82,20 @@
     }
 }
 
+.slogan-stream .slogan__sub p {
+    @media (min-width: 1440px) {
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
+.slogan-air .slogan__sub p {
+    @media (min-width: 1440px) {
+        width: 35%;
+        margin: 0 auto;
+    }
+}
+
 .slogan__btn {
     margin-bottom: 6rem;
 
