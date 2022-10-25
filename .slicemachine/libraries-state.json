@@ -1,6 +1,303 @@
 {
   "slices": {
     "components": {
+      "about_contact": {
+        "library": "slices",
+        "id": "about_contact",
+        "name": "AboutContact",
+        "description": "AboutContact",
+        "model": {
+          "id": "about_contact",
+          "type": "SharedSlice",
+          "name": "AboutContact",
+          "description": "AboutContact",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "AboutContact",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": false,
+                    "multi": "paragraph,strong"
+                  }
+                },
+                "button_text": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Button Text",
+                    "placeholder": ""
+                  }
+                },
+                "button_link": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Button Link",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "select": null
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "paragraph",
+                  "text": "Minim dolore exercitation duis consectetur occaecat cillum nostrud exercitation duis id sunt fugiat.",
+                  "spans": []
+                }
+              ],
+              "button_text": "halfway",
+              "button_link": {
+                "link_type": "Web",
+                "url": "https://slicemachine.dev"
+              }
+            },
+            "slice_type": "about_contact"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/hoangnguyen/Desktop/notionAI/notionai-marketing/slices/AboutContact/default/preview.png",
+            "width": 1468,
+            "height": 362
+          }
+        }
+      },
+      "about_introduction": {
+        "library": "slices",
+        "id": "about_introduction",
+        "name": "AboutIntroduction",
+        "description": "AboutIntroduction",
+        "model": {
+          "id": "about_introduction",
+          "type": "SharedSlice",
+          "name": "AboutIntroduction",
+          "description": "AboutIntroduction",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "AboutIntroduction",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": false,
+                    "multi": "paragraph,strong"
+                  }
+                }
+              },
+              "items": {
+                "title": {
+                  "type": "Text",
+                  "config": {
+                    "label": "title",
+                    "placeholder": ""
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "description",
+                    "placeholder": "",
+                    "allowTargetBlank": false,
+                    "multi": "o-list-item,paragraph,strong"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "title": "occur",
+                "description": [
+                  {
+                    "type": "paragraph",
+                    "text": "Culpa in laborum esse labore labore enim amet ea. Officia non anim ut commodo. Labore reprehenderit nisi elit culpa non pariatur tempor esse mollit ea.",
+                    "spans": []
+                  }
+                ]
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "paragraph",
+                  "text": "Amet aute nisi non excepteur laborum aute veniam laborum.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "about_introduction"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/hoangnguyen/Desktop/notionAI/notionai-marketing/slices/AboutIntroduction/default/preview.png",
+            "width": 1470,
+            "height": 1282
+          }
+        }
+      },
+      "about_teams": {
+        "library": "slices",
+        "id": "about_teams",
+        "name": "AboutTeams",
+        "description": "AboutTeams",
+        "model": {
+          "id": "about_teams",
+          "type": "SharedSlice",
+          "name": "AboutTeams",
+          "description": "AboutTeams",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "AboutTeams",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": false,
+                    "multi": "strong,paragraph"
+                  }
+                }
+              },
+              "items": {
+                "is_active": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "is_active",
+                    "placeholder_false": "false",
+                    "placeholder_true": "true",
+                    "default_value": true
+                  }
+                },
+                "avatar": {
+                  "type": "Image",
+                  "config": {
+                    "label": "avatar",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "name": {
+                  "type": "Text",
+                  "config": {
+                    "label": "name",
+                    "placeholder": ""
+                  }
+                },
+                "position": {
+                  "type": "Text",
+                  "config": {
+                    "label": "position",
+                    "placeholder": ""
+                  }
+                },
+                "link_linkedin": {
+                  "type": "Link",
+                  "config": {
+                    "label": "link_linkedin",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "select": null
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "is_active": true,
+                "avatar": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89"
+                },
+                "name": "exclaimed",
+                "position": "electricity",
+                "link_linkedin": {
+                  "link_type": "Web",
+                  "url": "http://twitter.com"
+                }
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "paragraph",
+                  "text": "Magna id est sit nostrud. Lorem ullamco dolor magna consequat culpa anim laborum anim et velit amet.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "about_teams"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/hoangnguyen/Desktop/notionAI/notionai-marketing/slices/AboutTeams/default/preview.png",
+            "width": 1512,
+            "height": 1006
+          }
+        }
+      },
       "benefits": {
         "library": "slices",
         "id": "benefits",
