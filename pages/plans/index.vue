@@ -1,6 +1,6 @@
 <template>
   <div class="plans">
-    <PlanPackage :data="dataPackage" :title="introduction.primary.title"/>
+    <PlanPackage :data="dataPackage" :title="introduction?.primary?.title"/>
     <PackageDetail :data="dataDetail"/>
     <Faq />
     <Trusted />
@@ -18,6 +18,7 @@ export default {
   components: { PlanPackage, PackageDetail, Faq },
   async fetch ({ $prismic, store }) {
     const { data: plansResulst }= await $prismic.api.getSingle('plans')
+    console.log('data', plansResulst)
     store.commit('plans/SET_DATA', plansResulst)
   },
   data() {
@@ -127,11 +128,11 @@ export default {
     ]),
 
     dataPackage () {
-      return filter(this.introduction.items, item => item.is_active) || []
+      return filter(this.introduction?.items, item => item.is_active) || []
     },
 
     dataDetail () {
-      return filter(this.itemsPlan.items, item => item.is_active) || []
+      return filter(this.itemsPlan?.items, item => item.is_active) || []
     }
   }
 }
