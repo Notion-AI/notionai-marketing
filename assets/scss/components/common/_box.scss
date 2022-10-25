@@ -34,7 +34,23 @@
             }
         }
 
+        ::v-deep(span) {
+          color: #000000;
+          text-align: center;
+          font-size: 3.6rem;
+          line-height: 4.2rem;
+  
+          @screen lg {
+              font-size: 3rem;
+              line-height: 3.375rem;
+              text-align: left;
+          }
+        }
+        
         .text-white {
+          color: #fff;
+        }
+        ::v-deep(.text-white) {
             color: #fff;
         }
 
@@ -50,6 +66,21 @@
                 font-size: 3rem;
                 line-height: 3.375rem;
             }
+        }
+
+        ::v-deep(.gradient) {
+          background: -webkit-linear-gradient(247.69deg, #F5C0BE -4.24%, #A3A5EF 191.1%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-weight: 500;
+          font-size: 3.6rem;
+          line-height: 4.2rem;
+
+          @screen lg {
+              font-size: 3rem;
+              line-height: 3.375rem;
+          }
+          
         }
     }
 

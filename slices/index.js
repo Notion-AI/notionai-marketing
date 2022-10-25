@@ -2,6 +2,8 @@
 
 import Benefits from './Benefits';
 import Introduction from './Introduction';
+import PlanDetails from './PlanDetails';
+import PlansIntroduction from './PlansIntroduction';
 import Service from './Service';
 import Services from './Services';
 import TitlePrimary from './TitlePrimary';
@@ -9,6 +11,8 @@ import TitlePrimary from './TitlePrimary';
 export {
 	Benefits,
 	Introduction,
+	PlanDetails,
+	PlansIntroduction,
 	Service,
 	Services,
 	TitlePrimary,
@@ -17,6 +21,8 @@ export {
 export const components = {
 	benefits: Benefits,
 	introduction: Introduction,
+	plan_details: PlanDetails,
+	plans_introduction: PlansIntroduction,
 	service: Service,
 	services: Services,
 	title_primary: TitlePrimary,

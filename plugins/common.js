@@ -1,16 +1,18 @@
 import { slice, join } from 'lodash'
 
 export default (context, inject) => {
-  inject('textConvert', (title) => {
+  inject('textConvert', (title, classTextNormal = '', classTextHighlight = '') => {
     const text = title?.text
+    
+    const insertOpenTagNormalText = `<span class="${classTextNormal}">`
 
-    const insertOpenTag = '<span>'
-    const insertCloseTag = '</span>'
+    const insertOpenTagHighlightText = `<span class="${classTextHighlight}">`
+    const insertCloseTagSpan = '</span>'
 
     const positionStart = title?.spans[0]?.start || 0
     const positionEnd = title?.spans[0]?.end || 0
 
-    const convertTextHTML = join([slice(text, 0, positionStart), insertOpenTag, join(slice(text, positionStart, positionEnd), ''), insertCloseTag, text.slice(positionEnd)] , '') || ''
+    const convertTextHTML = join([insertOpenTagNormalText, join(slice(text, 0, positionStart), ''), insertCloseTagSpan, insertOpenTagHighlightText, join(slice(text, positionStart, positionEnd), ''), insertCloseTagSpan, insertOpenTagNormalText, join(text.slice(positionEnd), ''), insertCloseTagSpan] , '') || ''
 
     return convertTextHTML
   })

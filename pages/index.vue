@@ -112,6 +112,7 @@ import WhatWould from "~/components/homepage/WhatWould.vue";
 import LearnHow from "~/components/homepage/LearnHow.vue";
 import Compare from "../components/Compare.vue";
 import Trusted from "~/components/Trusted.vue";
+
 import { mapState } from 'vuex'
 
 export default {
@@ -129,7 +130,7 @@ export default {
     WhatWould,
     LearnHow,
     Compare,
-    Trusted
+    Trusted,
   },
   async fetch ({ $prismic, store }) {
     const { data: homeResulst }= await $prismic.api.getSingle('home_page')
