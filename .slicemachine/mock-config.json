@@ -36,7 +36,33 @@
     },
     "enterprise": {},
     "plans": {},
-    "about": {}
+    "about": {},
+    "tag": {
+      "name_tag": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      }
+    },
+    "filter": {},
+    "blogs": {
+      "title": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    },
+    "blog_page": {
+      "tile": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    },
+    "author": {}
   },
   "slices": {
     "Service": {
@@ -213,6 +239,7 @@
           }
         }
       }
-    }
+    },
+    "Tag": {}
   }
 }

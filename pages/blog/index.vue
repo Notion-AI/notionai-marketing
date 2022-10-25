@@ -8,8 +8,26 @@
 <script>
 import Sentences from '~/components/blog/Sentences.vue';
 import ListArticle from '~/components/blog/ListArticle.vue';
+import { mapState, mapGetters } from 'vuex'
+import { map, union } from 'lodash'
 export default {
     components: { Sentences, ListArticle },
+    async fetch ({ $prismic, store }) {
+      // Get all value tag of blogs page
+      const { results: blogResulst } = await $prismic.api.query(
+        $prismic.predicates.at('document.type','blogs')
+      );
+
+      const testGetByCategory = await $prismic.api.query([
+        $prismic.predicate.at('document.type','blogs'),
+        $prismic.predicate.at('my.blogs.author', 'Community')
+      ]);
+
+      if (!blogResulst) return
+      const tags = union(...map(blogResulst, 'tags'))
+      store.commit('blog/SET_DATA', blogResulst)
+      store.commit('blog/SET_TAGS', tags)
+    },
     data() {
         return {
             list: [
@@ -68,6 +86,12 @@ export default {
                 }
             ]
         }
+    },
+    computed: {
+      ...mapState('blog', [
+        'data',
+        'tags'
+      ])
     }
 }
 </script>
