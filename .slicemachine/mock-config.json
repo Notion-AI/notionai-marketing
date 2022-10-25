@@ -35,7 +35,8 @@
       }
     },
     "enterprise": {},
-    "plans": {}
+    "plans": {},
+    "about": {}
   },
   "slices": {
     "Service": {
@@ -160,6 +161,51 @@
             }
           },
           "benefits": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "AboutIntroduction": {
+      "default": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "AboutTeams": {
+      "default": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {}
+      }
+    },
+    "AboutContact": {
+      "default": {
+        "primary": {
+          "title": {
             "config": {
               "patternType": "PARAGRAPH",
               "blocks": 1

@@ -1,0 +1,27 @@
+{
+  "id": "about",
+  "label": "About",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "about_teams": {
+              "type": "SharedSlice"
+            },
+            "about_introduction": {
+              "type": "SharedSlice"
+            },
+            "about_contact": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}

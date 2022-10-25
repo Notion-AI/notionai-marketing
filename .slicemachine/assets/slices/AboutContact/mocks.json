@@ -1,0 +1,24 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "paragraph",
+          "text": "Minim dolore exercitation duis consectetur occaecat cillum nostrud exercitation duis id sunt fugiat.",
+          "spans": []
+        }
+      ],
+      "button_text": "halfway",
+      "button_link": {
+        "link_type": "Web",
+        "url": "https://slicemachine.dev"
+      }
+    },
+    "slice_type": "about_contact"
+  }
+]
