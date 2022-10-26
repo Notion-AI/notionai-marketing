@@ -77,8 +77,17 @@
 
 <script>
 import Explore from '~/components/blog/Explore.vue';
+import { mapState } from 'vuex'
 export default {
     components: { Explore },
+    async fetch ({ $prismic, store, route, params }) {
+      // Get all value tag of blogs page
+      const blogDetail = await $prismic.api.getByUID('blogs', params.id)
+
+      console.log('blogDetail', blogDetail)
+
+      store.commit('blog/SET_DATA_DETAIL', blogDetail)
+    },
     data() {
         return {
             dataExplore: [
@@ -104,6 +113,12 @@ export default {
                 },
             ]
         }
+    },
+
+    computed: {
+      ...mapState('blog', [
+        'blogDetail'
+      ])
     }
 }
 </script>

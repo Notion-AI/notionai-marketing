@@ -52,6 +52,18 @@
           "patternType": "PARAGRAPH",
           "blocks": 1
         }
+      },
+      "footnote": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "content": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
       }
     },
     "blog_page": {

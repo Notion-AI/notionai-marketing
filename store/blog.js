@@ -1,6 +1,7 @@
 const state = () => ({
   data: {},
-  tags: []
+  tags: [],
+  blogDetail: {}
 })
 
 const getters = {
@@ -15,6 +16,9 @@ const mutations = {
   },
   SET_TAGS (state, data) {
     state.tags = data
+  },
+  SET_DATA_DETAIL (state, data) {
+    state.blogDetail = data
   }
 }
 
