@@ -1,8 +1,11 @@
 <template>
     <div class="about">
-        <Intro />
-        <ThreePillar :data="data"/>
-        <Trusted />
+      <Intro :title="introduction?.primary?.title" :data="introduction?.items" />
+      <ThreePillar  
+        :teams="teams"
+        :contact="contact"
+      />
+      <Trusted />
     </div>
 </template>
 
@@ -20,16 +23,6 @@ export default {
       store.commit('about/SET_DATA', aboutResulst)
     },
 
-    data() {
-      return {
-        data: [
-          {img: "/images/three-pillar-1.png", name: 'Vinesh Prasad', position: 'Founder & CEO'},
-          {img: "/images/three-pillar-2.png", name: 'Snow', position: 'Chief Technology Officer'},
-          {img: "/images/three-pillar-3.png", name: 'Jeremy Walker', position: 'Chief Design Officer'}
-        ]
-      }
-    },
-
     computed: {
       ...mapState('about', [
         'data'
@@ -39,7 +32,7 @@ export default {
         'introduction',
         'teams',
         'contact'
-      ])
+      ]),
     }
 }
 </script>
