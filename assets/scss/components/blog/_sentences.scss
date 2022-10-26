@@ -30,6 +30,10 @@
 }
 
 .sentences__choose {
+    .active {
+      background: #000000;
+      color: #fff
+    }
     @screen lg {
         display: flex;
         justify-content: center;

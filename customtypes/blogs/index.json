@@ -13,12 +13,10 @@
         }
       },
       "title": {
-        "type": "StructuredText",
+        "type": "Text",
         "config": {
           "label": "Title",
-          "placeholder": "",
-          "allowTargetBlank": false,
-          "multi": "paragraph,strong"
+          "placeholder": ""
         }
       },
       "thumbnail": {

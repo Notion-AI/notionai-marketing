@@ -7,34 +7,20 @@
         <div class="sentences__choose">
             <p class="choose-text">Choose a from these categories</p>
             <div class="flex flex-wrap">
-                <app-button 
-                nuxt to=""
-                style="width: 74px"
-                >Press</app-button>
+                <app-button
+                  v-for="(category, idx) in tags"
+                  :key="idx"
+                  nuxt
+                  :to="{ name: 'blog', query: { ...$route?.query, category, page: 1 }}"
+                  :style="`${$route.query?.category === category ? 'min-width: 74px; background: #000000; color: #fff' : 'min-width: 74px;'}`"
+                >
+                  {{ category }}
+                </app-button>
 
                 <app-button 
-                    nuxt to=""
-                    style="width: 74px"
-                >Blog</app-button>
-
-                <app-button 
-                    nuxt to=""
-                    style="width: 74px"
-                >Social</app-button>
-
-                <app-button 
-                    nuxt to=""
-                    style="width: 74px"
-                >Events</app-button>
-
-                <app-button 
-                    nuxt to=""
-                    style="width: 110px"
-                >Resources</app-button>
-
-                <app-button 
-                    nuxt to=""
-                    style="width: 100px; background: #000000; color: #fff"
+                  nuxt
+                  :to="{ name: 'blog', query: { ...$route?.query, category: 'All', page: 1 } }"
+                  :style="`${(!$route.query?.category || $route.query?.category === 'All') ? 'width: 100px; background: #000000; color: #fff' : 'width: 100px;'}`"
                 >All Topics</app-button>
             </div>
         </div>
@@ -42,8 +28,14 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
 
+  computed: {
+    ...mapState('blog', [
+      'tags'
+    ])
+  }
 }
 </script>
 

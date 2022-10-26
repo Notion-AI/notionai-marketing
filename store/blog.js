@@ -1,10 +1,9 @@
 const state = () => ({
-  data: [],
+  data: {},
   tags: []
 })
 
 const getters = {
-
 }
 
 const actions = {
