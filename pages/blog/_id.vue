@@ -71,7 +71,7 @@
             </div>
         </div>
 
-        <Explore :data="dataExplore"/>
+        <Explore :title="blogDetail?.explore_title" :data="dateExplore"/>
     </div>
 </template>
 
@@ -81,43 +81,22 @@ import { mapState } from 'vuex'
 export default {
     components: { Explore },
     async fetch ({ $prismic, store, route, params }) {
-      // Get all value tag of blogs page
-      const blogDetail = await $prismic.api.getByUID('blogs', params.id)
-
-      console.log('blogDetail', blogDetail)
-
-      store.commit('blog/SET_DATA_DETAIL', blogDetail)
-    },
-    data() {
-        return {
-            dataExplore: [
-                {
-                    img: '/images/blog-5.png', 
-                    textBtn: 'Press', 
-                    title: 'Build a team dashboard to measure your startup team’s performance',
-                    text: "Having a dashboard helps keep your team aligned, and driving toward your goals. Here's how to build one.",
-                },
-
-                {
-                    img: '/images/blog-6.png', 
-                    textBtn: 'Social', 
-                    title: 'Save senior leaders time by providing fit-for-person media monitoring.',
-                    text: "Sentence here that speaks to product feature. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                },
-
-                {
-                    img: '/images/blog-1.png', 
-                    textBtn: 'Social', 
-                    title: 'Build a team dashboard to measure your startup team’s performance',
-                    text: "Having a dashboard helps keep your team aligned, and driving toward your goals. Here's how to build one.",
-                },
-            ]
+      const { data: blogDetail} = await $prismic.api.getByUID('blogs', params.id)
+      const { results: getExplore} = await $prismic.api.query([
+        $prismic.predicate.at('document.type','blogs')
+      ], {
+          page: 1,
+          pageSize: 6
         }
+      );
+      store.commit('blog/SET_DATA_DETAIL', blogDetail)
+      store.commit('blog/SET_DATA_EXPLORE', getExplore)
     },
 
     computed: {
       ...mapState('blog', [
-        'blogDetail'
+        'blogDetail',
+        'dateExplore'
       ])
     }
 }

@@ -16,13 +16,13 @@
                     @click="$router.push(`/blog/${item.uid}`)"
                 >
                     <img :src="item.data?.thumbnail?.url" :alt="item.data?.thumbnail?.alt" class="blog-img">
-                    <app-button
-                      v-for="category in item.tags"
-                      :key="category"
-                      class="blog-btn"
-                    >
-                      {{ category }}
-                    </app-button>
+                    <div class="flex flex-wrap gap-2">
+                      <app-button
+                        v-for="category in item.tags"
+                        :key="category"
+                        class="blog-btn"
+                      >{{ category }}</app-button>
+                    </div>
 
                     <h3 class="blog-title">{{ item.data?.title }}</h3>
                     <p class="blog-subtext">{{ item.data?.description_short }}</p>
