@@ -1,51 +1,34 @@
 <template>
     <div>
         <div class="blog-detail">
-            <h2 class="blog-detail__title">
-                <span class="text-gradient-yellow">Article title goes here.</span> 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            </h2>
+            <h2 class="blog-detail__title"
+                v-for="(item, idx) in titleDetail"
+                :key="idx"
+                v-html="$textConvert(item, '', 'text-gradient-yellow')"
+            ></h2>
     
             <div class="blog-detail__img">
-                <img src="~assets/images/blog/blog-detail-1.png" alt="" class="mx-auto">
+                <img :src="banner?.url" :alt="banner?.alt" class="mx-auto">
             </div>
     
             <div class="grid grid-cols-1 lg:grid-cols-3">
                 <div></div>
                 <div class="col-span-2">
-                    <div class="detail-text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-                    </div>
-    
-                    <div class="detail-img">
-                        <img src="~assets/images/blog/blog-detail-2.png" alt="" class="mx-auto">
-                    </div>
-    
-                    <div class="detail-text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-    
-                    <h3 class="detail-title lg:hidden">
-                        <p>Pull qoute/breakout text goes here.
-                        Lorem ipsum dolor sit amet, consect
-                        adipiscing elit,sed do eiusmod tempor
-                        incididunt ut labore et dolore magna.</p>
-                    </h3>
-    
-                    <h3 class="detail-title hidden xl:block">
-                        <p>Pull qoute/breakout text goes here.</p>
-                        <p>Lorem ipsum dolor sit amet, consect</p>
-                        <p>adipiscing elit,sed do eiusmod tempor</p>
-                        <p>incididunt ut labore et dolore magna.</p>
-                    </h3>
-    
-                    <div class="detail-text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                    <div
+                        v-for="(item, idx) in content"
+                        :key="idx"
+                    >
+                        <div v-if="item.type === 'paragraph'" class="detail-text" v-html="$textConvert(item, '', 'font-medium')">
+                            
+                        </div>
+
+                        <div v-if="item.type === 'image'" class="detail-img">
+                            <img :src="item.url" :alt="item.alt" class="mx-auto">
+                        </div>
+
+                        <h3 v-if="item.type === 'preformatted'" class="detail-title">
+                            <p>{{ item.text }}</p>
+                        </h3>
                     </div>
     
                     <div class="detail-infor">
@@ -53,18 +36,22 @@
                             <img src="~assets/images/logo-mini.png" alt="">
                             <p class="detail-infor__name-logo ml-4 mr-3">Notion Ai</p>
                         </div>
-                        <p class="detail-infor__time">Article published on XX Month, 2022</p>
+                        <p class="detail-infor__time">{{ blogDetail?.data?.created_date }}</p>
                     </div>
     
                     <div class="detail-divide"></div>
     
                     <div class="detail-note">
-                        <h4 class="detail-note__title">Footnote</h4>
+                       
+                        <h4 class="detail-note__title">
+                            {{ titleFootnote[0].text }}
+                        </h4>
     
-                        <ol type="1" class="detail-note__list">
-                            <li>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-                            <li>2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-                            <li>3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                        <ol 
+                            type="1" 
+                            class="detail-note__list"
+                        >
+                            <li v-for="(i, idx) in contentFootnote" :key="idx">{{ i.text }}</li>
                         </ol>
                     </div>
                 </div>
@@ -77,14 +64,12 @@
 
 <script>
 import Explore from '~/components/blog/Explore.vue';
-import { mapState } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 export default {
     components: { Explore },
     async fetch ({ $prismic, store, route, params }) {
       // Get all value tag of blogs page
       const blogDetail = await $prismic.api.getByUID('blogs', params.id)
-
-      console.log('blogDetail', blogDetail)
 
       store.commit('blog/SET_DATA_DETAIL', blogDetail)
     },
@@ -118,11 +103,26 @@ export default {
     computed: {
       ...mapState('blog', [
         'blogDetail'
-      ])
+      ]),
+
+      ...mapGetters('blog', [
+        'titleDetail',
+        'banner',
+        'content',
+        'footnote'
+      ]),
+
+      titleFootnote() {
+        return this.footnote.filter(i => i.type === 'paragraph')
+      },
+
+      contentFootnote() {
+        return this.footnote.filter(i => i.type === 'o-list-item')
+      }
     }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "~/assets/scss/pages/_blog-detail.scss";
 </style>

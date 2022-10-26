@@ -11,29 +11,34 @@
 
             <div class="list-article__blog grid grid-cols-1 gap-2.5 md:grid-cols-2 md:gap-5">
                 <div 
-                    v-for="(item, index) in getBlogs" :key="index" 
-                    class="mx-auto mb-14 md:mb-11"
-                    @click="$router.push(`/blog/${item.uid}`)"
+                  v-for="(item, index) in getBlogs" :key="index" 
+                  class="mx-auto mb-14 md:mb-11"
                 >
-                    <img :src="item.data?.thumbnail?.url" :alt="item.data?.thumbnail?.alt" class="blog-img">
-                    <app-button
-                      v-for="category in item.tags"
-                      :key="category"
-                      class="blog-btn"
-                    >
-                      {{ category }}
-                    </app-button>
+                  <img 
+                    :src="item.data?.thumbnail?.url" 
+                    :alt="item.data?.thumbnail?.alt" 
+                    class="blog-img"
+                    @click="$router.push(`/blog/${item.uid}`)"
+                  >
+                  <app-button
+                    v-for="category in item.tags"
+                    :key="category"
+                    class="blog-btn"
+                    @click="$router.push(`/blog/${item.uid}`)"
+                  >
+                    {{ category }}
+                  </app-button>
 
-                    <h3 class="blog-title">{{ item.data?.title }}</h3>
-                    <p class="blog-subtext">{{ item.data?.description_short }}</p>
+                  <h3 class="blog-title" @click="$router.push(`/blog/${item.uid}`)">{{ item.data?.title }}</h3>
+                  <p class="blog-subtext">{{ item.data?.description_short }}</p>
 
-                    <div class="blog-time">
-                        <div class="logo-mini">
-                            <img src="~assets/images/logo-mini.png" alt="">
-                            <span>{{ item.data?.author }}</span>
-                        </div>
-                        <span class="date">{{ item.data?.created_date }}</span>
-                    </div>
+                  <div class="blog-time">
+                      <div class="logo-mini">
+                          <img src="~assets/images/logo-mini.png" alt="">
+                          <span>{{ item.data?.author }}</span>
+                      </div>
+                      <span class="date">{{ item.data?.created_date }}</span>
+                  </div>
                 </div>
             </div>
         </div>
