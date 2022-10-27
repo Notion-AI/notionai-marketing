@@ -6,6 +6,25 @@ const state = () => ({
 })
 
 const getters = {
+  titleDetail: (state) => {
+    const title = state.blogDetail?.title_detail
+    return title
+  },
+
+  banner: (state) => {
+    const title = state.blogDetail?.banner
+    return title
+  },
+
+  content: (state) => {
+    const title = state.blogDetail?.content
+    return title
+  },
+
+  footnote: (state) => {
+    const footnote = state.blogDetail?.footnote
+    return footnote
+  }
 }
 
 const actions = {
