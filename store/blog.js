@@ -7,22 +7,22 @@ const state = () => ({
 
 const getters = {
   titleDetail: (state) => {
-    const title = state.blogDetail?.data?.title_detail
+    const title = state.blogDetail?.title_detail
     return title
   },
 
   banner: (state) => {
-    const title = state.blogDetail?.data?.banner
+    const title = state.blogDetail?.banner
     return title
   },
 
   content: (state) => {
-    const title = state.blogDetail?.data?.content
+    const title = state.blogDetail?.content
     return title
   },
 
   footnote: (state) => {
-    const footnote = state.blogDetail?.data?.footnote
+    const footnote = state.blogDetail?.footnote
     return footnote
   }
 }

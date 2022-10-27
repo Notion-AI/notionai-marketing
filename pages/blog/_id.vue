@@ -27,7 +27,7 @@
                         </div>
 
                         <h3 v-if="item.type === 'preformatted'" class="detail-title">
-                            <p>{{ item.text }}</p>
+                            <p>{{ item?.text }}</p>
                         </h3>
                     </div>
     
@@ -44,14 +44,14 @@
                     <div class="detail-note">
                        
                         <h4 class="detail-note__title">
-                            {{ titleFootnote[0].text }}
+                            {{ titleFootnote[0]?.text }}
                         </h4>
     
                         <ol 
                             type="1" 
                             class="detail-note__list"
                         >
-                            <li v-for="(i, idx) in contentFootnote" :key="idx">{{ i.text }}</li>
+                            <li v-for="(i, idx) in contentFootnote" :key="idx">{{ i?.text }}</li>
                         </ol>
                     </div>
                 </div>
@@ -82,7 +82,8 @@ export default {
 
     computed: {
       ...mapState('blog', [
-        'blogDetail'
+        'blogDetail',
+        'dateExplore'
       ]),
 
       ...mapGetters('blog', [
@@ -93,11 +94,11 @@ export default {
       ]),
 
       titleFootnote() {
-        return this.footnote.filter(i => i.type === 'paragraph')
+        return this.footnote?.filter(i => i.type === 'paragraph') || []
       },
 
       contentFootnote() {
-        return this.footnote.filter(i => i.type === 'o-list-item')
+        return this.footnote?.filter(i => i.type === 'o-list-item') || []
       }
     }
 }

@@ -11,9 +11,8 @@
                       v-for="(item, index) in data"
                       :key="index"
                       class="carousel-item"
-                      @click.native="() => $router.push({ name: 'blog-id', params: { id: item?.uid } })"
                     >
-                        <img :src="item.data?.thumbnail?.url" :alt="item.data?.thumbnail?.alt" class="blog-img">
+                        <img :src="item.data?.thumbnail?.url" :alt="item.data?.thumbnail?.alt" class="blog-img" @click="() => $router.push({ name: 'blog-id', params: { id: item?.uid } })">
                         <div class="flex flex-wrap gap-2">
                           <app-button
                             v-for="category in item.tags"
@@ -22,7 +21,7 @@
                           >{{ category }}</app-button>
                         </div>
                         
-                        <h3 class="blog-title">{{ item?.data?.title }}</h3>
+                        <h3 class="blog-title" @click="() => $router.push({ name: 'blog-id', params: { id: item?.uid } })">{{ item?.data?.title }}</h3>
                         <p class="blog-subtext">{{ item?.data?.description_short }}</p>
                     </slide>
                 </carousel>
