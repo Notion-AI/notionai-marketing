@@ -18,7 +18,7 @@
                         v-for="(item, idx) in content"
                         :key="idx"
                     >
-                        <div v-if="item.type === 'paragraph'" class="detail-text" v-html="$textConvert(item, '', 'font-medium')">
+                        <div v-if="item.type === 'paragraph'" class="detail-text" v-html="$textConvertBlog(item, '', 'font-medium')">
                             
                         </div>
 

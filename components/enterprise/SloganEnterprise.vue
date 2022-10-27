@@ -4,7 +4,7 @@
         <p
           v-for="(title, idx) in getTitles"
           :key="idx"
-          v-html="$textConvert(title)"
+          v-html="$textConvert(title, '', 'highlight')"
         >
         </p>
       </h2>
