@@ -11,14 +11,14 @@
   "lang": "en-us",
   "alternate_languages": [],
   "data": {
-    "slogan_text_line_1_highlight": "happened",
-    "slogan_text_line_1_normal": "try",
-    "slogan_text_line_2_normal": "vast",
-    "slogan_text_description": "establish",
-    "slogan_text_btn": "deal",
+    "slogan_text_line_1_highlight": "location",
+    "slogan_text_line_1_normal": "pupil",
+    "slogan_text_line_2_normal": "grown",
+    "slogan_text_description": "flag",
+    "slogan_text_btn": "save",
     "slogan_btn_link": {
       "link_type": "Web",
-      "url": "https://prismic.io"
+      "url": "http://twitter.com"
     },
     "slogan_image": {
       "dimensions": {
@@ -27,10 +27,17 @@
       },
       "alt": null,
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+      "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1"
     },
-    "benefit_title_highlight": "fog",
-    "benefit_title_normal": "slip",
+    "slogan_media": {
+      "link_type": "Media",
+      "name": "mock",
+      "kind": "image",
+      "url": "https://source.unsplash.com/random",
+      "size": "10kB"
+    },
+    "benefit_title_highlight": "opinion",
+    "benefit_title_normal": "growth",
     "benefits": [
       {
         "image": {
@@ -40,19 +47,19 @@
           },
           "alt": null,
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa"
+          "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055"
         },
-        "title_highlight": "whispered",
-        "title_normal": "meat",
-        "description": "wrote"
+        "title_highlight": "discovery",
+        "title_normal": "tales",
+        "description": "team"
       }
     ],
     "services": [
       {
-        "title_normal_before": "only",
-        "title_highlight": "further",
-        "title_normal_after": "activity",
-        "description": "thrown",
+        "title_normal_before": "dot",
+        "title_highlight": "join",
+        "title_normal_after": "thrown",
+        "description": "buy",
         "image": {
           "dimensions": {
             "width": 900,
@@ -64,24 +71,25 @@
         }
       }
     ],
-    "campare_title_normal": "eaten",
-    "campare_title_highlight": "this",
-    "campare_btn_text": "sister",
+    "campare_title_normal": "wind",
+    "campare_title_highlight": "once",
+    "campare_btn_text": "selection",
     "campare_btn_link": {
       "link_type": "Web",
-      "url": "https://slicemachine.dev"
+      "url": "http://twitter.com"
     },
-    "organisation_title_normal": "sit",
-    "organisation_title_highlight": "most",
-    "organisation_btn_enterprise_text": "how",
-    "organisation_tab_left_text": "syllable",
-    "organisation_tab_right_text": "further",
-    "feedback_title_normal_before": "orbit",
-    "feedback_highlight": "each",
-    "feedback_normal_after": "airplane",
+    "organisation_title_normal": "lake",
+    "organisation_title_highlight": "use",
+    "organisation_btn_enterprise_text": "growth",
+    "organisation_tab_left_text": "needed",
+    "organisation_tab_right_text": "familiar",
+    "feedback_title_normal_before": "morning",
+    "feedback_highlight": "courage",
+    "feedback_normal_after": "thank",
+    "feedback_title_normal_line_2": "heard",
     "feedbacks": [
       {
-        "content": "design",
+        "content": "terrible",
         "logo_company": {
           "dimensions": {
             "width": 900,
@@ -89,7 +97,7 @@
           },
           "alt": null,
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43"
+          "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5"
         }
       }
     ]

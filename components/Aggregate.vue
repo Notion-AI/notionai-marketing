@@ -2,7 +2,7 @@
     <div :class="type" class="aggregate">
 			<div class="container mx-auto">
 				<h2 class="aggregate__title">
-					{{organisation_title_normal}} <span>{{organisation_title_highlight}}</span>
+          <p>{{organisation_title_normal}} <span>{{organisation_title_highlight}}</span></p>
 				</h2>
 
 				<div class="aggregate__btn">

@@ -94,11 +94,14 @@
     }
 
     &__sub {
+        display: flex;
+        justify-content: center;
         p {
             color: #BEBEBE;
             text-align: center;
             font-size: 1.6rem;
             line-height: 2.2rem;
+            max-width: 300px;
 
             @screen lg {
                 font-size: 1.25rem;

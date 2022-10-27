@@ -42,6 +42,14 @@
           "select": null
         }
       },
+      "media": {
+        "type": "Link",
+        "config": {
+          "label": "Media",
+          "placeholder": "",
+          "select": "media"
+        }
+      },
       "section_1_image": {
         "type": "Image",
         "config": {

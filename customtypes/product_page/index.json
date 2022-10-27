@@ -64,6 +64,14 @@
           "thumbnails": []
         }
       },
+      "slogan_media": {
+        "type": "Link",
+        "config": {
+          "label": "Slogan Media",
+          "placeholder": "",
+          "select": "media"
+        }
+      },
       "benefit_title_highlight": {
         "type": "Text",
         "config": {
@@ -242,6 +250,13 @@
         "type": "Text",
         "config": {
           "label": "feedback_normal_after",
+          "placeholder": ""
+        }
+      },
+      "feedback_title_normal_line_2": {
+        "type": "Text",
+        "config": {
+          "label": "feedback_title_normal_line_2",
           "placeholder": ""
         }
       },

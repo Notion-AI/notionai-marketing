@@ -9,6 +9,7 @@
       :slogan_text_btn="dataStream.slogan_text_btn"
       :slogan_btn_link="dataStream.slogan_btn_link"
       :slogan_image="dataStream.slogan_image"
+      :slogan_media="dataStream.slogan_media"
       :class="`slogan-${$route.name}`"
     />
     <Benefits
@@ -44,7 +45,7 @@
       <template v-slot:right>
         <div>
           <h2 class="box-title">
-            <span class="gradient">{{services[1].title_highlight}} </span> <span>{{services[1].title_normal_after}} </span>
+            <span>{{services[1].title_normal_before}}</span><span class="gradient">{{services[1].title_highlight}} </span> <span>{{services[1].title_normal_after}} </span>
           </h2>
 
           <p class="box-sub">{{services[1].description}}</p>
@@ -65,13 +66,11 @@
           </p>
 
           <app-button
-            nuxt
-            to=""
             color="gradient-pink"
             style="width: 232px; height: 38px"
             class="mb-28 md:mb-0 mx-auto md:ml-0"
           >
-            Start your free trial today
+            <a :href="alertLink.url" :target="alertLink.target">Start your free trial today</a>
           </app-button>
         </div>
       </template>
@@ -102,7 +101,7 @@
 
 <script>
 import caculatorwidth from '~/utils/caculator-width'
-import { mapState } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 import Trusted from '~/components/Trusted.vue'
 export default {
     mixins: [caculatorwidth],
@@ -112,8 +111,14 @@ export default {
     },
     computed: {
         ...mapState("product", ["dataStream"]),
+        ...mapGetters([
+          'alert',
+        ]),
         services() {
             return this.dataStream.services || [];
+        },
+        alertLink () {
+          return this.alert?.link || {}
         }
     },
     components: { Trusted }

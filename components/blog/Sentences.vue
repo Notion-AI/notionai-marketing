@@ -1,8 +1,10 @@
 <template>
     <div class="sentences">
-        <h2 class="sentences__title">
+        <div class="flex justify-center">
+          <h2 class="sentences__title">
             Sentence here about articles Notion publishes. <span class="text-gradient-yellow">Find what you’re looking for.</span>
-        </h2>
+          </h2>
+        </div>
 
         <div class="sentences__choose">
             <p class="choose-text">Choose a from these categories</p>
