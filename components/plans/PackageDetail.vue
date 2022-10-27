@@ -20,10 +20,12 @@
                   </p>
                 </h2>
                 <app-button
-                    class="des__sign-up"
-                    style="width: 100px"
-                    :color="`gradient-${item.gradient}`"
-                >Sign up</app-button>
+                  class="des__sign-up"
+                  style="width: 100px"
+                  :color="`gradient-${item.gradient}`"
+                >
+                  <a :href="signUpLink.url" :target="signUpLink.url">Sign up</a>
+                </app-button>
             </div>
 
             <div class="des">
@@ -57,12 +59,17 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
     props: {
         data: {
             type: Array,
             default: () => []
         }
+    },
+
+    computed: {
+      ...mapGetters(['signUpLink'])
     }
 }
 </script>
