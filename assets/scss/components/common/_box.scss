@@ -50,7 +50,7 @@
         .text-white {
           color: #fff;
         }
-        ::v-deep(.text-white) {
+        &::v-deep(.text-white) {
             color: #fff;
         }
 
@@ -68,7 +68,7 @@
             }
         }
 
-        ::v-deep(.gradient) {
+        &::v-deep(.gradient) {
           background: -webkit-linear-gradient(247.69deg, #F5C0BE -4.24%, #A3A5EF 191.1%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
