@@ -29,7 +29,7 @@
             <div class="des">
                 <h4 class="des__title">{{ item.title }}</h4>
 
-                <p class="des__sub">{{ item.subTitle }}</p>
+                <p class="des__sub">{{ item.subtitle }}</p>
 
                 <div class="des__benefit">How you’ll benefit</div>
 
@@ -37,7 +37,7 @@
                     <li v-for="(i, idx) in item.benefits" :key="idx">
                         <img v-if="item.gradient === 'yellow' || item.gradient === 'pink'" src="~assets/images/plans/check.png" alt="" />
                         <img v-else src="~assets/images/plans/check-violet.png" alt="" />
-                        {{ i.text }}
+                        <p>{{ i.text }}</p>
                     </li>
                 </ul>
 
@@ -69,4 +69,49 @@ export default {
 
 <style lang="scss">
 @import "~/assets/scss/components/plans/_package-detail.scss";
+</style>
+
+<style scoped>
+.des__slogan .text-gradient-yellow {
+  background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+
+.des__slogan :deep(.text-gradient-yellow) {
+  background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+
+.text-gradient-pink {
+  background: -webkit-linear-gradient(247.69deg, #F5C0BE -4.24%, #A3A5EF 191.1%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+
+
+.des__slogan :deep(.text-gradient-pink) {
+  background: -webkit-linear-gradient(247.69deg, #F5C0BE -4.24%, #A3A5EF 191.1%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+
+.text-gradient-violet {
+  background: linear-gradient(252.6deg, #D1A8D0 -62.78%, #9D9AED 119.63%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+
+.des__slogan :deep(.text-gradient-violet) {
+  background: linear-gradient(252.6deg, #D1A8D0 -62.78%, #9D9AED 119.63%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
 </style>

@@ -26,15 +26,6 @@
         }
     }
 
-    span {
-        font-size: 4rem;
-
-        @screen lg {
-            font-size: 4.125rem;
-            line-height: 4.375rem;
-        }
-    }
-
     ::v-deep(span) {
       font-size: 4rem;
 
@@ -42,7 +33,15 @@
           font-size: 4.125rem;
           line-height: 4.375rem;
       }
-  }
+    }
+
+
+    &::v-deep(.text-gradient-yellow) {
+      background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 500;
+    }
 }
 
 .package-item-wrapper {
@@ -57,14 +56,58 @@
 
 .wrapper-gradient-yellow {
     background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+
+
+    .text-gradient-yellow {
+      background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 500;
+    }
+
+    &::v-deep(.text-gradient-yellow) {
+      background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 500;
+    }
 }
+
 
 .wrapper-gradient-pink {
     background: -webkit-linear-gradient(247.69deg, #F5C0BE -4.24%, #A3A5EF 191.1%);
+
+    .text-gradient-pink {
+      background: -webkit-linear-gradient(247.69deg, #F5C0BE -4.24%, #A3A5EF 191.1%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 500;
+    }
+
+    &::v-deep(.text-gradient-pink) {
+      background: -webkit-linear-gradient(247.69deg, #F5C0BE -4.24%, #A3A5EF 191.1%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 500;
+    }
 }
 
 .wrapper-gradient-violet {
     background: linear-gradient(252.6deg, #D1A8D0 -62.78%, #9D9AED 119.63%);
+
+    .text-gradient-violet {
+      background: linear-gradient(252.6deg, #D1A8D0 -62.78%, #9D9AED 119.63%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 500;
+    }
+
+    &::v-deep(.text-gradient-violet) {
+      background: linear-gradient(252.6deg, #D1A8D0 -62.78%, #9D9AED 119.63%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 500;
+    }
 }
 
 .package-item {
@@ -93,6 +136,20 @@
 .package-item__price {
     margin-bottom: 2rem;
     text-align: center;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    line-height: 50px;
+
+    @screen lg {
+        min-height: 5.625rem;
+    }
+
+    @media (min-width: 1350px) {
+        margin-bottom: 1rem;
+    }
+
     .usd {
         font-weight: 500;
         font-size: 3rem;
@@ -134,4 +191,35 @@
 
 .package-item__btn {
 
+}
+
+* {
+  font-size: 10px;
+  font-family: 'Graphik', sans-serif;
+  font-weight: 400;
+  color: #fff;
+
+  @screen lg{
+    font-size: 16px;
+  }
+}
+
+.fringer-data,
+.datasets,
+.ranking,
+.ranking--modify,
+.compare,
+.data-cluster,
+.data-globe,
+.gather-infor,
+.source,
+.slogan,
+.benefits,
+.slogan-enterprise,
+.timeline-enter,
+.trusted,
+.intro,
+.plans-package
+{
+  background-color: #100418;
 }

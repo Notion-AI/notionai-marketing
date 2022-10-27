@@ -41,3 +41,13 @@ export default {
 <style lang="scss">
 @import "~/assets/scss/components/about/_intro.scss";
 </style>
+
+
+<style scoped>
+.intro__title :deep(.text-gradient-yellow) {
+  background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+</style>

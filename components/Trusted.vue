@@ -22,12 +22,10 @@
                         <p class="text-feedback">{{ feedback?.content || ''}}</p>
                         <div v-if="$route.path === '/' || $route.path === '/stream' || $route.path === '/plans' || $route.path === '/about'" class="trusted-line">
                             <span></span>
-                            <!-- <span class="hidden lg:block"></span> -->
                         </div>
 
                         <div v-if="$route.path === '/air'" class="trusted-line trusted-line--pink">
                             <span></span>
-                            <!-- <span class="hidden lg:block"></span> -->
                         </div>
 
                         <div v-if="$route.path === '/enterprise'" class="trusted-line trusted-line--violet">
@@ -38,25 +36,6 @@
                             <img :src="feedback?.logo_company?.url" :alt="feedback?.logo_company?.alt">
                         </div>
                     </slide>
-                    <!-- <slide>
-                        <p class="text-feedback">“A global review of thematics and practices in life insurance advice led to four ideas that informed the design strategy for Advice solutions.”</p>
-                        
-                        <div v-if="$route.path === '/' || $route.path === '/stream' || $route.path === '/plans' || $route.path === '/about'" class="trusted-line">
-                            <span></span>
-                        </div>
-
-                        <div v-if="$route.path === '/air'" class="trusted-line trusted-line--pink">
-                            <span></span>
-                        </div>
-
-                        <div v-if="$route.path === '/enterprise'" class="trusted-line trusted-line--violet">
-                            <span></span>
-                        </div>
-
-                        <div class="trusted-img">
-                            <img src="~assets/images/anz.png" alt="">
-                        </div>
-                    </slide> -->
                 </carousel>
             </client-only>
         </div>
@@ -89,8 +68,12 @@ export default {
 
       data () {
         return this.layout?.data || {}
+      },
+
+      mounted() {
+        console.log(this.$refs.feedback);
       }
-    }
+    },
 }
 </script>
 
