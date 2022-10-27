@@ -136,8 +136,8 @@
 
 .text-feedback {
     font-size: 1.6rem;
-    height: 17rem;
-    margin-bottom: 1.5rem;
+    min-height: 17rem;
+    margin-bottom: 2rem;
 
     @screen sm {
         min-height: 9.6rem;
