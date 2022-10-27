@@ -6,6 +6,7 @@
 }
 
 .sentences__title {
+    max-width: 52rem;
     margin-bottom: 4rem;
     font-size: 4rem;
     line-height: 4.125rem;
@@ -30,6 +31,10 @@
 }
 
 .sentences__choose {
+    .active {
+      background: #000000;
+      color: #fff
+    }
     @screen lg {
         display: flex;
         justify-content: center;

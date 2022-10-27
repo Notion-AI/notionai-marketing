@@ -1,0 +1,59 @@
+{
+  "id": "mock-doc-id",
+  "url": null,
+  "type": "blogs",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "title": "poem",
+    "thumbnail": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72"
+    },
+    "description_short": "ahead",
+    "created_date": "2019-04-14",
+    "author": "From Notion Ai",
+    "title_detail": [
+      {
+        "type": "paragraph",
+        "text": "Occaecat reprehenderit dolore nostrud mollit fugiat velit laborum anim eiusmod. Pariatur esse laboris et nulla eiusmod magna labore officia anim.",
+        "spans": []
+      }
+    ],
+    "banner": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04"
+    },
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Pariatur sint eu cupidatat ipsum laboris Lorem dolor adipisicing est sint irure non. Voluptate sit ullamco consectetur eu commodo nisi pariatur nostrud.",
+        "spans": []
+      }
+    ],
+    "footnote": [
+      {
+        "type": "paragraph",
+        "text": "Tempor dolore ea sunt nisi dolore ullamco et.",
+        "spans": []
+      }
+    ],
+    "explore_title": "world"
+  }
+}

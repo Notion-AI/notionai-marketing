@@ -1,29 +1,29 @@
 <template>
     <div class="plans-package">
-        <h2 class="plans-package__title lg:hidden">
-            <p>Leverage the power of AI and <span class="text-gradient-yellow">find a plan that’s right for you.</span></p>
-        </h2>
-
-        <h2 class="plans-package__title hidden lg:block">
-            <p>Leverage the power of AI and</p>
-            <p class="text-gradient-yellow">find a plan that’s right for you.</p>
+        <h2 class="plans-package__title">
+            <p
+              v-for="(item, idx) in title"
+              :key="idx"
+              v-html="$textConvert(item, '', 'text-gradient-yellow')"
+            >
+            </p>
         </h2>
 
         <div class="plans-package__list grid grid-cols-1 lg:grid-cols-3 lg:gap-4">
             <div 
                 class="package-item-wrapper"
                 v-for="(item, index) in data" :key="index"
-                :class="`wrapper-gradient-${item.classGradient}`"
+                :class="`wrapper-gradient-${item.class_gradient}`"
             >
                 <div class="package-item">
                     <h5 
                         class="package-item__title"
-                        :class="`text-gradient-${item.classGradient}`"
+                        :class="`text-gradient-${item.class_gradient}`"
                     >
                         {{ item.title }}
                     </h5>
                     <div class="package-item__price">
-                        <span class="usd" :class="`text-gradient-${item.classGradient}`">{{ item.price }}</span>
+                        <span class="usd" :class="`text-gradient-${item.class_gradient}`">{{ item.price }}</span>
                         <span class="monthly">{{ item.perMonth }}</span>
                     </div>
 
@@ -48,8 +48,12 @@
 export default { 
     props: {
         data: {
-            type: Array,
-            default: () => []
+          type: Array,
+          default: () => []
+        },
+        title: {
+          type: Array,
+          default: () => []
         }
     }
 }

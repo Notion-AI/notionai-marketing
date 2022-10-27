@@ -14,72 +14,84 @@
       </p>
     </TimelineEnterprise>
 
-    <Box background="#100418">
+    <Box
+      v-for="(service, idx) in itemsService"
+      :key="idx"
+      :background="service.background_color"
+    >
       <template v-slot:left>
-        <div>
-          <h2 class="box-title">
-            <span class="text-white">Be a champion of saving senior leaders time by providing fit-for-person</span> <span class="gradient">media monitoring.</span>
+        <div v-if="idx % 2 == 0">
+          <h2
+            v-for="(title, index) in service.title"
+            class="box-title"
+            v-html="$textConvert(title, 'text-white', 'gradient')"
+            :key="index"
+          >
           </h2>
 
           <p class="box-sub">
-            Sentence here that speaks to product feature. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
-        </div>
-      </template>
-
-      <template v-slot:right>
-        <img src="~assets/images/enterprise/enterprise-2.png" alt="" class="mx-auto" />
-      </template>
-    </Box>
-
-    <Box background="#291E30" :reverse="window.width < 768 ? true : false">
-      <template v-slot:left>
-        <img src="~assets/images/enterprise/enterprise-3.png" alt="" class="mx-auto" />
-      </template>
-
-      <template v-slot:right>
-        <div>
-          <h2 class="box-title">
-            <span class="text-white">Compare content to your peers and identify gaps for capturing audience engagement with</span> <span class="gradient">Content commissioning.</span>
-          </h2>
-
-          <p class="box-sub">
-            Sentence here that speaks to product feature. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
-        </div>
-      </template>
-    </Box>
-
-    <Box isBtn background="#100418">
-      <template v-slot:left>
-        <div>
-          <h2 class="box-title">
-            <span class="text-white">Demonstrate your organisation’s expertise with</span> <span class="gradient">valuable content. </span>
-          </h2>
-
-          <p class="box-sub">
-           Sentence here that speaks to product feature. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            {{ service.description }}
           </p>
 
           <app-button
-            nuxt
-            to=""
+            v-if="service.button_text"
             color="gradient-violet"
             style="width: 120px"
             class="mb-28 md:mb-0 mx-auto md:ml-0"
           >
-            Contact us
+            <a
+              v-if="service.button_link"
+              :href="service.button_link?.url || ''"
+              :target="service.button_link?.target || ''"
+            >
+              {{ service.button_text }}
+            </a>
+            <span v-else>
+              {{ service.button_text }}
+            </span>
           </app-button>
         </div>
+        <img v-else :src="service.image?.url" :alt="service.image?.alt" class="mx-auto" />
       </template>
 
       <template v-slot:right>
-        <img src="~assets/images/enterprise/enterprise-4.png" alt="" class="mx-auto" />
+        <img v-if="idx % 2 == 0" :src="service.image?.url" :alt="service.image?.alt"  class="mx-auto" />
+        <div v-else>
+          <h2
+            v-for="(title, index) in service.title"
+            class="box-title"
+            v-html="$textConvert(title, 'text-white', 'gradient')"
+            :key="index"
+          >
+          </h2>
+
+          <p class="box-sub">
+            {{ service.description }}
+          </p>
+
+          <app-button
+            v-if="service.button_text"
+            color="gradient-violet"
+            style="width: 120px"
+            class="mb-28 md:mb-0 mx-auto md:ml-0"
+          >
+            <a
+              v-if="service.button_link"
+              :href="service.button_link?.url || ''"
+              :target="service.button_link?.target || ''"
+            >
+              {{ service.button_text }}
+            </a>
+            <span v-else>
+              {{ service.button_text }}
+            </span>
+          </app-button>
+        </div>
       </template>
     </Box>
-
+    
     <TimelineEnterprise
-      :data="itemsBenefitsIntro"
+      :data="itemsBenefitsSecurity"
     >
       <p>Security, control and</p>
       <p>compliance that you expect from</p>
@@ -125,12 +137,22 @@ export default {
 
     ...mapGetters('enterprise', [
       'benefitsIntro',
-      'intruduction'
+      'intruduction',
+      'services',
+      'benefitsSecurity'
     ]),
 
     itemsBenefitsIntro () {
       return this.benefitsIntro?.items || []
-    }
+    },
+
+    itemsService () {
+      return filter(this.services.items, item => item.is_active)
+    },
+
+    itemsBenefitsSecurity () {
+      return this.benefitsSecurity?.items || []
+    },
   }
 }
 </script>

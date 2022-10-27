@@ -15,8 +15,10 @@
               <h3 class="item-title">
                 {{ item.title[0].text }}
               </h3>
-
-              <p>{{ item.description }}</p>
+              
+              <h5 class="flex justify-center">
+                <p>{{ item.description }}</p>
+              </h5>
             </slide>
           </carousel>
         </client-only>

@@ -1,22 +1,28 @@
 <template>
     <div class="explore">
-        <h2 class="explore__title lg:hidden">
-            <p>Explore 1000+ articles on trending topics from around the globe and stay infromed.</p>
-        </h2>
-
-        <h2 class="explore__title hidden lg:block">
-            <p>Explore 1000+ articles on trending topics</p>
-            <p>from around the globe and stay infromed.</p>
+        <h2 class="explore__title">
+            <p>{{title}}</p>
         </h2>
 
         <div class="explore__carousel list-article__blog">
             <client-only>
                 <carousel v-bind="options">
-                    <slide class="carousel-item" v-for="(item, index) in data" :key="index">
-                        <img :src="item.img" alt="" class="blog-img">
-                        <app-button class="blog-btn">{{ item.textBtn }}</app-button>
-                        <h3 class="blog-title">{{ item.title }}</h3>
-                        <p class="blog-subtext">{{ item.text }}</p>
+                    <slide
+                      v-for="(item, index) in data"
+                      :key="index"
+                      class="carousel-item"
+                    >
+                        <img :src="item.data?.thumbnail?.url" :alt="item.data?.thumbnail?.alt" class="blog-img" @click="() => $router.push({ name: 'blog-id', params: { id: item?.uid } })">
+                        <div class="flex flex-wrap gap-2">
+                          <app-button
+                            v-for="category in item.tags"
+                            :key="category"
+                            class="blog-btn"
+                          >{{ category }}</app-button>
+                        </div>
+                        
+                        <h3 class="blog-title" @click="() => $router.push({ name: 'blog-id', params: { id: item?.uid } })">{{ item?.data?.title }}</h3>
+                        <p class="blog-subtext">{{ item?.data?.description_short }}</p>
                     </slide>
                 </carousel>
             </client-only>
@@ -42,6 +48,10 @@ export default {
         data: {
             type: Array,
             default: () => []
+        },
+        title: {
+          type: String,
+          default: ''
         }
     }
 }

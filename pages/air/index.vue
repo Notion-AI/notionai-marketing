@@ -8,6 +8,7 @@
       :slogan_text_btn="data.slogan_text_btn"
       :slogan_btn_link="data.slogan_btn_link"
       :slogan_image="data.slogan_image"
+      :slogan_media="data.slogan_media"
       :class="`slogan-${$route.name}`"
     />
     <Benefits
@@ -62,13 +63,11 @@
           </p>
 
           <app-button
-            nuxt
-            to=""
             color="gradient-pink"
             style="width: 232px; height: 38px"
             class="mb-28 md:mb-0 mx-auto md:ml-0"
           >
-            Start your free trial today
+            <a :href="alertLink.url" :target="alertLink.target">Start your free trial today</a>
           </app-button>
         </div>
       </template>
@@ -102,7 +101,7 @@ import Compare from '~/components/Compare.vue'
 import Aggregate from '~/components/Aggregate.vue'
 
 import caculatorwidth from '~/utils/caculator-width'
-import { mapState } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 
 export default {
   components: { Compare, Aggregate },
@@ -117,8 +116,14 @@ export default {
   },
   computed: {
     ...mapState('product', ['data']),
+    ...mapGetters([
+      'alert',
+    ]),
     services() {
       return this.data.services || []
+    },
+    alertLink () {
+      return this.alert?.link || {}
     }
   },
   head () {

@@ -103,3 +103,12 @@
         margin-bottom: 4.5rem;
     }
 }
+
+.slogan__img {
+  display: flex;
+  justify-content: center;
+
+  video {
+    max-width: 400px;
+  }
+}

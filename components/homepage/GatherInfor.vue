@@ -21,7 +21,12 @@
             </div>
 
             <div class="gather-infor__img">
-                <img :src="data.section_1_image.url" :alt="data.section_1_image.alt" class="mx-auto">
+              <client-only>
+                <video autoplay loop playsinline muted>
+                  <source :src="data?.media?.url" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </client-only>
             </div>
        </div>
     </div>

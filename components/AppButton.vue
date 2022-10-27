@@ -58,9 +58,9 @@
           {
             props: {
               to: this.to,
-              exact: this.exact
+              exact: this.exact,
             },
-            attrs: this.attrs,
+            // attrs: this.attrs,
             class: {
               btn: true,
               ...this.classes

@@ -2,40 +2,43 @@
     padding: 9.75rem 2rem 8.5rem 2rem;
 
     @screen lg {
-        padding: 9.75rem 5rem 8.5rem 5rem;
+      padding: 9.75rem 5rem 8.5rem 5rem;
     }
 }
 
 .compare__title {
     margin-bottom: 2.5rem;
+    display: flex;
+    justify-content: center;
     p {
         font-size: 3rem;
         line-height: 4rem;
         text-align: center;
+        max-width: 885px;
 
         @screen md {
-            font-size: 3.75rem;
+          font-size: 3.75rem;
         }
 
         span {
-            font-weight: 500;
-            font-size: 3rem;
-            line-height: 4rem;
-            background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+          font-weight: 500;
+          font-size: 3rem;
+          line-height: 4rem;
+          background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
 
-            @screen md {
-                font-size: 3.75rem;
-            }
+          @screen md {
+              font-size: 3.75rem;
+          }
         }
     }
 }
 
 .compare__title-air {
     p span {
-        background: -webkit-linear-gradient(247.69deg, #F5C0BE -4.24%, #A3A5EF 191.1%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+      background: -webkit-linear-gradient(247.69deg, #F5C0BE -4.24%, #A3A5EF 191.1%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 }
