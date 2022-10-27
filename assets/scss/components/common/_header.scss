@@ -2,9 +2,19 @@
     background-color: #291E30;
     text-align: center;
     padding: 0.625rem 1.25rem;
+    font-size: 1.2rem;
+    
+    @screen lg {
+        font-size: 1rem;
+    }
 
     a {
         text-decoration: underline;
+        font-size: 1.2rem;
+    
+        @screen lg {
+            font-size: 1rem;
+        }
     }
 }
 
@@ -100,7 +110,7 @@
         transition: all 0.4s ease-in-out;
         display: flex;
         flex-direction: column;
-        overflow-y: hidden;
+        overflow-y: auto;
         z-index: 99;
     }
 
@@ -119,6 +129,11 @@
             display: flex;
             align-items: center;
             flex-direction: column;
+            margin-bottom: 4rem;
+        }
+
+        @screen 2xl {
+            margin-bottom: 0;
         }
 
         li {
@@ -134,7 +149,7 @@
             }
 
             a {
-                font-size: 1.6rem;
+                font-size: 16px;
                 line-height: 136%;
             }
         }
@@ -145,7 +160,7 @@
         text-align: center;
         
         a {
-            font-size: 1.6rem;
+            font-size: 16px;
         }
     }
 }

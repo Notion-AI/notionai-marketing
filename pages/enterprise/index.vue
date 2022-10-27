@@ -9,7 +9,7 @@
       <p
         v-for="(title, idx) in benefitsIntro?.primary?.title"
         :key="idx"
-        v-html="$textConvert(title)"
+        v-html="$textConvert(title, '', 'highlight')"
       >
       </p>
     </TimelineEnterprise>
@@ -156,7 +156,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>
