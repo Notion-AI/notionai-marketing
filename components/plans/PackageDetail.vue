@@ -37,7 +37,7 @@
                     <li v-for="(i, idx) in item.benefits" :key="idx">
                         <img v-if="item.gradient === 'yellow' || item.gradient === 'pink'" src="~assets/images/plans/check.png" alt="" />
                         <img v-else src="~assets/images/plans/check-violet.png" alt="" />
-                        {{ i.text }}
+                        <p>{{ i.text }}</p>
                     </li>
                 </ul>
 

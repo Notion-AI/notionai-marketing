@@ -13,7 +13,7 @@
     .des__title, 
     .des__sub p, 
     .des__benefit, 
-    .des__benefit-list li, 
+    .des__benefit-list li p, 
     .des__price p span {
       color: #000000;
     }
@@ -101,12 +101,19 @@
   }
 
   li{
-    @extend .des__sub;
     margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
   
     img {
       margin-right: 1.75rem;
       display: inline-block;
+      vertical-align: middle;
+    }
+
+    p {
+      @extend .des__sub;
+      margin-bottom: 0;
     }
   }
 }

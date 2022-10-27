@@ -26,15 +26,6 @@
         }
     }
 
-    span {
-        font-size: 4rem;
-
-        @screen lg {
-            font-size: 4.125rem;
-            line-height: 4.375rem;
-        }
-    }
-
     ::v-deep(span) {
       font-size: 4rem;
 
@@ -93,6 +84,20 @@
 .package-item__price {
     margin-bottom: 2rem;
     text-align: center;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    line-height: 50px;
+
+    @screen lg {
+        min-height: 5.625rem;
+    }
+
+    @media (min-width: 1350px) {
+        margin-bottom: 1rem;
+    }
+
     .usd {
         font-weight: 500;
         font-size: 3rem;
