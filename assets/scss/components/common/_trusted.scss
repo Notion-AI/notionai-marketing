@@ -137,23 +137,24 @@
 .text-feedback {
     font-size: 1.6rem;
     height: 17rem;
+    margin-bottom: 1.5rem;
 
     @screen sm {
-        height: 9.6rem;
+        min-height: 9.6rem;
     }
 
     @screen md {
-        height: 14.4rem;
+        min-height: 14.4rem;
     }
 
     @screen lg {
         font-size: 1.25rem;
         line-height: 1.625rem;
-        height: 9.75rem;
+        min-height: 9.75rem;
     }
 
     @screen xl {
-        height: 8.5rem;
+        min-height: 8.5rem;
     }
 }
 
