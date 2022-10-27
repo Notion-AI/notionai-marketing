@@ -91,7 +91,7 @@
     </Box>
     
     <TimelineEnterprise
-      :data="itemsBenefitsIntro"
+      :data="itemsBenefitsSecurity"
     >
       <p>Security, control and</p>
       <p>compliance that you expect from</p>
@@ -138,7 +138,8 @@ export default {
     ...mapGetters('enterprise', [
       'benefitsIntro',
       'intruduction',
-      'services'
+      'services',
+      'benefitsSecurity'
     ]),
 
     itemsBenefitsIntro () {
@@ -147,7 +148,11 @@ export default {
 
     itemsService () {
       return filter(this.services.items, item => item.is_active)
-    }
+    },
+
+    itemsBenefitsSecurity () {
+      return this.benefitsSecurity?.items || []
+    },
   }
 }
 </script>

@@ -23,7 +23,13 @@
             </div>
 
             <div class="slogan__img">
-                <img :src="slogan_image.url" :alt="slogan_image.alt" class="mx-auto" />
+                <!-- <img :src="slogan_image.url" :alt="slogan_image.alt" class="mx-auto" /> -->
+                <client-only>
+                  <video autoplay loop playsinline muted>
+                    <source :src="slogan_media?.url" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </client-only>
             </div>
         </div>
     </div>
@@ -65,11 +71,22 @@ export default {
         },
         slogan_image: {
           type: Object,
-          default: {
-            url: '',
-            alt: null,
+          default: () => {
+            return {
+              url: '',
+              alt: null,
+            }
           }
         },
+        slogan_media: {
+          type: Object,
+          default: () => {
+            return {
+              url: '',
+              alt: null,
+            }
+          }
+        }
     }
 }
 </script>

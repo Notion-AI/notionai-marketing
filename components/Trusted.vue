@@ -7,6 +7,7 @@
                 <span v-if="$route.path === '/air'" class="title--gradient-pink">{{ data.feedback_title_highlight }}</span>
                 <span v-if="$route.path === '/enterprise'" class="title--gradient-violet">{{ data.feedback_title_highlight }}</span>
                 <p class="inline-block">{{ data.feedback_title_normal_after }}</p>
+                <p class="block">{{ data.feedback_title_normal_line_2 }}</p>
             </h2>
         </div>
 

@@ -62,3 +62,12 @@
         opacity: 0.1;
     }
 }
+
+.gather-infor__img {
+  display: flex;
+  justify-content: center;
+
+  video {
+    max-width: 400px;
+  }
+}
