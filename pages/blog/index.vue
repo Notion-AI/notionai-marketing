@@ -30,7 +30,7 @@ export default {
 
       const getByCategory = await $prismic.api.query(queryPayload, {
           page: 1,
-          pageSize: 2
+          pageSize: 6
         }
       );
 
@@ -42,7 +42,7 @@ export default {
     data () {
       return {
         currentPage: 1,
-        pageSize: 2,
+        pageSize: 6,
       }
     },
 
