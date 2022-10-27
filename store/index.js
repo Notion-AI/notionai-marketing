@@ -13,7 +13,8 @@ const getters = {
   },
   logo: (state) => state.layout?.data?.logo,
   emailContact: (state) => state.layout?.data?.email_contact,
-  feedbacks: (state) => state.layout?.data?.feedback || []
+  feedbacks: (state) => state.layout?.data?.feedback || [],
+  signUpLink: (state) => state.layout?.data?.sign_up_link
 }
 
 const actions = {
