@@ -2,8 +2,12 @@
     <div class="slogan">
         <div class="container mx-auto">
             <h2 :class="`slogan__title ${type}`">
-                <p><span>{{slogan_text_line_1_highlight}}</span>{{slogan_text_line_1_normal}}</p>
-                <p>{{slogan_text_line_2_normal}}</p>
+                <p
+                  v-for="(title, idx) in slogan_title"
+                  :key="idx"
+                  v-html="$textConvert(title, '', 'highlight')"
+                >
+                </p>
             </h2>
 
             <div class="slogan__sub">
@@ -42,17 +46,9 @@ export default {
             type: String,
             default: 'air'
         },
-        slogan_text_line_1_highlight: {
-          type: String,
-          default: ''
-        },
-        slogan_text_line_1_normal: {
-          type: String,
-          default: ''
-        },
-        slogan_text_line_2_normal: {
-          type: String,
-          default: ''
+        slogan_title: {
+          type: Array,
+          default: () => []
         },
         slogan_text_description: {
           type: String,
@@ -93,4 +89,30 @@ export default {
 
 <style lang="scss" scoped>
 @import "~/assets/scss/components/common/_slogan.scss";
+</style>
+
+<style scoped>
+.slogan__title p :deep(span),
+.slogan__title p :deep(.highlight) {
+  font-weight: 500;
+  font-size: 4.6rem;
+  line-height: 5rem;
+
+  @screen lg {
+      font-size: 4.125rem;
+      line-height: 4.375rem;
+  }
+}
+
+.slogan__title.stream p :deep(.highlight) {
+  background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.slogan__title.air p :deep(.highlight) {
+  background: -webkit-linear-gradient(247.69deg, #F5C0BE -4.24%, #A3A5EF 191.1%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 </style>

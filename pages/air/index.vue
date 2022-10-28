@@ -1,9 +1,7 @@
 <template>
   <div class="air">
     <Slogan
-      :slogan_text_line_1_highlight="data.slogan_text_line_1_highlight"
-      :slogan_text_line_1_normal="data.slogan_text_line_1_normal"
-      :slogan_text_line_2_normal="data.slogan_text_line_2_normal"
+      :slogan_title="data.slogan_title"
       :slogan_text_description="data.slogan_text_description"
       :slogan_text_btn="data.slogan_text_btn"
       :slogan_btn_link="data.slogan_btn_link"

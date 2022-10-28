@@ -2,7 +2,13 @@
   "_cts": {
     "product_page": {
       "features": {},
-      "services": {}
+      "services": {},
+      "sologan_title": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
     },
     "home_page": {},
     "layout": {
