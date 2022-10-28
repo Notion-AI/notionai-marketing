@@ -2,9 +2,7 @@
   <div class="stream">
     <Slogan
       type="stream"
-      :slogan_text_line_1_highlight="dataStream.slogan_text_line_1_highlight"
-      :slogan_text_line_1_normal="dataStream.slogan_text_line_1_normal"
-      :slogan_text_line_2_normal="dataStream.slogan_text_line_2_normal"
+      :slogan_title="dataStream.slogan_title"
       :slogan_text_description="dataStream.slogan_text_description"
       :slogan_text_btn="dataStream.slogan_text_btn"
       :slogan_btn_link="dataStream.slogan_btn_link"

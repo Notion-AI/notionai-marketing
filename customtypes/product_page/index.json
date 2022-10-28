@@ -12,25 +12,13 @@
           "placeholder": ""
         }
       },
-      "slogan_text_line_1_highlight": {
-        "type": "Text",
+      "slogan_title": {
+        "type": "StructuredText",
         "config": {
-          "label": "slogan_text_line_1_highlight",
-          "placeholder": ""
-        }
-      },
-      "slogan_text_line_1_normal": {
-        "type": "Text",
-        "config": {
-          "label": "slogan_text_line_1_normal",
-          "placeholder": ""
-        }
-      },
-      "slogan_text_line_2_normal": {
-        "type": "Text",
-        "config": {
-          "label": "slogan_text_line_2_normal",
-          "placeholder": ""
+          "label": "Slogan Title",
+          "placeholder": "",
+          "allowTargetBlank": false,
+          "multi": "paragraph,strong"
         }
       },
       "slogan_text_description": {

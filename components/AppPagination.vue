@@ -40,7 +40,7 @@ export default {
         maxVisibleButtons: {
             type: Number,
             required: false,
-            default: 3
+            default: 2
         },
         totalPages: {
             type: Number,
@@ -87,7 +87,7 @@ export default {
                     isDisabled: i === this.currentPage
                 });
             }
-
+            
             return range;
         },
         isInFirstPage() {

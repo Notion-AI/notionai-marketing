@@ -36,7 +36,7 @@
                             class="mx-auto"
                             color="outline-white"
                             style="width: 130px"
-                        >Learn more</app-button>
+                        >{{ item.price }}</app-button>
                     </div>
                 </div>
             </div>

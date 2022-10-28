@@ -68,6 +68,10 @@
   justify-content: center;
 
   video {
-    max-width: 400px;
+    max-width: 100%;
+
+    @screen sm {
+      max-width: 390px;
+    }
   }
 }
