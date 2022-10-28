@@ -26,25 +26,12 @@
         }
     }
 
-<<<<<<< Updated upstream
     ::v-deep(span) {
-=======
-    span {
-        font-size: 4rem;
-
-        @screen lg {
-            font-size: 4.125rem;
-            line-height: 4.375rem;
-        }
-    }
-
-    &::v-deep(span) {
->>>>>>> Stashed changes
       font-size: 4rem;
 
       @screen lg {
-          font-size: 4.125rem;
-          line-height: 4.375rem;
+        font-size: 4.125rem;
+        line-height: 4.375rem;
       }
     }
 
