@@ -1,5 +1,6 @@
 <template>
-<!-- https://stackoverflow.com/questions/70246314/nuxt3-threejstroisjs-deployment-on-vercel-es-module-error -->
+  <!-- createApp is Vue/Nuxt 3 so trois won't work. -->
+  <!-- https://stackoverflow.com/questions/70246314/nuxt3-threejstroisjs-deployment-on-vercel-es-module-error -->
   <client-only>
     <Renderer ref="renderer">
       <Camera :position="{ z: 100 }"></Camera>
@@ -24,16 +25,12 @@
     },
 
     mounted() {
-      console.log("this.$refs")
-      console.log(this.$refs)
       const renderer = this.$refs.renderer;
-      console.log("renderer")
-      console.log(renderer)
-      // const box = this.$refs.box.mesh;
+      const box = this.$refs.box.mesh;
 
-      // renderer.onBeforeRender(() => {
-      //   box.rotation.x += 0.01;
-      // });
+      renderer.onBeforeRender(() => {
+        box.rotation.x += 0.01;
+      });
     },
   };
 </script>
