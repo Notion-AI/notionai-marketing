@@ -22,9 +22,12 @@
     max-width: 100%;
 
     @screen lg {
-      max-width: 50rem;
       font-size: 4.125rem;
       line-height: 4.375rem;
+    }
+
+    @screen xl {
+      max-width: 70%;
     }
   }
 }

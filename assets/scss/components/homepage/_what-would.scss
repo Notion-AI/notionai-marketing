@@ -44,6 +44,13 @@
             font-size: 1.5rem;
             line-height: 1.875rem;
             color: #000000;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            display: inline-block;
+
+            @screen lg {
+                margin-bottom: 1.25rem;
+            }
 
             &:last-child span {
                 display: none;

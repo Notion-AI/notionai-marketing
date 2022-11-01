@@ -37,7 +37,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1.75rem;
 
   h3 {
     font-weight: 500;
@@ -73,6 +72,7 @@
   letter-spacing: -0.02em;
   color: #8B8B8B;
   transition: all 0.4s ease-in-out;
+  margin-top: 1.5rem;
 
   @screen lg {
     font-size: 1.5rem;
