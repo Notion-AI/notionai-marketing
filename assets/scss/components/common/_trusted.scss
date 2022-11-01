@@ -80,7 +80,7 @@
         transform: translate(-50%, -30px);
         width: 100%;
         height: 1px;
-        background: linear-gradient(to right, #F2B59C, #FFE26E, #AAAEF5, #100418);
+        background: linear-gradient(to right, #F2B59C, #FFE26E, #100418);
         z-index: 0;
 
         @screen lg {
@@ -119,6 +119,18 @@
         &:last-child {
             padding-right: 0;
         }
+    }
+}
+
+.trusted__carousel--air {
+    &::before {
+        background: linear-gradient(to right, #F5C0BE, #A3A5EF, #100418);   
+    }
+}
+
+.trusted__carousel--enterprise {
+    &::before {
+        background: linear-gradient(to right, #D1A8D0, #9D9AED, #100418);   
     }
 }
 

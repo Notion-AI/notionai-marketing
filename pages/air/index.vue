@@ -18,7 +18,7 @@
       <template v-slot:left>
         <div>
           <h2 class="box-title">
-            <span>{{services[0].title_normal_before}} </span> <span class="gradient">{{services[0].title_highlight}} </span> <span>{{services[0].title_normal_after}}</span>
+            <span>{{services[0].title_normal_before}} </span> <span class="text-gradient-pink">{{services[0].title_highlight}} </span> <span>{{services[0].title_normal_after}}</span>
           </h2>
 
           <p class="box-sub">
@@ -40,7 +40,7 @@
       <template v-slot:right>
         <div>
           <h2 class="box-title">
-            <span class="gradient">{{services[1].title_highlight}} </span> <span>{{services[1].title_normal_after}} </span>
+            <span class="text-gradient-pink">{{services[1].title_highlight}} </span> <span>{{services[1].title_normal_after}} </span>
           </h2>
 
           <p class="box-sub">{{services[1].description}}</p>
@@ -52,7 +52,7 @@
       <template v-slot:left>
         <div>
           <h2 class="box-title">
-            <span>{{services[2].title_normal_before}} </span> <span class="gradient">{{services[2].title_highlight}} </span>
+            <span>{{services[2].title_normal_before}} </span> <span class="text-gradient-pink">{{services[2].title_highlight}} </span>
 						<span>{{services[2].title_normal_after}}</span>
           </h2>
 

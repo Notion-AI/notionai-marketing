@@ -36,6 +36,7 @@
                             class="mx-auto"
                             color="outline-white"
                             style="width: 130px"
+                            v-scroll-to="`#package-detail-${index}`"
                         >{{ item.price }}</app-button>
                     </div>
                 </div>

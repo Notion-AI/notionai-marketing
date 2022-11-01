@@ -2,10 +2,8 @@
     <div class="compare">
         <div class="container mx-auto">
             <div class="compare__title" :class="{'compare__title-air': isAir}">
-                <p>
-                  {{campare_title_normal}}
-                  <span>{{campare_title_highlight}}</span>
-                </p>
+              {{campare_title_normal}}
+              <span>{{campare_title_highlight}}</span>
             </div>
 
             <div class="compare__btn">

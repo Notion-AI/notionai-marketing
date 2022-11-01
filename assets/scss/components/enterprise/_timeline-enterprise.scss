@@ -53,23 +53,6 @@
   }
 }
 
-.timeline-enter__dot {
-  
-  // &::before{
-  //   content: '';
-  //   position: absolute;
-  //   left: 50%;
-  //   top: 40%;
-  //   transform: translate(-50%, -40%);
-  //   width: 100%;
-  //   height: 1px;
-  //   background: linear-gradient(to right, #9D9AED, #D1A8D0, #100418 103%);
-  //   z-index: 1;
-  // }
-
-  
-}
-
 .carousel {
   padding: 0 2rem;
   position: relative;
@@ -82,7 +65,7 @@
     transform: translate(-50%, -5%);
     width: 100%;
     height: 1px;
-    background: linear-gradient(to right, #9D9AED, #D1A8D0, #100418 103%);
+    background: linear-gradient(to right, #D1A8D0,  #9D9AED, #100418 103%);
     z-index: 0;
   }
 

@@ -24,7 +24,7 @@
           <h2
             v-for="(title, index) in service.title"
             class="box-title"
-            v-html="$textConvert(title, 'text-white', 'gradient')"
+            v-html="$textConvert(title, 'text-white', 'text-gradient-violet')"
             :key="index"
           >
           </h2>
@@ -60,7 +60,7 @@
           <h2
             v-for="(title, index) in service.title"
             class="box-title"
-            v-html="$textConvert(title, 'text-white', 'gradient')"
+            v-html="$textConvert(title, 'text-white', 'text-gradient-violet')"
             :key="index"
           >
           </h2>
