@@ -30,8 +30,8 @@
       font-size: 4rem;
 
       @screen lg {
-          font-size: 4.125rem;
-          line-height: 4.375rem;
+        font-size: 4.125rem;
+        line-height: 4.375rem;
       }
     }
 
@@ -147,7 +147,8 @@
     }
 
     @media (min-width: 1350px) {
-        margin-bottom: 1rem;
+        // margin-bottom: 1rem;
+        margin-bottom: 0;
     }
 
     .usd {
@@ -187,39 +188,4 @@
         font-size: 1.25rem;
         line-height: 1.625rem;
     }
-}
-
-.package-item__btn {
-
-}
-
-* {
-  font-size: 10px;
-  font-family: 'Graphik', sans-serif;
-  font-weight: 400;
-  color: #fff;
-
-  @screen lg{
-    font-size: 16px;
-  }
-}
-
-.fringer-data,
-.datasets,
-.ranking,
-.ranking--modify,
-.compare,
-.data-cluster,
-.data-globe,
-.gather-infor,
-.source,
-.slogan,
-.benefits,
-.slogan-enterprise,
-.timeline-enter,
-.trusted,
-.intro,
-.plans-package
-{
-  background-color: #100418;
 }

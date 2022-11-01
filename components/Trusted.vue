@@ -11,7 +11,7 @@
             </h2>
         </div>
 
-        <div class="trusted__carousel">
+        <div class="trusted__carousel" :class="`trusted__carousel--${$route.name}`">
             <client-only>
                 <carousel v-bind="options">
                     <slide

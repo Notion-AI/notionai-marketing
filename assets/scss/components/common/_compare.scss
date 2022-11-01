@@ -8,37 +8,41 @@
 
 .compare__title {
     margin-bottom: 2.5rem;
-    display: flex;
-    justify-content: center;
-    p {
-        font-size: 3rem;
-        line-height: 4rem;
-        text-align: center;
-        max-width: 885px;
+    font-size: 3rem;
+    line-height: 4rem;
+    text-align: center;
+    letter-spacing: -0.02em;
 
-        @screen md {
-          font-size: 3.75rem;
-        }
+    @screen md {
+      font-size: 3.75rem;
+    }
 
-        span {
-          font-weight: 500;
-          font-size: 3rem;
-          line-height: 4rem;
-          background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
+    @screen xl {
+      width: 72%;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-          @screen md {
-              font-size: 3.75rem;
-          }
-        }
+    span {
+      font-weight: 500;
+      font-size: 3rem;
+      line-height: 4rem;
+      background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.02em;
+
+      @screen md {
+        font-size: 3.75rem;
+      }
     }
 }
 
 .compare__title-air {
-    p span {
+    span {
       background: -webkit-linear-gradient(247.69deg, #F5C0BE -4.24%, #A3A5EF 191.1%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      letter-spacing: -0.02em;
     }
 }

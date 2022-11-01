@@ -9,7 +9,7 @@
                 <n-link :to="{ name: 'blog', query: { ...$route.query, author: 'Resources', page: 1}}" :class="`${ $route?.query?.author === 'Resources' ? 'font-bold' : ''}`">Resources</n-link>
             </div>
 
-            <div class="list-article__blog grid grid-cols-1 gap-2.5 md:grid-cols-2 md:gap-5">
+            <div class="list-article__blog grid grid-cols-1 md:grid-cols-2 md:gap-6">
                 <div 
                   v-for="(item, index) in getBlogs" :key="index" 
                   class="mx-auto mb-14 md:mb-11"
@@ -17,7 +17,7 @@
                   <img 
                     :src="item.data?.thumbnail?.url" 
                     :alt="item.data?.thumbnail?.alt" 
-                    class="blog-img"
+                    class="blog-img 2xl:w-full"
                     @click="$router.push(`/blog/${item.uid}`)"
                   >
                   <div class="flex flex-wrap gap-2">

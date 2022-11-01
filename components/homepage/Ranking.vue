@@ -6,7 +6,7 @@
             :style="{paddingBottom: padding + 'rem'}"
         >
             <div class="container mx-auto">
-                <img class="mx-auto" :src="require(`~/assets/images/home/${image}.png`)" alt="" />
+                <img class="mx-auto" :src="require(`~/assets/images/home/${image}.svg`)" alt="" />
                 <h2 class="ranking__text" v-if="isText">
                     {{rankingText}} <span>{{rankingTextHighlight}}</span>
                 </h2>
@@ -22,8 +22,8 @@
                 class="container container--modify mx-auto"
             >
                 <h2 :class="{'opacity-30': opacity}" class="ranking__left">{{straightText}}</h2>
-                <img v-if="opacity" src="~assets/images/home/ranking-3.png" alt="" class="mx-auto"/>
-                <img v-else src="~assets/images/home/ranking-4.png" alt="" class="mx-auto"/>
+                <img v-if="opacity" src="~assets/images/home/ranking-3.svg" alt="" class="mx-auto"/>
+                <img v-else src="~assets/images/home/ranking-4.svg" alt="" class="mx-auto"/>
                 <h2 :class="{'opacity-30': opacity}" class="ranking__right">{{underText}}</h2>
             </div>
         </div>

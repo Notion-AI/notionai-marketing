@@ -11,7 +11,7 @@
             </div>
 
             <div class="gather-infor__img">
-                <img src="~assets/images/home/gather-infor-2.png" alt="" class="mx-auto">
+                <GatherInfor2  class="mx-auto"/>
             </div>
        </div>
     </div>
@@ -19,7 +19,13 @@
 
 <script>
 import { mapState } from 'vuex'
+import GatherInfor2 from '~/assets/images/home/gather-infor-2.svg?inline'
+
 export default {
+  components: {
+    GatherInfor2
+  },
+
   computed: {
     ...mapState('home', ['data'])
   },

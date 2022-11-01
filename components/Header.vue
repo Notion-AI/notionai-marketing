@@ -106,6 +106,16 @@ export default {
       }
     },
 
+    watch: { 
+        '$route.name': {
+            handler(value) {
+                value === 'blog' || value === 'blog-id' ? this.scrollUp = true : this.scrollUp = false
+            },
+            deep: true,
+            immediate: true
+        }
+    },
+
     mounted() {
         this.prev = window.scrollY;
         window.addEventListener('scroll', e => this.handleNavigation(e));
@@ -115,15 +125,19 @@ export default {
         handleNavigation(e) {
             const window = e.currentTarget;
 
-            if (this.prev > window.scrollY) {
+            if(this.$route.name === 'blog' || this.$route.name === 'blog-id') {
                 this.scrollUp = true
-            } else if (this.prev < window.scrollY) {
-                this.scrollUp = false
-            }
+            } else {
+                if (this.prev > window.scrollY) {
+                this.scrollUp = true
+                } else if (this.prev < window.scrollY) {
+                    this.scrollUp = false
+                }
 
-            if(window.scrollY === 0) {
-                this.scrollUp = false
-                document.getElementById('header').classList.remove("transparent")
+                if(window.scrollY === 0) {
+                    this.scrollUp = false
+                    document.getElementById('header').classList.remove("transparent")
+                }
             }
             this.prev = window.scrollY;
         },

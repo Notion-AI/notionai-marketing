@@ -29,8 +29,8 @@
 
             <h2 
                 class="get-touch"
-                v-for="(item, idx) in titleContact"
-                :key="idx"
+                v-for="(item, index) in titleContact"
+                :key="index"
                 v-html="$textConvert(item, '', 'text-gradient-yellow')"
             ></h2>
 
