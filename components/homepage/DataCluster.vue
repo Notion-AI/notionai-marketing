@@ -2,9 +2,9 @@
   <div class="data-cluster">
     <div class="container mx-auto">
         <div v-if="type === 1" class="flex items-center content-between">
-            <img src="~assets/images/home/data-cluster-1.png" alt="" class="w-1/3 lg:w-auto mr-auto">
-            <img src="~assets/images/home/data-cluster-2.png" alt="" class="w-1/3 lg:w-auto mx-auto">
-            <img src="~assets/images/home/data-cluster-3.png" alt="" class="w-1/3 lg:w-auto ml-auto">
+            <img src="~assets/images/home/data-cluster-1.svg" alt="" class="w-1/3 lg:w-auto mr-auto">
+            <img src="~assets/images/home/data-cluster-2.svg" alt="" class="w-1/3 lg:w-auto mx-auto">
+            <img src="~assets/images/home/data-cluster-3.svg" alt="" class="w-1/3 lg:w-auto ml-auto">
 
             <div class="data-cluster__text">
                 <p>{{clusterText}} <span>{{clusterTextHighlight}}</span></p>
@@ -13,11 +13,11 @@
         </div>
 
         <div v-if="type === 2">
-            <img src="~assets/images/home/data-cluster-4.png" alt="" class="mx-auto">
+            <img src="~assets/images/home/data-cluster-4.svg" alt="" class="mx-auto">
         </div>
 
         <div v-if="type === 3">
-            <img src="~assets/images/home/data-globe-3.png" alt="" class="mx-auto">
+            <img src="~assets/images/home/data-globe-3.svg" alt="" class="mx-auto">
         </div>
     </div>
   </div>

@@ -6,7 +6,7 @@
                 {{textLeft}}
             </p>
             <div>
-                <img class="mx-auto" :src="require(`~/assets/images/home/${image}.png`)" alt="" />
+                <img class="mx-auto" :src="require(`~/assets/images/home/${image}.svg`)" alt="" />
             </div>
             <p class="data-globe__text-right text-center lg:text-left">
                 {{textRight}}

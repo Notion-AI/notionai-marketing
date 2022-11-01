@@ -1,13 +1,13 @@
 <template>
   <div class="source">
     <div class="container mx-auto" v-if="type === 1">
-      <img class="mx-auto w-8/12" src="~/assets/images/home/source.png" alt=""/>
+      <img class="mx-auto w-8/12" src="~/assets/images/home/source.svg" alt=""/>
       <p class="source__number">{{sourceNumber}}</p>
     </div>
 
-    <img v-if="type === 2" class="mx-auto w-full" src="~/assets/images/home/source-2.png" alt=""/>
+    <img v-if="type === 2" class="mx-auto w-full" src="~/assets/images/home/source-2.svg" alt=""/>
 
-    <img v-if="type === 3" class="ml-auto w-9/12" src="~/assets/images/home/source-3.png" alt=""/>
+    <img v-if="type === 3" class="ml-auto w-9/12" src="~/assets/images/home/source-3.svg" alt=""/>
   </div>
 </template>
 
