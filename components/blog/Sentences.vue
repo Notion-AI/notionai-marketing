@@ -8,7 +8,7 @@
 
         <div class="sentences__choose">
             <p class="choose-text">Choose a from these categories</p>
-            <div class="flex flex-wrap">
+            <div class="flex flex-wrap justify-center">
                 <app-button
                   v-for="(category, idx) in tags"
                   :key="idx"

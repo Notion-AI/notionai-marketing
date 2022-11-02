@@ -59,6 +59,8 @@
 
   .arrow img {
     transition: ease 0.4s;
+    min-width: 18px;
+    margin-left: 1.5rem;
   }
 
   .arrow-rotate img {

@@ -1,7 +1,7 @@
 <template>
   <div class="what-would">
     <div class="container mx-auto">
-        <h2 class="what-would__title" style="max-width: 600px;">
+        <h2 class="what-would__title">
             <p>{{data.section_12_title_normal}} <span>{{data.section_12_title_highlight}}</span></p>
         </h2>
 

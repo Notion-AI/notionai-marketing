@@ -9,9 +9,11 @@
 
 .explore__title {
     margin-bottom: 4rem;
-
+    padding-right: 1.5rem;
+    
     @screen lg {
         margin-bottom: 3.75rem;
+        padding-right: 4.5rem;
     }
     p {
         font-size: 3.6rem;
@@ -21,6 +23,10 @@
             font-size: 3.25rem;
             line-height: 3.875rem;
         }
+    }
+
+    @media (min-width: 1440px) {
+        margin-right: 14rem;
     }
 }
 .explore__carousel {

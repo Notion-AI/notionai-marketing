@@ -8,7 +8,7 @@
             ></h2>
     
             <div class="blog-detail__img">
-                <img :src="banner?.url" :alt="banner?.alt" class="mx-auto">
+                <img :src="banner?.url" :alt="banner?.alt" />
             </div>
     
             <div class="grid grid-cols-1 lg:grid-cols-3">
