@@ -19,6 +19,7 @@
       :key="idx"
       :background="service.background_color"
     >
+      <div>{{ idx }}</div>
       <template v-slot:left>
         <div v-if="idx % 2 == 0">
           <h2
@@ -53,12 +54,14 @@
         </div>
         <!-- <img v-else :src="service.image?.url" :alt="service.image?.alt" class="mx-auto" /> -->
         <!-- <div v-else class="flex justify-center w-full"> -->
-        <nuxt-img v-else src="/images/ept/ept-1.svg" placeholder="/images/ept/ept-1-pld.png" />
+        <nuxt-img v-else :src="`/images/ept/ept-${idx}.svg`" :placeholder="`/images/ept/ept-${idx}-pld.png`" />
         <!-- </div> -->
       </template>
 
       <template v-slot:right>
-        <img v-if="idx % 2 == 0" :src="service.image?.url" :alt="service.image?.alt"  class="mx-auto" />
+        <!-- <img v-if="idx % 2 == 0" :src="service.image?.url" :alt="service.image?.alt"  class="mx-auto" /> -->
+        <nuxt-img v-if="idx % 2 == 0" :src="`/images/ept/ept-${idx}.svg`" :placeholder="`/images/ept/ept-${idx}-pld.png`" />
+
         <div v-else>
           <h2
             v-for="(title, index) in service.title"

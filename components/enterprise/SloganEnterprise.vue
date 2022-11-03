@@ -24,7 +24,7 @@
       <div class="slogan-enterprise__img">
         <!-- <img :src="intruduction.primary.media.url" :alt="intruduction.primary.media.name" class="mx-auto"> -->
         <div class="flex justify-center w-full">
-          <nuxt-img src="/images/ept/ept-0.svg" placeholder="/images/ept/ept-0-pld.png" />
+          <nuxt-img src="/images/ept/ept.svg" placeholder="/images/ept/ept-pld.png" />
         </div>
       </div>
     </div>
