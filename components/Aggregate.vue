@@ -8,7 +8,7 @@
 			<div class="aggregate__btn">
 				<app-button class="mx-auto" nuxt :to="{ 'name': organisation_btn_enterprise_router }" :color="type === 'stream' ? 'gradient-yellow' : 'gradient-pink'"
 					style="width: 148px;">
-					{{ organisation_btn_enterprise_text }}
+					<span>{{ organisation_btn_enterprise_text }}</span>
 				</app-button>
 			</div>
 	

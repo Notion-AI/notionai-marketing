@@ -22,7 +22,9 @@
                             tag="a"
                             :target="item.link_linkedin.target"
                             :href="item.link_linkedin.url"
-                        >LinkedIn</app-button>
+                        >
+                            <span>LinkedIn</span>
+                        </app-button>
                     </div>
                 </div>
             </div>
@@ -42,7 +44,7 @@
                 :target="this.contact?.primary?.button_link?.target"
                 :href="this.contact?.primary?.button_link?.url"
             >
-                {{ this.contact?.primary?.button_text }}
+                <span>{{ this.contact?.primary?.button_text }}</span>
             </app-button>
         </div>
     </div>
