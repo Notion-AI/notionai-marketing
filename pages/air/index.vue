@@ -29,7 +29,7 @@
 
       <template v-slot:right>
         <div class="flex justify-center w-full">
-          <nuxt-img src="/images/air/air-1.svg"/>
+          <nuxt-img src="/images/air/air-1.svg" placeholder="/images/air/air-1-placeholder.png"/>
         </div>
         <!-- <img :src="services[0].image.url" :alt="services[0].image.alt" class="mx-auto" /> -->
       </template>
