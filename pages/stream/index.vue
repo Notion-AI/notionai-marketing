@@ -100,6 +100,7 @@
       :organisation_btn_enterprise_text="dataStream.organisation_btn_enterprise_text"
       :organisation_tab_left_text="dataStream.organisation_tab_left_text"
       :organisation_tab_right_text="dataStream.organisation_tab_right_text"
+      :organisation_btn_enterprise_router="dataStream.organisation_btn_enterprise_router"
     />
 
     <Trusted />

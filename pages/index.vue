@@ -91,6 +91,7 @@
       :campare_title_normal="data.section_14_title_normal"
       :campare_title_highlight="data.section_14_title_highlight"
       :campare_btn_text="data.section_14_btn_text"
+      :campare_btn_link="data.section_14_btn_link"
     />
 
     <Trusted />

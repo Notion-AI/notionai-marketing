@@ -6,7 +6,7 @@
 			</h2>
 	
 			<div class="aggregate__btn">
-				<app-button class="mx-auto" nuxt to="" :color="type === 'stream' ? 'gradient-yellow' : 'gradient-pink'"
+				<app-button class="mx-auto" nuxt :to="{ 'name': organisation_btn_enterprise_router }" :color="type === 'stream' ? 'gradient-yellow' : 'gradient-pink'"
 					style="width: 148px;">
 					{{ organisation_btn_enterprise_text }}
 				</app-button>
@@ -65,6 +65,10 @@ export default {
 		organisation_tab_right_text: {
 			type: String,
 			default: ''
+		},
+    organisation_btn_enterprise_router: {
+			type: String,
+			default: 'enterprise'
 		}
 	}
 }

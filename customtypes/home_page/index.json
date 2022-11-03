@@ -331,11 +331,16 @@
                 "placeholder": ""
               }
             },
-            "button_link": {
-              "type": "Text",
+            "router_link": {
+              "type": "Select",
               "config": {
-                "label": "button_link",
-                "placeholder": ""
+                "label": "Router Link",
+                "placeholder": "",
+                "options": [
+                  "air",
+                  "stream",
+                  "enterprise"
+                ]
               }
             }
           }
@@ -363,10 +368,12 @@
         }
       },
       "section_14_btn_link": {
-        "type": "Text",
+        "type": "Link",
         "config": {
-          "label": "section_14_btn_link",
-          "placeholder": ""
+          "label": "Section 14 btn link",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null
         }
       },
       "section_15_title_before": {

@@ -17,7 +17,7 @@
                     <app-button
                         class="mx-auto"
                         nuxt
-                        to=""
+                        :to="{ 'name': prod.router_link }"
                         :color="`${idx === 0 ? 'gradient-yellow' : 'gradient-violet'}`"
                         style="width: 128px"
                     >{{prod.button_text}}</app-button>
