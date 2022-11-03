@@ -25,7 +25,7 @@
                       v-for="category in item.tags"
                       :key="category"
                       class="blog-btn"
-                    >{{ category }}</app-button>
+                    ><span>{{ category }}</span></app-button>
                   </div>
 
                   <h3 class="blog-title" @click="$router.push(`/blog/${item.uid}`)">{{ item.data?.title }}</h3>
