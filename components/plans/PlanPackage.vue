@@ -24,7 +24,7 @@
                     </h5>
                     <div class="package-item__price">
                         <span class="usd" :class="`text-gradient-${item.class_gradient}`">{{ item.price }}</span>
-                        <span class="monthly">{{ item.perMonth }}</span>
+                        <span class="monthly">{{ item.per_month }}</span>
                     </div>
 
                     <p class="package-item__text">

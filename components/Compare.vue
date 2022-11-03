@@ -12,7 +12,7 @@
                     :color="isAir ? 'gradient-pink' : 'gradient-yellow'"
                     style="width: 116px"
                 >
-                  <a :href="campare_btn_link.url" :target="campare_btn_link.target">{{campare_btn_text}}</a>
+                  <a :href="campare_btn_link.url" target="_blank">{{campare_btn_text}}</a>
                 </app-button>
             </div>
         </div>

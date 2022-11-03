@@ -220,6 +220,19 @@
           "placeholder": ""
         }
       },
+      "organisation_btn_enterprise_router": {
+        "type": "Select",
+        "config": {
+          "label": "organisation_btn_enterprise_router",
+          "placeholder": "",
+          "options": [
+            "enterprise",
+            "air",
+            "stream"
+          ],
+          "default_value": "enterprise"
+        }
+      },
       "feedback_title_normal_before": {
         "type": "Text",
         "config": {
