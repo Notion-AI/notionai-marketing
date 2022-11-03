@@ -63,7 +63,10 @@
     }
 
     a {
-        margin: 0 auto 1rem auto;
+        // margin: 0 auto 1rem auto;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+
         @screen lg {
             margin: 0 0.375rem 0 0;
         }

@@ -41,8 +41,8 @@
             <span class="monthly"> / {{ item.monthly }}</span>
           </p>
           <div v-if="item.users && item.topics" class="flex items-center ml-11">
-            <app-button color="gray" class="mr-4">{{ item.users }} Users</app-button>
-            <app-button color="gray">{{ item.topics }} Topics</app-button>
+            <app-button color="gray" class="mr-4" style="width: 98px">{{ item.users }} Users</app-button>
+            <app-button color="gray" style="width: 98px">{{ item.topics }} Topics</app-button>
           </div>
         </div>
       </div>
@@ -70,7 +70,7 @@ export default {
 @import "~/assets/scss/components/plans/_package-detail.scss";
 </style>
 
-<!-- <style scoped>
+<style scoped>
 .des__slogan .text-gradient-yellow {
   background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
   -webkit-background-clip: text;
@@ -80,13 +80,6 @@ export default {
 
 .des__slogan :deep(.text-gradient-yellow) {
   background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 500;
-}
-
-.text-gradient-pink {
-  background: -webkit-linear-gradient(247.69deg, #F5C0BE -4.24%, #A3A5EF 191.1%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 500;
@@ -113,4 +106,4 @@ export default {
   -webkit-text-fill-color: transparent;
   font-weight: 500;
 }
-</style> -->
+</style>
