@@ -1,7 +1,9 @@
 <template>
     <footer class="footer" id="footer">
         <div class="footer__location lg:flex">
-            <n-link to="/" class="footer-logo"><img :src="logo.url" :alt="logo.alt"></n-link>
+            <n-link to="/" class="footer-logo">
+              <nuxt-img provider="prismic" :src="logo.url" :alt="logo.alt"/>
+            </n-link>
             <div class="location">
                 <div class="location-address">
                     <p class="mb-1 font-medium">{{ locationTitle }}</p>
@@ -19,7 +21,7 @@
                       <a :href="emailContact">Contact</a>
                     </app-button>
                     <a v-for="(s, idx) in socials" :key="idx" :href="s.link.url" :target="s.link.target" class="mr-8 md:mr-5" >
-                      <img :src="s.icon_image.url" :alt="s.icon_image.alt">
+                      <nuxt-img provider="prismic" :src="s.icon_image.url" :alt="s.icon_image.alt"/>
                     </a>
                 </div>
             </div>
