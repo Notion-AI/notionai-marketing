@@ -33,7 +33,7 @@
                         </div>
 
                         <div class="trusted-img">
-                            <img :src="feedback?.logo_company?.url" :alt="feedback?.logo_company?.alt">
+                            <nuxt-img provider="prismic" :src="feedback?.logo_company?.url" :alt="feedback?.logo_company?.alt"/>
                         </div>
                     </slide>
                 </carousel>
