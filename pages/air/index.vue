@@ -28,13 +28,19 @@
       </template>
 
       <template v-slot:right>
-        <img :src="services[0].image.url" :alt="services[0].image.alt" class="mx-auto" />
+        <div class="flex justify-center w-full">
+          <nuxt-img src="/images/air/air-1.svg" placeholder="./images/air/air-1-placeholder.png" loading="lazy"/>
+        </div>
+        <!-- <img :src="services[0].image.url" :alt="services[0].image.alt" class="mx-auto" /> -->
       </template>
     </Box>
 
     <Box v-if="services.length >= 2" background="#F7F7F7" :reverse="window.width < 768 ? true : false">
       <template v-slot:left>
-        <img :src="services[1].image.url" :alt="services[1].image.alt" class="mx-auto" />
+        <!-- <img :src="services[1].image.url" :alt="services[1].image.alt" class="mx-auto" /> -->
+        <div class="flex justify-center w-full">
+          <nuxt-img src="/images/air/air-2.svg" placeholder="./images/air/air-2-placeholder.png" loading="lazy"/>
+        </div>
       </template>
 
       <template v-slot:right>
@@ -71,7 +77,10 @@
       </template>
 
       <template v-slot:right>
-        <img :src="services[2].image.url" :alt="services[2].image.alt" class="mx-auto" />
+        <!-- <img :src="services[2].image.url" :alt="services[2].image.alt" class="mx-auto" /> -->
+        <div class="flex justify-center w-full">
+          <nuxt-img src="/images/air/air-3.svg" placeholder="./images/air/air-3-placeholder.png" loading="lazy"/>
+        </div>
       </template>
     </Box>
 
