@@ -17,8 +17,9 @@
         height: 2.375rem;
     }
 
-    a{
+    a, span{
         font-size: 1.6rem;
+        color: #100418;
 
         @screen lg {
             font-size: 1rem;
@@ -37,42 +38,91 @@
 
 .btn--white {
     background: #fff;
+
+    &:hover, &:active {
+        background: #000;
+        a, span {
+            color: #fff;
+        }
+    }
 }
 
 .btn--gradient-yellow {
-    background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
-    border: unset;
+    border: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0 , 0, 0, 0.24);
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+
+    &:hover, &:active {
+        border-radius: 100rem;
+        border: solid 2px transparent;
+        background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        box-shadow: 2px 1000px 1px #000 inset;
+        
+        a, span {
+            background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
 }
 
 .btn--gradient-pink {
-    background: linear-gradient(247.69deg, #F5C0BE -4.24%, #A3A5EF 191.1%);
-    border: unset;
+    border: none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0 , 0, 0, 0.24);
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(247.69deg, #F5C0BE -4.24%, #A3A5EF 191.1%);
+
+    &:hover, &:active {
+        border-radius: 100rem;
+        border: solid 2px transparent;
+        background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(247.69deg, #F5C0BE -4.24%, #A3A5EF 191.1%);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        box-shadow: 2px 1000px 1px #000 inset;
+        
+        a, span {
+            background: linear-gradient(247.69deg, #F5C0BE -4.24%, #A3A5EF 191.1%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
 }
 
 .btn--gradient-violet {
-    background: linear-gradient(252.6deg, #D1A8D0 -62.78%, #9D9AED 119.63%);
-    border: unset;
+    border: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0 , 0, 0, 0.24);
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(252.6deg, #D1A8D0 -62.78%, #9D9AED 119.63%);
+
+    &:hover, &:active {
+        border-radius: 100rem;
+        border: solid 2px transparent;
+        background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(252.6deg, #D1A8D0 -62.78%, #9D9AED 119.63%);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        box-shadow: 2px 1000px 1px #000 inset;
+        
+        a, span {
+            background: linear-gradient(252.6deg, #D1A8D0 -62.78%, #9D9AED 119.63%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
 }
 
 .btn-outline--white {
     border: 1px solid #fff;
     background: transparent;
-    color: #fff;
-}
 
-.btn-outline--gradient-yellow {
-    position: relative;
-    padding: 1px;
-    background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+    a, span {
+        color: #fff;
+    }
 
-    a {
-        background: #222;
-        display: inline-block;
-        border-radius: 1.875rem;
-        height: 1.6875rem !important;
-        width: 6.3125rem !important;
-        // background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
-        // background-clip: text !important;
-        // color: transparent !important;
+    &:hover, &:active {
+        background: #fff;
+
+        a, span {
+            color: #100418 !important;
+        }
     }
 }

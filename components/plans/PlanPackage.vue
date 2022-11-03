@@ -37,7 +37,7 @@
                             color="outline-white"
                             style="width: 130px"
                             v-scroll-to="`#package-detail-${index}`"
-                        >{{ item.price }}</app-button>
+                        ><span>{{ item.price }}</span></app-button>
                     </div>
                 </div>
             </div>

@@ -14,16 +14,18 @@
                   :key="idx"
                   nuxt
                   :to="{ name: 'blog', query: { ...$route?.query, category, page: 1 }}"
-                  :style="`${$route.query?.category === category ? 'min-width: 74px; background: #000000; color: #fff' : 'min-width: 74px;'}`"
+                  :style="`${$route.query?.category === category ? 'min-width: 74px' : 'min-width: 74px;'}`"
                 >
-                  {{ category }}
+                  <span>{{ category }}</span>
                 </app-button>
 
                 <app-button 
                   nuxt
                   :to="{ name: 'blog', query: { ...$route?.query, category: 'All', page: 1 } }"
-                  :style="`${(!$route.query?.category || $route.query?.category === 'All') ? 'width: 100px; background: #000000; color: #fff' : 'width: 100px;'}`"
-                >All Topics</app-button>
+                  :style="`${(!$route.query?.category || $route.query?.category === 'All') ? 'width: 100px' : 'width: 100px;'}`"
+                >
+                  <span>All Topics</span>
+                </app-button>
             </div>
         </div>
     </div>
