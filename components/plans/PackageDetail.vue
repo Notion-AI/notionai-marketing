@@ -41,8 +41,8 @@
             <span class="monthly"> / {{ item.monthly }}</span>
           </p>
           <div v-if="item.users && item.topics" class="flex items-center ml-11">
-            <app-button color="gray" class="mr-4" style="width: 98px">{{ item.users }} Users</app-button>
-            <app-button color="gray" style="width: 98px">{{ item.topics }} Topics</app-button>
+            <app-button color="gray" class="mr-4" style="width: 98px"><span><span>{{ item.users }} Users</span></span></app-button>
+            <app-button color="gray" style="width: 98px"><span><span>{{ item.topics }} Topics</span></span></app-button>
           </div>
         </div>
       </div>

@@ -15,11 +15,12 @@
                     :to="{ name: item.routers_name }"
                     :class="item.routers_name === $route.name ? `${item.routers_name}-active` : ''"
                 >
-                    {{ item.name[0]?.text || '' }}
+                    <span>{{ item.name[0]?.text || '' }}</span>
                 </n-link>
                 <app-button
                     class="login-btn"
                     color="outline-white"
+                    style="width: 102px; height: 30px;"
                 >
                     <a :href="alertLink.url" :target="alertLink.target">Login</a>
                 </app-button>
@@ -56,10 +57,10 @@
 
                         <div class="mobile-list__login">
                             <app-button 
-                            class="w-full md:w-6/12 mx-auto"
-                            color="outline-white"
+                                class="w-full md:w-6/12 mx-auto"
+                                color="outline-white"
                             >
-                            <a :href="alertLink.url" :target="alertLink.target">Login</a>
+                                <a :href="alertLink.url" :target="alertLink.target">Login</a>
                             </app-button>
 
                             <p class="trial text-white">

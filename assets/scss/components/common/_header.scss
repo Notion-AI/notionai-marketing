@@ -41,32 +41,8 @@
     transition: all 0.4s ease-in;
 }
 
-.header.bg-color-white {
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(8px);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 99;
-  transition: all 0.4s ease-in;
-}
-
-.header.bg-color-black {
-  background: #100418;
-  opacity: 0.6;
-  backdrop-filter: blur(8px);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 99;
-  transition: all 0.4s ease-in;
-}
-
-.transparent,
-.bg-color-white {
-    .header__desktop a {
+.transparent {
+    .header__desktop a, .header__desktop a span{
         color: #000000;
     }
 
@@ -95,32 +71,90 @@
     align-items: center;
 
     a {
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         width: 6.375rem;
         height: 1.875rem;
         color: #fff;
-        margin-right: 0.3125rem;
+        margin-right: 0.5rem;
         text-align: center;
-        line-height: 2;
+        
+    }
 
-        &:last-child {
-            margin-right: 0;
+    .stream-active, .plans-active, .blog-active, .about-active {
+        border-radius: 1.875rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0 , 0, 0, 0.24);
+        background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+
+        a, span {
+            color: #100418;
+        }
+
+        &:hover, &:active {
+            border-radius: 100rem;
+            border: solid 2px transparent;
+            background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            box-shadow: 2px 1000px 1px #000 inset;
+            
+            a, span {
+                background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
         }
     }
 
-    .stream-active, .plans-active, .blog-active {
-        background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
-        border-radius: 1.875rem;
-    }
-
     .air-active {
-        background-color: #E9BCC5;
         border-radius: 1.875rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0 , 0, 0, 0.24);
+        background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(247.69deg, #F5C0BE -4.24%, #A3A5EF 191.1%);
+
+        a, span {
+            color: #100418;
+        }
+
+        &:hover, &:active {
+            border-radius: 100rem;
+            border: solid 2px transparent;
+            background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(247.69deg, #F5C0BE -4.24%, #A3A5EF 191.1%);
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            box-shadow: 2px 1000px 1px #000 inset;
+            
+            a, span {
+                background: linear-gradient(247.69deg, #F5C0BE -4.24%, #A3A5EF 191.1%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
     }
 
     .enterprise-active {
-        background-color: #CDA7D2;
         border-radius: 1.875rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0 , 0, 0, 0.24);
+        background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(252.6deg, #D1A8D0 -62.78%, #9D9AED 119.63%);
+
+        a, span {
+            color: #100418;
+        }
+
+        &:hover, &:active {
+            border-radius: 100rem;
+            border: solid 2px transparent;
+            background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(252.6deg, #D1A8D0 -62.78%, #9D9AED 119.63%);
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            box-shadow: 2px 1000px 1px #000 inset;
+            
+            a, span {
+                background: linear-gradient(252.6deg, #D1A8D0 -62.78%, #9D9AED 119.63%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
     }
 }
 
