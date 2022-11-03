@@ -1,7 +1,7 @@
 <template>
     <div class="benefits-item">
         <div class="benefits-item__img">
-            <img :src="img" alt="">
+            <nuxt-img provider="prismic" :src="img" />
         </div>
 
         <h2 class="benefits-item__title">

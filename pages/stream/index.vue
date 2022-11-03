@@ -33,7 +33,7 @@
       <template v-slot:right>
         <!-- <img :src="services[0].image.url" :alt="services[0].image.alt" class="mx-auto" /> -->
         <div class="flex justify-center w-full">
-          <nuxt-img src="/images/stream/stream-1.svg" placeholder="./images/stream/stream-1-placeholder.png" />
+          <nuxt-img src="/images/stream/stream-1.svg" placeholder="/images/stream/stream-1-placeholder.png" />
         </div>
       </template>
     </Box>
@@ -42,7 +42,7 @@
       <template v-slot:left>
         <!-- <img :src="services[1].image.url" :alt="services[1].image.alt" class="mx-auto" /> -->
         <div class="flex justify-center w-full">
-          <nuxt-img src="/images/stream/stream-2.svg" placeholder="./images/stream/stream-2-placeholder.png" />
+          <nuxt-img src="/images/stream/stream-2.svg" placeholder="/images/stream/stream-2-placeholder.png" />
         </div>
       </template>
 
@@ -82,7 +82,7 @@
       <template v-slot:right>
         <!-- <img :src="services[2].image.url" :alt="services[2].image.alt" class="mx-auto" /> -->
         <div class="flex justify-center w-full">
-          <nuxt-img src="/images/stream/stream-3.svg" placeholder="./images/stream/stream-3-placeholder.png" />
+          <nuxt-img src="/images/stream/stream-3.svg" placeholder="/images/stream/stream-3-placeholder.png" />
         </div>
       </template>
     </Box>

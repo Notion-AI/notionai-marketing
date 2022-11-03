@@ -29,7 +29,7 @@
 
       <template v-slot:right>
         <div class="flex justify-center w-full">
-          <nuxt-img src="/images/air/air-1.svg" placeholder="./images/air/air-1-placeholder.png" loading="lazy"/>
+          <nuxt-img src="/images/air/air-1.svg"/>
         </div>
         <!-- <img :src="services[0].image.url" :alt="services[0].image.alt" class="mx-auto" /> -->
       </template>
@@ -39,7 +39,7 @@
       <template v-slot:left>
         <!-- <img :src="services[1].image.url" :alt="services[1].image.alt" class="mx-auto" /> -->
         <div class="flex justify-center w-full">
-          <nuxt-img src="/images/air/air-2.svg" placeholder="./images/air/air-2-placeholder.png" loading="lazy"/>
+          <nuxt-img src="/images/air/air-2-placeholder.png"/>
         </div>
       </template>
 
@@ -79,7 +79,7 @@
       <template v-slot:right>
         <!-- <img :src="services[2].image.url" :alt="services[2].image.alt" class="mx-auto" /> -->
         <div class="flex justify-center w-full">
-          <nuxt-img src="/images/air/air-3.svg" placeholder="./images/air/air-3-placeholder.png" loading="lazy"/>
+          <nuxt-img src="/images/air/air-3-placeholder.png"/>
         </div>
       </template>
     </Box>
