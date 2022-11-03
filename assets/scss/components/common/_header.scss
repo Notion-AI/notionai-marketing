@@ -41,8 +41,33 @@
     transition: all 0.4s ease-in;
 }
 
-.transparent {
-    .header__desktop a, .header__desktop a span{
+.header.bg-color-white {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  transition: all 0.4s ease-in;
+}
+
+.header.bg-color-black {
+  background: #100418;
+  opacity: 0.6;
+  backdrop-filter: blur(8px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  transition: all 0.4s ease-in;
+}
+
+.transparent,
+.bg-color-white {
+    .header__desktop a,
+    .header__desktop a span{
         color: #000000;
     }
 
