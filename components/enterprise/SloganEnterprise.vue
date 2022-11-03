@@ -22,7 +22,10 @@
       </div>
 
       <div class="slogan-enterprise__img">
-        <img :src="intruduction.primary.media.url" :alt="intruduction.primary.media.name" class="mx-auto">
+        <!-- <img :src="intruduction.primary.media.url" :alt="intruduction.primary.media.name" class="mx-auto"> -->
+        <div class="flex justify-center w-full">
+          <nuxt-img src="/images/ept/ept-0.svg" placeholder="/images/ept/ept-0-pld.png" />
+        </div>
       </div>
     </div>
 </template>
