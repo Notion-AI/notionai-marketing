@@ -10,7 +10,9 @@
         }
       }
     },
-    "home_page": {},
+    "home_page": {
+      "section_list_products": {}
+    },
     "layout": {
       "alert": {
         "title": {
