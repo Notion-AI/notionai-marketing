@@ -28,7 +28,8 @@ export default {
   plugins: [
     { src: '@/plugins/vue-carousel.js', mode: 'client' },
     { src: '@/plugins/common.js' },
-    { src: '@/plugins/vue-scrollto.js' }
+    { src: '@/plugins/vue-scrollto.js' },
+    { src: '@/plugins/vue-observe-visibility.js'}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

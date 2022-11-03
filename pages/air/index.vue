@@ -1,6 +1,8 @@
 <template>
   <div class="air">
     <Slogan
+      class="bg-color-black"
+      v-observe-visibility="visibilityChanged"
       :slogan_title="data.slogan_title"
       :slogan_text_description="data.slogan_text_description"
       :slogan_text_btn="data.slogan_text_btn"
@@ -10,11 +12,13 @@
       :class="`slogan-${$route.name}`"
     />
     <Benefits
+      class="bg-color-black"
+      v-observe-visibility="visibilityChanged"
       :benefit_title_highlight="data.benefit_title_highlight"
       :benefit_title_normal="data.benefit_title_normal"
       :benefits="data.benefits"
     />
-    <Box v-if="services.length >= 1">
+    <Box v-if="services.length >= 1" v-observe-visibility="visibilityChanged" class="bg-color-white">
       <template v-slot:left>
         <div>
           <h2 class="box-title">
@@ -35,7 +39,7 @@
       </template>
     </Box>
 
-    <Box v-if="services.length >= 2" background="#F7F7F7" :reverse="window.width < 768 ? true : false">
+    <Box v-if="services.length >= 2" background="#F7F7F7" :reverse="window.width < 768 ? true : false" v-observe-visibility="visibilityChanged" class="bg-color-white">
       <template v-slot:left>
         <!-- <img :src="services[1].image.url" :alt="services[1].image.alt" class="mx-auto" /> -->
         <div class="flex justify-center w-full">
@@ -54,7 +58,7 @@
       </template>
     </Box>
 
-    <Box v-if="services.length >= 3" isBtn>
+    <Box v-if="services.length >= 3" isBtn v-observe-visibility="visibilityChanged" class="bg-color-white">
       <template v-slot:left>
         <div>
           <h2 class="box-title">
@@ -85,6 +89,8 @@
     </Box>
 
     <Compare
+      class="bg-color-black"
+      v-observe-visibility="visibilityChanged"
       isAir
       :campare_title_normal="data.campare_title_normal"
       :campare_title_highlight="data.campare_title_highlight"
@@ -92,6 +98,8 @@
       :campare_btn_link="data.campare_btn_link"
     />
     <Aggregate
+      class="bg-color-white"
+      v-observe-visibility="visibilityChanged"
       :organisation_title_normal="data.organisation_title_normal"
       :organisation_title_highlight="data.organisation_title_highlight"
       :organisation_btn_enterprise_text="data.organisation_btn_enterprise_text"
@@ -100,7 +108,7 @@
       :organisation_btn_enterprise_router="data.organisation_btn_enterprise_router"
     />
 
-    <Trusted />
+    <Trusted class="bg-color-black" v-observe-visibility="visibilityChanged"/>
   </div>
 </template>
 
@@ -109,7 +117,7 @@ import Compare from '~/components/Compare.vue'
 import Aggregate from '~/components/Aggregate.vue'
 
 import caculatorwidth from '~/utils/caculator-width'
-import { mapState, mapGetters } from 'vuex'
+import { mapState, mapGetters, mapMutations } from 'vuex'
 
 export default {
   components: { Compare, Aggregate },
@@ -141,7 +149,16 @@ export default {
   },
   mounted() {
   },
-  methods: {}
+  methods: {
+    ...mapMutations(['SET_HEADER_COLOR']),
+
+    visibilityChanged (isVisible, entry) {
+      console.log('visibilityChanged', isVisible, entry)
+      if (isVisible) {
+        this.SET_HEADER_COLOR(entry.target.className)
+      }
+    },
+  },
 }
 </script>
 

@@ -3,7 +3,7 @@
         <div v-if="isShowAlert" class="header-join">
             {{ alertTitle }} <a :href="alertLink.url" :target="alertLink.target">{{alertTitleLink}}</a>
         </div>
-        <div class="header" id="header" :class="{'transparent': scrollUp}">
+        <div class="header" id="header" :class="`${scrollUp ? color : ''}`">
             <div class="header__logo">
                 <n-link to="/" v-if="scrollUp"><img src="~assets/images/logo-black.png" alt=""></n-link>
                 <n-link to="/" v-else><img src="~assets/images/logo.png" alt=""></n-link>
@@ -74,7 +74,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapState,  mapGetters } from 'vuex'
 
 export default {
     data() {
@@ -86,9 +86,12 @@ export default {
     },
 
     computed: {
+      ...mapState([
+        'color'
+      ]),
       ...mapGetters([
         'navigator',
-        'alert',
+        'alert'
       ]),
 
       isShowAlert () {
