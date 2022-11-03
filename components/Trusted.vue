@@ -86,7 +86,7 @@ export default {
         autoplayHoverPause: true,
         perPage: 2,
         paginationEnabled: false,
-        perPageCustom: [[768, 2]],
+        // perPageCustom: [[768, 2]],
       },
     }
   },

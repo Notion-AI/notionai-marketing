@@ -1,12 +1,38 @@
 <template>
     <div class="list-article-wrapper">
         <div class="list-article">
-            <div class="list-article__category">
-                <n-link :to="{ name: 'blog', query: { ...$route.query, author: 'Latest', page: 1} }" :class="`${ (!$route?.query?.author || $route?.query?.author === 'Latest') ? 'font-bold' : ''}`">Latest</n-link>
-                <n-link :to="{ name: 'blog', query: { ...$route.query, author: 'From Notion Ai', page: 1}}" :class="`${ $route?.query?.author === 'From Notion Ai' ? 'font-bold' : ''}`">From Notion Ai</n-link>
-                <n-link :to="{ name: 'blog', query: { ...$route.query, author: 'Community', page: 1}}" :class="`${ $route?.query?.author === 'Community' ? 'font-bold' : ''}`">Community</n-link>
-                <n-link :to="{ name: 'blog', query: { ...$route.query, author: 'Events', page: 1}}" :class="`${ $route?.query?.author === 'Events' ? 'font-bold' : ''}`">Events</n-link>
-                <n-link :to="{ name: 'blog', query: { ...$route.query, author: 'Resources', page: 1}}" :class="`${ $route?.query?.author === 'Resources' ? 'font-bold' : ''}`">Resources</n-link>
+           <div class="list-article__category--mobile block lg:hidden">
+              <client-only>
+                <carousel v-bind="options">
+                  <slide>
+                    <n-link :to="{ name: 'blog', query: { ...$route.query, author: 'Latest', page: 1} }" :class="`${ (!$route?.query?.author || $route?.query?.author === 'Latest') ? 'font-bold' : ''}`">Latest</n-link>
+                  </slide>
+
+                  <slide>
+                    <n-link :to="{ name: 'blog', query: { ...$route.query, author: 'From Notion Ai', page: 1}}" :class="`${ $route?.query?.author === 'From Notion Ai' ? 'font-bold' : ''}`">From Notion Ai</n-link>
+                  </slide>
+
+                  <slide>
+                    <n-link :to="{ name: 'blog', query: { ...$route.query, author: 'Community', page: 1}}" :class="`${ $route?.query?.author === 'Community' ? 'font-bold' : ''}`">Community</n-link>
+                  </slide>
+
+                  <slide>
+                    <n-link :to="{ name: 'blog', query: { ...$route.query, author: 'Events', page: 1}}" :class="`${ $route?.query?.author === 'Events' ? 'font-bold' : ''}`">Events</n-link>
+                  </slide>
+
+                  <slide>
+                    <n-link :to="{ name: 'blog', query: { ...$route.query, author: 'Resources', page: 1}}" :class="`${ $route?.query?.author === 'Resources' ? 'font-bold' : ''}`">Resources</n-link>
+                  </slide>
+                </carousel>
+              </client-only>
+           </div>
+
+            <div class="list-article__category--desktop hidden lg:block">
+              <n-link :to="{ name: 'blog', query: { ...$route.query, author: 'Latest', page: 1} }" :class="`${ (!$route?.query?.author || $route?.query?.author === 'Latest') ? 'font-bold' : ''}`">Latest</n-link>
+              <n-link :to="{ name: 'blog', query: { ...$route.query, author: 'From Notion Ai', page: 1}}" :class="`${ $route?.query?.author === 'From Notion Ai' ? 'font-bold' : ''}`">From Notion Ai</n-link>
+              <n-link :to="{ name: 'blog', query: { ...$route.query, author: 'Community', page: 1}}" :class="`${ $route?.query?.author === 'Community' ? 'font-bold' : ''}`">Community</n-link>
+              <n-link :to="{ name: 'blog', query: { ...$route.query, author: 'Events', page: 1}}" :class="`${ $route?.query?.author === 'Events' ? 'font-bold' : ''}`">Events</n-link>
+              <n-link :to="{ name: 'blog', query: { ...$route.query, author: 'Resources', page: 1}}" :class="`${ $route?.query?.author === 'Resources' ? 'font-bold' : ''}`">Resources</n-link>
             </div>
 
             <div class="list-article__blog grid grid-cols-1 md:grid-cols-2 md:gap-6">
@@ -63,6 +89,12 @@ export default {
     data() {
       return {
         currentPage: 1,
+        options: {
+          autoplay: false,
+          autoplayHoverPause: true,
+          perPage: 4,
+          paginationEnabled: false,
+        },
       };
     },
 
