@@ -54,6 +54,27 @@
         &::v-deep(.text-white) {
             color: #fff;
         }
+
+        &::v-deep(.text-gradient-yellow) {
+            background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 500;
+        }
+
+        &::v-deep(.text-gradient-pink) {
+            background: -webkit-linear-gradient(247.69deg, #F5C0BE -4.24%, #A3A5EF 191.1%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 500;
+        }
+
+        &::v-deep(.text-gradient-violet) {
+            background: linear-gradient(252.6deg, #D1A8D0 -62.78%, #9D9AED 119.63%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 500;
+        }
     }
 
     .box-sub {

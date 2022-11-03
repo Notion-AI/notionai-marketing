@@ -33,39 +33,41 @@
                     <img src="~assets/images/icon-menu.png" alt="">
                 </n-link>
 
-                <div v-if="isMenu" class="mobile-list">
-                    <div class="mobile-list__action">
-                        <n-link to="/"><img src="~assets/images/logo-mobile.png" alt=""></n-link>
-                        <n-link 
-                            to=""
-                            @click.native="isMenu = false"
-                        >
-                            <img src="~assets/images/icon-close.png" alt="">
-                        </n-link>
+                <transition name="fade">
+                    <div v-if="isMenu" class="mobile-list">
+                        <div class="mobile-list__action">
+                            <n-link to="/"><img src="~assets/images/logo-mobile.png" alt="" class="logo-mobile" /></n-link>
+                            <n-link 
+                                to=""
+                                @click.native="isMenu = false"
+                            >
+                                <img src="~assets/images/icon-close.png" alt="">
+                            </n-link>
+                        </div>
+
+                        <ul class="mobile-list__menu">
+                            <li><a :href="alertLink.url" :target="alertLink.target">Start your free trial today</a></li>
+                            <li v-for="(item, idx) in navigator" :key="idx" @click="handleClickMenu()">
+                            <n-link :to="{ name: item.routers_name }">
+                                {{ item.name[0]?.text || '' }}
+                            </n-link>
+                            </li>
+                        </ul>
+
+                        <div class="mobile-list__login">
+                            <app-button 
+                            class="w-full md:w-6/12 mx-auto"
+                            color="outline-white"
+                            >
+                            <a :href="alertLink.url" :target="alertLink.target">Login</a>
+                            </app-button>
+
+                            <p class="trial text-white">
+                            <a :href="alertLink.url" :target="alertLink.target">Start your free trial today</a>
+                            </p>
+                        </div>
                     </div>
-
-                    <ul class="mobile-list__menu">
-                        <li><a :href="alertLink.url" :target="alertLink.target">Start your free trial today</a></li>
-                        <li v-for="(item, idx) in navigator" :key="idx" @click="handleClickMenu()">
-                          <n-link :to="{ name: item.routers_name }">
-                            {{ item.name[0]?.text || '' }}
-                          </n-link>
-                        </li>
-                    </ul>
-
-                    <div class="mobile-list__login">
-                        <app-button 
-                          class="w-full md:w-6/12 mx-auto"
-                          color="outline-white"
-                        >
-                          <a :href="alertLink.url" :target="alertLink.target">Login</a>
-                        </app-button>
-
-                        <p class="trial text-white">
-                          <a :href="alertLink.url" :target="alertLink.target">Start your free trial today</a>
-                        </p>
-                    </div>
-                </div>
+                </transition>
             </div>
         </div>
     </header>

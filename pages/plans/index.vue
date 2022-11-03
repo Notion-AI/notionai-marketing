@@ -18,7 +18,6 @@ export default {
   components: { PlanPackage, PackageDetail, Faq },
   async fetch ({ $prismic, store }) {
     const { data: plansResulst }= await $prismic.api.getSingle('plans')
-    console.log('data', plansResulst)
     store.commit('plans/SET_DATA', plansResulst)
   },
   data() {
