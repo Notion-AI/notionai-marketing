@@ -20,7 +20,7 @@
                         :to="{ 'name': prod.router_link }"
                         :color="`${idx === 0 ? 'gradient-yellow' : 'gradient-violet'}`"
                         style="width: 128px"
-                    >{{prod.button_text}}</app-button>
+                    ><span>{{prod.button_text}}</span></app-button>
                 </div>
 
                 <div :class="`${idx === 0 ? 'item-border-yellow' : 'item-border-violet'}`"></div>

@@ -16,9 +16,9 @@
           
             <div class="slogan__btn">
                 <app-button
-                    class="mx-auto"
-                    color="outline-white"
-                    style="width: 190px;"
+                  class="mx-auto"
+                  color="outline-white"
+                  style="width: 190px;"
                 >
                   <a :href="slogan_btn_link.url" :target="slogan_btn_link.target">
                     {{slogan_text_btn}}
