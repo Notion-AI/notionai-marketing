@@ -1,5 +1,5 @@
 .sentences {
-    padding: 4rem 2rem 5rem 2rem;
+    padding: 4rem 2rem 2rem 2rem;
     @screen lg {
         padding: 3.875rem 5rem 5.25rem 5rem;
     }
@@ -29,11 +29,11 @@
         }
     }
 
-    .text-gradient-yellow {
-      background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-weight: 500;
+    & :deep(.text-gradient-yellow){
+        background: linear-gradient(253.64deg, #F2B59C 6.02%, #FFE26E 117.3%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 500;
     }
 }
 
@@ -42,7 +42,7 @@
       background: #000000;
       color: #fff
     }
-    @screen lg {
+    @screen xl {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -55,7 +55,7 @@
         text-align: center;
         margin-bottom: 1rem;
 
-        @screen lg {
+        @screen xl {
             text-align: left;
             font-size: 1rem;
             margin-bottom: 0;
