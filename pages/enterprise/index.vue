@@ -51,7 +51,10 @@
             </span>
           </app-button>
         </div>
-        <img v-else :src="service.image?.url" :alt="service.image?.alt" class="mx-auto" />
+        <!-- <img v-else :src="service.image?.url" :alt="service.image?.alt" class="mx-auto" /> -->
+        <!-- <div v-else class="flex justify-center w-full"> -->
+        <nuxt-img v-else src="/images/ept/ept-1.svg" placeholder="/images/ept/ept-1-pld.png" />
+        <!-- </div> -->
       </template>
 
       <template v-slot:right>
