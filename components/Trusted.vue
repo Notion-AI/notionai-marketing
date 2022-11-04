@@ -27,7 +27,7 @@
     </div>
 
     <div class="trusted__carousel" :class="`trusted__carousel--${$route.name}`">
-      <client-only>
+      <!-- <client-only>
         <carousel v-bind="options">
           <slide
             v-for="(feedback, idx) in feedbacks"
@@ -70,7 +70,50 @@
             </div>
           </slide>
         </carousel>
-      </client-only>
+      </client-only> -->
+
+      <swiper ref="mySwiper" :options="swiperOptions">
+        <swiper-slide 
+          v-for="(feedback, idx) in feedbacks"
+          :key="idx"
+          class="carousel-item"
+        >
+          <p class="text-feedback">{{ feedback?.content || '' }}</p>
+            <div
+              v-if="
+                $route.path === '/' ||
+                $route.path === '/stream' ||
+                $route.path === '/plans' ||
+                $route.path === '/about'
+              "
+              class="trusted-line"
+            >
+              <span></span>
+            </div>
+
+            <div
+              v-if="$route.path === '/air'"
+              class="trusted-line trusted-line--pink"
+            >
+              <span></span>
+            </div>
+
+            <div
+              v-if="$route.path === '/enterprise'"
+              class="trusted-line trusted-line--violet"
+            >
+              <span></span>
+            </div>
+
+            <div class="trusted-img">
+              <nuxt-img
+                provider="prismic"
+                :src="feedback?.logo_company?.url"
+                :alt="feedback?.logo_company?.alt"
+              />
+            </div>
+        </swiper-slide>
+      </swiper>
     </div>
   </div>
 </template>
@@ -87,6 +130,30 @@ export default {
         perPage: 2,
         paginationEnabled: false,
         // perPageCustom: [[768, 2]],
+      },
+
+      swiperOptions: {
+        slidesPerView: 'auto',
+        spaceBetween: 25,
+        autoplay: true,
+        breakpoints: {
+          '640': {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          '768': {
+            slidesPerView: 2,
+            spaceBetween: 60,
+          },
+          '1024': {
+            slidesPerView: 2,
+            spaceBetween: 80,
+          },
+          '1600': {
+            slidesPerView: 2,
+            spaceBetween: 160,
+          },
+        }
       },
     }
   },
