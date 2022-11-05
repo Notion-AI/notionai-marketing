@@ -14,72 +14,56 @@
       :benefit_title_normal="data.benefit_title_normal"
       :benefits="data.benefits"
     />
-    <Box v-if="services.length >= 1">
+
+    <Box
+      v-for="service, idx in services"
+      :key="idx"
+      :background="service.background_color"
+      :reverse="(idx % 2 !== 0 && window.width < 768) ? true : false"
+    >
       <template v-slot:left>
-        <div>
+        <div v-if="idx % 2 === 0">
           <h2 class="box-title">
-            <span>{{services[0].title_normal_before}} </span> <span class="text-gradient-pink">{{services[0].title_highlight}} </span> <span>{{services[0].title_normal_after}}</span>
+            <span>{{service.title_normal_before}} </span> <span class="text-gradient-yellow">{{service.title_highlight}} </span> <span>{{service.title_normal_after}}</span>
           </h2>
 
           <p class="box-sub">
-            {{services[0].description}}
-          </p>
-        </div>
-      </template>
-
-      <template v-slot:right>
-        <div class="flex justify-center w-full">
-          <nuxt-img src="/images/air/air-1.svg" placeholder="/images/air/air-1-placeholder.png"/>
-        </div>
-        <!-- <img :src="services[0].image.url" :alt="services[0].image.alt" class="mx-auto" /> -->
-      </template>
-    </Box>
-
-    <Box v-if="services.length >= 2" background="#F7F7F7" :reverse="window.width < 768 ? true : false">
-      <template v-slot:left>
-        <!-- <img :src="services[1].image.url" :alt="services[1].image.alt" class="mx-auto" /> -->
-        <div class="flex justify-center w-full">
-          <nuxt-img src="/images/air/air-2.svg" placeholder="/images/air/air-2-placeholder.png"/>
-        </div>
-      </template>
-
-      <template v-slot:right>
-        <div>
-          <h2 class="box-title">
-            <span class="text-gradient-pink">{{services[1].title_highlight}} </span> <span>{{services[1].title_normal_after}} </span>
-          </h2>
-
-          <p class="box-sub">{{services[1].description}}</p>
-        </div>
-      </template>
-    </Box>
-
-    <Box v-if="services.length >= 3" isBtn>
-      <template v-slot:left>
-        <div>
-          <h2 class="box-title">
-            <span>{{services[2].title_normal_before}} </span> <span class="text-gradient-pink">{{services[2].title_highlight}} </span>
-						<span>{{services[2].title_normal_after}}</span>
-          </h2>
-
-          <p class="box-sub">
-            {{services[2].description}}
+            {{service.description}}
           </p>
 
           <app-button
+            v-if="service?.button_text && service?.button_link"
             color="gradient-pink"
             style="width: 232px; height: 38px"
             class="mb-28 md:mb-0 mx-auto md:ml-0"
           >
-            <a :href="alertLink.url" :target="alertLink.target">Start your free trial today</a>
+            <a :href="service.button_link.url" :target="service.button_link.target">{{ service?.button_text }}</a>
           </app-button>
+        </div>
+        <div v-else class="flex justify-center w-full">
+          <nuxt-img provider="prismic" :src="service.image.url" :alt="service.image.alt" class="mx-auto" />
         </div>
       </template>
 
       <template v-slot:right>
-        <!-- <img :src="services[2].image.url" :alt="services[2].image.alt" class="mx-auto" /> -->
-        <div class="flex justify-center w-full">
-          <nuxt-img src="/images/air/air-3.svg" placeholder="/images/air/air-3-placeholder.png"/>
+        <div v-if="idx % 2 === 0" class="flex justify-center w-full">
+          <nuxt-img provider="prismic" :src="service.image.url" :alt="service.image.alt" class="mx-auto" />
+        </div>
+        <div v-else>
+          <h2 class="box-title">
+            <span>{{service.title_normal_before}}</span> <span class="text-gradient-yellow">{{service.title_highlight}} </span> <span>{{service.title_normal_after}} </span>
+          </h2>
+
+          <p class="box-sub">{{service.description}}</p>
+
+          <app-button
+            v-if="service?.button_text && service?.button_link"
+            color="gradient-pink"
+            style="width: 232px; height: 38px"
+            class="mb-28 md:mb-0 mx-auto md:ml-0"
+          >
+            <a :href="service.button_link.url" :target="service.button_link.target">{{ service?.button_text }}</a>
+          </app-button>
         </div>
       </template>
     </Box>

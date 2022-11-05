@@ -148,8 +148,34 @@
               "type": "Image",
               "config": {
                 "label": "image",
-                "constraint": {},
+                "constraint": {
+                  "height": null,
+                  "width": null
+                },
                 "thumbnails": []
+              }
+            },
+            "background_color": {
+              "type": "Color",
+              "config": {
+                "label": "Background Color",
+                "placeholder": ""
+              }
+            },
+            "button_text": {
+              "type": "Text",
+              "config": {
+                "label": "Button Text",
+                "placeholder": ""
+              }
+            },
+            "button_link": {
+              "type": "Link",
+              "config": {
+                "label": "Button Link",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "select": null
               }
             }
           }
