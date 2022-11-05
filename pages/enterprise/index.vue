@@ -18,6 +18,7 @@
       v-for="(service, idx) in itemsService"
       :key="idx"
       :background="service.background_color"
+      :reverse="(idx % 2 !== 0 && window.width < 768) ? true : false"
     >
       <div>{{ idx }}</div>
       <template v-slot:left>
@@ -54,13 +55,16 @@
         </div>
         <!-- <img v-else :src="service.image?.url" :alt="service.image?.alt" class="mx-auto" /> -->
         <!-- <div v-else class="flex justify-center w-full"> -->
-        <nuxt-img v-else :src="`/images/ept/ept-${idx}.svg`" :placeholder="`/images/ept/ept-${idx}-pld.png`" />
+        <div v-else class="flex justify-center w-full">
+          <nuxt-img provider="prismic" :src="service.image?.url" :alt="service.image?.alt" class="mx-auto" />
+        </div>
         <!-- </div> -->
       </template>
 
       <template v-slot:right>
-        <!-- <img v-if="idx % 2 == 0" :src="service.image?.url" :alt="service.image?.alt"  class="mx-auto" /> -->
-        <nuxt-img v-if="idx % 2 == 0" :src="`/images/ept/ept-${idx}.svg`" :placeholder="`/images/ept/ept-${idx}-pld.png`" />
+        <div v-if="idx % 2 == 0" class="flex justify-center w-full">
+          <nuxt-img provider="prismic" :src="service.image?.url" :alt="service.image?.alt" class="mx-auto" />
+        </div>
 
         <div v-else>
           <h2
