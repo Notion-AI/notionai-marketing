@@ -122,6 +122,7 @@ export default {
     mounted() {
         this.prev = window.scrollY;
         window.addEventListener('scroll', e => this.handleNavigation(e));
+        window.addEventListener('resize', this.windowHeight())
     },
 
     methods: {
@@ -147,6 +148,11 @@ export default {
 
         handleClickMenu() {
             this.isMenu = false
+        },
+
+        windowHeight(){
+            const doc = document.documentElement
+            doc.style.setProperty('--window-height', `${window.innerHeight}px`)
         }
     }
 }
