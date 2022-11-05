@@ -29,7 +29,7 @@ export default {
     { src: '@/plugins/vue-carousel.js', mode: 'client' },
     { src: '@/plugins/common.js' },
     { src: '@/plugins/vue-scrollto.js' },
-    { src: "~/plugins/vue-awesome-swiper.js", ssr: false, mode: "client" },
+    { src: "~/plugins/vue-awesome-swiper.js", mode: "client" },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
