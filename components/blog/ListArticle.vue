@@ -74,7 +74,7 @@
         </div>
 
         <div class="list-article" v-if="data?.total_pages > 1">
-            <div class="list-article__category"></div>
+            <div class="list-article__category--desktop"></div>
             <AppPagination
                 class="blog-pagintion"
                 :total-pages="data?.total_pages"

@@ -11,9 +11,9 @@
                 <img :src="banner?.url" :alt="banner?.alt" />
             </div>
     
-            <div class="grid grid-cols-1 lg:grid-cols-3">
+            <div class="grid grid-cols-1 lg:grid-cols-5">
                 <div></div>
-                <div class="col-span-2">
+                <div class="col-span-3">
                     <div
                         v-for="(item, idx) in content"
                         :key="idx"
@@ -59,6 +59,8 @@
                         </ol>
                     </div>
                 </div>
+
+                <div></div>
             </div>
         </div>
 
