@@ -85,7 +85,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapState,  mapGetters } from 'vuex'
 
 export default {
     data() {
@@ -98,11 +98,18 @@ export default {
     },
 
     computed: {
+      ...mapState([
+        'color'
+      ]),
       ...mapGetters([
         'navigator',
+<<<<<<< HEAD
         'alert',
         'logo',
         'logoBlack'
+=======
+        'alert'
+>>>>>>> 041de9f (dynamic header bg color)
       ]),
 
       isShowAlert () {

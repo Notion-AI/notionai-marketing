@@ -1,6 +1,8 @@
 <template>
   <div class="air">
     <Slogan
+      class="bg-color-black"
+      v-observe-visibility="visibilityChanged"
       :slogan_title="data.slogan_title"
       :slogan_text_description="data.slogan_text_description"
       :slogan_text_btn="data.slogan_text_btn"
@@ -10,6 +12,8 @@
       :class="`slogan-${$route.name}`"
     />
     <Benefits
+      class="bg-color-black"
+      v-observe-visibility="visibilityChanged"
       :benefit_title_highlight="data.benefit_title_highlight"
       :benefit_title_normal="data.benefit_title_normal"
       :benefits="data.benefits"
@@ -69,6 +73,8 @@
     </Box>
 
     <Compare
+      class="bg-color-black"
+      v-observe-visibility="visibilityChanged"
       isAir
       :campare_title_normal="data.campare_title_normal"
       :campare_title_highlight="data.campare_title_highlight"
@@ -76,6 +82,8 @@
       :campare_btn_link="data.campare_btn_link"
     />
     <Aggregate
+      class="bg-color-white"
+      v-observe-visibility="visibilityChanged"
       :organisation_title_normal="data.organisation_title_normal"
       :organisation_title_highlight="data.organisation_title_highlight"
       :organisation_btn_enterprise_text="data.organisation_btn_enterprise_text"
@@ -84,7 +92,7 @@
       :organisation_btn_enterprise_router="data.organisation_btn_enterprise_router"
     />
 
-    <Trusted />
+    <Trusted class="bg-color-black" v-observe-visibility="visibilityChanged"/>
   </div>
 </template>
 
@@ -93,7 +101,7 @@ import Compare from '~/components/Compare.vue'
 import Aggregate from '~/components/Aggregate.vue'
 
 import caculatorwidth from '~/utils/caculator-width'
-import { mapState, mapGetters } from 'vuex'
+import { mapState, mapGetters, mapMutations } from 'vuex'
 
 export default {
   components: { Compare, Aggregate },
@@ -125,7 +133,16 @@ export default {
   },
   mounted() {
   },
-  methods: {}
+  methods: {
+    ...mapMutations(['SET_HEADER_COLOR']),
+
+    visibilityChanged (isVisible, entry) {
+      console.log('visibilityChanged', isVisible, entry)
+      if (isVisible) {
+        this.SET_HEADER_COLOR(entry.target.className)
+      }
+    },
+  },
 }
 </script>
 
