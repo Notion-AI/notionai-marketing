@@ -33,8 +33,12 @@
     
                     <div class="detail-infor">
                         <div class="flex items-center mb-4 md:mb-0">
-                            <img src="~assets/images/logo-mini.png" alt="">
-                            <p class="detail-infor__name-logo ml-4 mr-3">Notion Ai</p>
+                            <nuxt-img
+                              provider="prismic"
+                              :src="item.data?.logo?.url"
+                              :alt="item.data?.logo?.alt"
+                            />
+                            <p class="detail-infor__name-logo ml-4 mr-3">{{ item.data?.author }}</p>
                         </div>
                         <p class="detail-infor__time">{{ blogDetail?.data?.created_date }}</p>
                     </div>
