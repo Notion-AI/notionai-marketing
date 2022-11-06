@@ -34,6 +34,7 @@ export default {
     { src: '@/plugins/common.js' },
     { src: '@/plugins/vue-scrollto.js' },
     { src: "~/plugins/vue-awesome-swiper.js", mode: "client" },
+    { src: '@/plugins/vue-observe-visibility.js'}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

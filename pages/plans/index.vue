@@ -1,9 +1,18 @@
 <template>
   <div class="plans">
-    <PlanPackage :data="dataPackage" :title="introduction?.primary?.title"/>
+    <div class="black-transparent" v-observe-visibility="visibilityChanged">
+      <PlanPackage :data="dataPackage" :title="introduction?.primary?.title"/>
+    </div>
+
     <PackageDetail :data="dataDetail"/>
-    <Faq />
-    <Trusted />
+
+    <div class="transparent" v-observe-visibility="visibilityChanged">
+      <Faq />
+    </div>
+
+    <div class="black-transparent" v-observe-visibility="visibilityChanged">
+      <Trusted />
+    </div>
   </div>
 </template>
 
@@ -11,7 +20,7 @@
 import PlanPackage from '~/components/plans/PlanPackage.vue';
 import PackageDetail from '~/components/plans/PackageDetail.vue';
 import Faq from '~/components/plans/Faq.vue';
-import { mapState, mapGetters } from 'vuex'
+import { mapState, mapGetters, mapMutations } from 'vuex'
 import { filter } from 'lodash'
 
 export default {
@@ -39,7 +48,16 @@ export default {
     dataDetail () {
       return filter(this.itemsPlan?.items, item => item.is_active) || []
     }
-  }
+  },
+  methods: {
+    ...mapMutations(['SET_HEADER_COLOR']),
+
+    visibilityChanged (isVisible, entry) {
+      if (isVisible) {
+        this.SET_HEADER_COLOR(entry.target.className)
+      }
+    },
+  },
 }
 </script>
 

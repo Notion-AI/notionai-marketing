@@ -1,114 +1,116 @@
 <template>
   <div class="enterprise">
-    <SloganEnterprise v-if="intruduction?.primary?.is_active || false"/>
-
-    <TimelineEnterprise
-      v-if="benefitsIntro?.primary?.is_active || false"
-      :data="itemsBenefitsIntro"
-    >
-      <p
-        v-for="(title, idx) in benefitsIntro?.primary?.title"
-        :key="idx"
-        v-html="$textConvert(title, '', 'highlight')"
-      >
-      </p>
-    </TimelineEnterprise>
-
-    <Box
-      v-for="(service, idx) in itemsService"
-      :key="idx"
-      :background="service.background_color"
-      :reverse="(idx % 2 !== 0 && window.width < 768) ? true : false"
-    >
-      <div>{{ idx }}</div>
-      <template v-slot:left>
-        <div v-if="idx % 2 == 0">
-          <h2
-            v-for="(title, index) in service.title"
-            class="box-title"
-            v-html="$textConvert(title, 'text-white', 'text-gradient-violet')"
-            :key="index"
-          >
-          </h2>
-
-          <p class="box-sub">
-            {{ service.description }}
-          </p>
-
-          <app-button
-            v-if="service.button_text"
-            color="gradient-violet"
-            style="width: 120px"
-            class="mb-28 md:mb-0 mx-auto md:ml-0"
-          >
-            <a
-              v-if="service.button_link"
-              :href="service.button_link?.url || ''"
-              :target="service.button_link?.target || ''"
-            >
-              {{ service.button_text }}
-            </a>
-            <span v-else>
-              {{ service.button_text }}
-            </span>
-          </app-button>
-        </div>
-        <!-- <img v-else :src="service.image?.url" :alt="service.image?.alt" class="mx-auto" /> -->
-        <!-- <div v-else class="flex justify-center w-full"> -->
-        <div v-else class="flex justify-center w-full">
-          <nuxt-img provider="prismic" :src="service.image?.url" :alt="service.image?.alt" class="mx-auto" />
-        </div>
-        <!-- </div> -->
-      </template>
-
-      <template v-slot:right>
-        <div v-if="idx % 2 == 0" class="flex justify-center w-full">
-          <nuxt-img provider="prismic" :src="service.image?.url" :alt="service.image?.alt" class="mx-auto" />
-        </div>
-
-        <div v-else>
-          <h2
-            v-for="(title, index) in service.title"
-            class="box-title"
-            v-html="$textConvert(title, 'text-white', 'text-gradient-violet')"
-            :key="index"
-          >
-          </h2>
-
-          <p class="box-sub">
-            {{ service.description }}
-          </p>
-
-          <app-button
-            v-if="service.button_text"
-            color="gradient-violet"
-            style="width: 120px"
-            class="mb-28 md:mb-0 mx-auto md:ml-0"
-          >
-            <a
-              v-if="service.button_link"
-              :href="service.button_link?.url || ''"
-              :target="service.button_link?.target || ''"
-            >
-              {{ service.button_text }}
-            </a>
-            <span v-else>
-              {{ service.button_text }}
-            </span>
-          </app-button>
-        </div>
-      </template>
-    </Box>
+    <div class="black-transparent" v-observe-visibility="visibilityChanged">
     
-    <TimelineEnterprise
-      :data="itemsBenefitsSecurity"
-    >
-      <p>Security, control and</p>
-      <p>compliance that you expect from</p>
-      <p class="gradient">enterprise-grade platforms.</p>
-    </TimelineEnterprise>
+      <SloganEnterprise v-if="intruduction?.primary?.is_active || false"/>
 
-    <Trusted />
+      <TimelineEnterprise
+        v-if="benefitsIntro?.primary?.is_active || false"
+        :data="itemsBenefitsIntro"
+      >
+        <p
+          v-for="(title, idx) in benefitsIntro?.primary?.title"
+          :key="idx"
+          v-html="$textConvert(title, '', 'highlight')"
+        >
+        </p>
+      </TimelineEnterprise>
+
+      <Box
+        v-for="(service, idx) in itemsService"
+        :key="idx"
+        :background="service.background_color"
+        :reverse="(idx % 2 !== 0 && window.width < 768) ? true : false"
+      >
+        <template v-slot:left>
+          <div v-if="idx % 2 == 0">
+            <h2
+              v-for="(title, index) in service.title"
+              class="box-title"
+              v-html="$textConvert(title, 'text-white', 'text-gradient-violet')"
+              :key="index"
+            >
+            </h2>
+
+            <p class="box-sub">
+              {{ service.description }}
+            </p>
+
+            <app-button
+              v-if="service.button_text"
+              color="gradient-violet"
+              style="width: 120px"
+              class="mb-28 md:mb-0 mx-auto md:ml-0"
+            >
+              <a
+                v-if="service.button_link"
+                :href="service.button_link?.url || ''"
+                :target="service.button_link?.target || ''"
+              >
+                {{ service.button_text }}
+              </a>
+              <span v-else>
+                {{ service.button_text }}
+              </span>
+            </app-button>
+          </div>
+          <!-- <img v-else :src="service.image?.url" :alt="service.image?.alt" class="mx-auto" /> -->
+          <!-- <div v-else class="flex justify-center w-full"> -->
+          <div v-else class="flex justify-center w-full">
+            <nuxt-img provider="prismic" :src="service.image?.url" :alt="service.image?.alt" class="mx-auto" />
+          </div>
+          <!-- </div> -->
+        </template>
+
+        <template v-slot:right>
+          <div v-if="idx % 2 == 0" class="flex justify-center w-full">
+            <nuxt-img provider="prismic" :src="service.image?.url" :alt="service.image?.alt" class="mx-auto" />
+          </div>
+
+          <div v-else>
+            <h2
+              v-for="(title, index) in service.title"
+              class="box-title"
+              v-html="$textConvert(title, 'text-white', 'text-gradient-violet')"
+              :key="index"
+            >
+            </h2>
+
+            <p class="box-sub">
+              {{ service.description }}
+            </p>
+
+            <app-button
+              v-if="service.button_text"
+              color="gradient-violet"
+              style="width: 120px"
+              class="mb-28 md:mb-0 mx-auto md:ml-0"
+            >
+              <a
+                v-if="service.button_link"
+                :href="service.button_link?.url || ''"
+                :target="service.button_link?.target || ''"
+              >
+                {{ service.button_text }}
+              </a>
+              <span v-else>
+                {{ service.button_text }}
+              </span>
+            </app-button>
+          </div>
+        </template>
+      </Box>
+      
+      <TimelineEnterprise
+        :data="itemsBenefitsSecurity"
+      >
+        <p>Security, control and</p>
+        <p>compliance that you expect from</p>
+        <p class="gradient">enterprise-grade platforms.</p>
+      </TimelineEnterprise>
+
+      <Trusted />
+    </div>
   </div>
 </template>
 
@@ -117,7 +119,7 @@ import SloganEnterprise from '~/components/enterprise/SloganEnterprise.vue'
 import TimelineEnterprise from '~/components/enterprise/TimelineEnterprise.vue'
 import caculatorwidth from '~/utils/caculator-width'
 import Trusted from '~/components/Trusted.vue'
-import { mapState, mapGetters } from 'vuex'
+import { mapState, mapGetters, mapMutations } from 'vuex'
 import { filter } from 'lodash'
 
 export default {
@@ -163,6 +165,15 @@ export default {
     itemsBenefitsSecurity () {
       return this.benefitsSecurity?.items || []
     },
-  }
+  },
+  methods: {
+    ...mapMutations(['SET_HEADER_COLOR']),
+
+    visibilityChanged (isVisible, entry) {
+      if (isVisible) {
+        this.SET_HEADER_COLOR(entry.target.className)
+      }
+    },
+  },
 }
 </script>
