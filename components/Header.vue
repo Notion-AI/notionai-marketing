@@ -3,10 +3,14 @@
         <div v-if="isShowAlert" class="header-join">
             {{ alertTitle }} <a :href="alertLink.url" :target="alertLink.target">{{alertTitleLink}}</a>
         </div>
+<<<<<<< HEAD
         <div 
             class="header" id="header" 
             :class="{'transparent': scrollUp, 'header--blog': isBlog}"
         >
+=======
+        <div class="header" id="header" :class="`${scrollUp ? color : ''}`">
+>>>>>>> 890750b26581beb11a43b2e3d130516dcea0c2dd
             <div class="header__logo">
                 <n-link to="/" v-if="scrollUp || isBlog">
                   <nuxt-img provider="prismic" :src="logoBlack.url" :alt="logoBlack.alt"/>
