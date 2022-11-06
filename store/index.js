@@ -12,6 +12,7 @@ const getters = {
     }
   },
   logo: (state) => state.layout?.data?.logo,
+  logoBlack: (state) => state.layout?.data?.logo_black,
   emailContact: (state) => state.layout?.data?.email_contact,
   feedbacks: (state) => state.layout?.data?.feedback || [],
   signUpLink: (state) => state.layout?.data?.sign_up_link
