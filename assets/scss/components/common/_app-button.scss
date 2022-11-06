@@ -27,6 +27,15 @@
     }
 }
 
+.btn.active {
+    background-color: #000;
+    color: #fff;
+
+    span {
+        color: #fff;
+    }
+}
+
 .border--none {
     border:unset
 }
