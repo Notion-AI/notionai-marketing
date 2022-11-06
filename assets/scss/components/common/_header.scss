@@ -87,6 +87,14 @@
     }
 }
 
+.logo-black {
+  filter: brightness(0);
+}
+
+.logo-white {
+  filter: brightness(1);
+}
+
 .header__logo a img {
     object-fit: cover;
     width: 8.2rem;

@@ -1,6 +1,6 @@
 <template>
   <div class="air">
-    <div class="bg-color-black" v-observe-visibility="visibilityChanged">
+    <div class="black-transparent" v-observe-visibility="visibilityChanged">
       <Slogan
         :slogan_title="data.slogan_title"
         :slogan_text_description="data.slogan_text_description"
@@ -12,7 +12,7 @@
       />
     </div>
 
-    <div class="bg-color-black" v-observe-visibility="visibilityChanged">
+    <div class="black-transparent" v-observe-visibility="visibilityChanged">
       <Benefits
         :benefit_title_highlight="data.benefit_title_highlight"
         :benefit_title_normal="data.benefit_title_normal"
@@ -20,7 +20,7 @@
       />
     </div>
     
-    <div class="bg-color-white" v-observe-visibility="visibilityChanged">
+    <div class="transparent" v-observe-visibility="visibilityChanged">
       <Box
         v-for="service, idx in services"
         :key="idx"
@@ -75,7 +75,7 @@
       </Box>
     </div>
 
-    <div class="bg-color-black" v-observe-visibility="visibilityChanged">
+    <div class="black-transparent" v-observe-visibility="visibilityChanged">
       <Compare
         isAir
         :campare_title_normal="data.campare_title_normal"
@@ -85,7 +85,7 @@
       />
     </div>
     
-    <div class="bg-color-white" v-observe-visibility="visibilityChanged">
+    <div class="transparent" v-observe-visibility="visibilityChanged">
       <Aggregate
         :organisation_title_normal="data.organisation_title_normal"
         :organisation_title_highlight="data.organisation_title_highlight"
@@ -96,7 +96,7 @@
       />
     </div>
     
-    <div class="bg-color-black" v-observe-visibility="visibilityChanged">
+    <div class="black-transparent" v-observe-visibility="visibilityChanged">
       <Trusted />
     </div>
   </div>
