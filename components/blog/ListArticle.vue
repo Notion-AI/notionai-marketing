@@ -62,8 +62,8 @@
                           <!-- <img src="~assets/images/logo-mini.png" alt=""> -->
                           <nuxt-img
                             provider="prismic"
-                            :src="item.data?.logo?.url"
-                            :alt="item.data?.logo?.alt"
+                            :src="item.data?.logo_author?.url"
+                            :alt="item.data?.logo_author?.alt"
                           />
                           <span>{{ item.data?.author }}</span>
                       </div>

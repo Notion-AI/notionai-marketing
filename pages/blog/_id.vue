@@ -35,8 +35,8 @@
                         <div class="flex items-center mb-4 md:mb-0">
                             <nuxt-img
                               provider="prismic"
-                              :src="item.data?.logo?.url"
-                              :alt="item.data?.logo?.alt"
+                              :src="item.data?.logo_author?.url"
+                              :alt="item.data?.logo_author?.alt"
                             />
                             <p class="detail-infor__name-logo ml-4 mr-3">{{ item.data?.author }}</p>
                         </div>
