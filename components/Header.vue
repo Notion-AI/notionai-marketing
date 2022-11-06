@@ -139,11 +139,15 @@ export default {
     // },
 
     watch: {
-        isMenu(newValue) {
-            if(newValue) {
-                document.documentElement.style.overflow = "hidden"
-            }
+      isMenu(newValue) {
+        if (newValue) {
+          document.documentElement.style.overflow = "hidden"
+          document.documentElement.style.position = "fixed"
+        } else {
+          document.documentElement.style.overflow = "auto"
+          document.documentElement.style.position = "unset"
         }
+      }
     },
 
     mounted() {
