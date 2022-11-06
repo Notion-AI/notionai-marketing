@@ -55,6 +55,14 @@
           "default_value": "From Notion Ai"
         }
       },
+      "logo_author": {
+        "type": "Image",
+        "config": {
+          "label": "Logo Author",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "title_detail": {
         "type": "StructuredText",
         "config": {
