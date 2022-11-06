@@ -6,11 +6,11 @@
 
         <div class="explore__carousel list-article__blog">
             <client-only>
-                <carousel v-bind="options">
-                    <slide
-                      v-for="(item, index) in data"
-                      :key="index"
-                      class="carousel-item"
+                <swiper ref="mySwiper" :options="swiperOptions">
+                    <swiper-slide 
+                        v-for="(item, index) in data"
+                        :key="index"
+                        class="carousel-item"
                     >
                         <img :src="item.data?.thumbnail?.url" :alt="item.data?.thumbnail?.alt" class="blog-img" @click="() => $router.push({ name: 'blog-id', params: { id: item?.uid } })">
                         <div class="flex flex-wrap gap-2">
@@ -23,8 +23,8 @@
                         
                         <h3 class="blog-title" @click="() => $router.push({ name: 'blog-id', params: { id: item?.uid } })">{{ item?.data?.title }}</h3>
                         <p class="blog-subtext">{{ item?.data?.description_short }}</p>
-                    </slide>
-                </carousel>
+                    </swiper-slide>
+                </swiper>
             </client-only>
         </div>
     </div>
@@ -34,12 +34,20 @@
 export default {
     data() {
         return {
-            options: {
+            swiperOptions: {
+                slidesPerView: 'auto',
+                spaceBetween: 15,
                 autoplay: true,
-                autoplayHoverPause: true,
-                perPage: 1,
-                paginationEnabled: false,
-                perPageCustom: [[768, 2], [1024, 3]],
+                breakpoints: {
+                    '640': {
+                        slidesPerView: 'auto',
+                        spaceBetween: 15,
+                    },
+                     '5120': {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                    }
+                }
             },
         }
     },
