@@ -3,6 +3,10 @@ import sm from './sm.json'
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   target: 'static',
+  server: {
+    port: 3000, // default: 3000
+    host: '0.0.0.0' // default: localhost
+  },
   head: {
     title: 'notionai-marketing',
     htmlAttrs: {

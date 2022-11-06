@@ -59,7 +59,12 @@
 
                   <div class="blog-time">
                       <div class="logo-mini">
-                          <img src="~assets/images/logo-mini.png" alt="">
+                          <!-- <img src="~assets/images/logo-mini.png" alt=""> -->
+                          <nuxt-img
+                            provider="prismic"
+                            :src="item.data?.logo?.url"
+                            :alt="item.data?.logo?.alt"
+                          />
                           <span>{{ item.data?.author }}</span>
                       </div>
                       <span class="date">{{ item.data?.created_date }}</span>

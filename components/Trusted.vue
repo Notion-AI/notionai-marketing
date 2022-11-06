@@ -5,19 +5,19 @@
         <p class="inline-block">{{ data.feedback_title_normal_before }}</p>
         <span
           v-if="
-            $route.path === '/' ||
-            $route.path === '/stream' ||
-            $route.path === '/plans' ||
-            $route.path === '/about'
+            $route.name === 'index' ||
+            $route.name === 'stream' ||
+            $route.name === 'plans' ||
+            $route.name === 'about'
           "
           class="title--gardient-common"
           >{{ data.feedback_title_highlight }}</span
         >
-        <span v-if="$route.path === '/air'" class="title--gradient-pink">{{
+        <span v-if="$route.name === 'air'" class="title--gradient-pink">{{
           data.feedback_title_highlight
         }}</span>
         <span
-          v-if="$route.path === '/enterprise'"
+          v-if="$route.name === 'enterprise'"
           class="title--gradient-violet"
           >{{ data.feedback_title_highlight }}</span
         >
@@ -37,10 +37,10 @@
             <p class="text-feedback">{{ feedback?.content || '' }}</p>
               <div
                 v-if="
-                  $route.path === '/' ||
-                  $route.path === '/stream' ||
-                  $route.path === '/plans' ||
-                  $route.path === '/about'
+                  $route.name === 'index' ||
+                  $route.name === 'stream' ||
+                  $route.name === 'plans' ||
+                  $route.name === 'about'
                 "
                 class="trusted-line"
               >
@@ -48,14 +48,14 @@
               </div>
 
               <div
-                v-if="$route.path === '/air'"
+                v-if="$route.name === 'air'"
                 class="trusted-line trusted-line--pink"
               >
                 <span></span>
               </div>
 
               <div
-                v-if="$route.path === '/enterprise'"
+                v-if="$route.name === 'enterprise'"
                 class="trusted-line trusted-line--violet"
               >
                 <span></span>
