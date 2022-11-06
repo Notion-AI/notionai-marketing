@@ -35,12 +35,12 @@
                         <div class="flex items-center mb-4 md:mb-0">
                             <nuxt-img
                               provider="prismic"
-                              :src="item.data?.logo_author?.url"
-                              :alt="item.data?.logo_author?.alt"
+                              :src="blogDetail?.logo_author?.url"
+                              :alt="blogDetail?.logo_author?.alt"
                             />
-                            <p class="detail-infor__name-logo ml-4 mr-3">{{ item.data?.author }}</p>
+                            <p class="detail-infor__name-logo ml-4 mr-3">{{ blogDetail?.author }}</p>
                         </div>
-                        <p class="detail-infor__time">{{ blogDetail?.data?.created_date }}</p>
+                        <p class="detail-infor__/time">{{ blogDetail?.created_date }}</p>
                     </div>
     
                     <div class="detail-divide"></div>
