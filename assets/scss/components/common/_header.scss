@@ -46,6 +46,17 @@
     transition: all 0.4s ease-in;
 }
 
+.header.black-transparent {
+    background: rgba(16, 4, 24, 0.6);
+    backdrop-filter: blur(8px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    transition: all 0.4s ease-in;
+}
+
 .header--blog, .transparent {
     .header__desktop a, .header__desktop a span{
         color: #000000;
@@ -58,6 +69,21 @@
 
     .login-btn {
         border-color: #100418;
+    }
+}
+
+.black-transparent {
+    .header__desktop a, .header__desktop a span{
+        color: #fff;
+    }
+
+    .header__logo a img {
+        width: unset;
+        height: unset;
+    }
+
+    .login-btn {
+        border-color: #fff;
     }
 }
 
