@@ -74,7 +74,7 @@
                             </app-button>
 
                             <p class="trial text-white">
-                            <a :href="alertLink.url" :target="alertLink.target">Start your free trial today</a>
+                                <a :href="alertLink.url" :target="alertLink.target">Start your free trial today</a>
                             </p>
                         </div>
                     </div>
@@ -138,10 +138,18 @@ export default {
     //     }
     // },
 
+    watch: {
+        isMenu(newValue) {
+            if(newValue) {
+                document.documentElement.style.overflow = "hidden"
+            }
+        }
+    },
+
     mounted() {
         this.prev = window.scrollY;
         window.addEventListener('scroll', e => this.handleNavigation(e));
-        // window.addEventListener('resize', this.windowHeight())
+        window.addEventListener('resize', this.windowHeight())
     },
 
     methods: {
@@ -179,10 +187,10 @@ export default {
             this.isMenu = false
         },
 
-        // windowHeight(){
-        //     const doc = document.documentElement
-        //     doc.style.setProperty('--window-height', `${window.innerHeight}px`)
-        // }
+        windowHeight(){
+            const doc = document.documentElement
+            doc.style.setProperty('--window-height', `${window.innerHeight}px`)
+        }
     }
 }
 </script>
