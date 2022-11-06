@@ -103,13 +103,9 @@ export default {
       ]),
       ...mapGetters([
         'navigator',
-<<<<<<< HEAD
         'alert',
         'logo',
         'logoBlack'
-=======
-        'alert'
->>>>>>> 041de9f (dynamic header bg color)
       ]),
 
       isShowAlert () {
