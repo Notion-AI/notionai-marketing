@@ -5,11 +5,11 @@
         </div>
         <div 
             class="header" id="header" 
-            :class="{'transparent': scrollUp, 'header--blog': isBlog}"
+            :class="`${scrollUp ? color : ''} ${isBlog ? 'header--blog' : ''}`"
         >
             <div class="header__logo">
                 <n-link to="/" v-if="scrollUp || isBlog">
-                  <nuxt-img provider="prismic" :src="logoBlack.url" :alt="logoBlack.alt"/>
+                  <nuxt-img :class="`${ color === 'black-transparent' ? 'logo-white' : 'logo-black' }`"  provider="prismic" :src="logo.url" :alt="logo.alt"/>
                 </n-link>
                 <n-link to="/" v-else>
                   <nuxt-img provider="prismic" :src="logo.url" :alt="logo.alt"/>
@@ -85,15 +85,14 @@
 </template>
 
 <script>
-import { mapState,  mapGetters } from 'vuex'
+import { mapState,  mapGetters, mapMutations } from 'vuex'
 
 export default {
     data() {
        return {
            isMenu: false,
            prev: null,
-           scrollUp: false,
-           isBlog: false
+           scrollUp: false
        }
     },
 
@@ -122,13 +121,11 @@ export default {
 
       alertLink () {
         return this.alert?.link || {}
-      }
-    },
+      },
 
-    created() {
-        if(this.$route.name === 'blog' || this.$route.name === 'blog-id') {
-            this.isBlog = true
-        }
+      isBlog () {
+        return this.$route.name === 'blog' || this.$route.name === 'blog-id'
+      }
     },
 
     // watch: { 
@@ -150,6 +147,12 @@ export default {
           document.documentElement.style.overflow = "auto"
           document.documentElement.style.position = "unset"
         }
+      },
+
+      '$route.name': {
+        handler(value) {
+          this.SET_HEADER_COLOR('transparent')
+        }
       }
     },
 
@@ -160,6 +163,8 @@ export default {
     },
 
     methods: {
+       ...mapMutations(['SET_HEADER_COLOR']),
+
         handleNavigation(e) {
             const window = e.currentTarget;
 

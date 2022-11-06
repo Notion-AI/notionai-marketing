@@ -1,6 +1,6 @@
 const state = () => ({
   layout: {},
-  color: 'bg-color-white'
+  color: 'transparent'
 })
 
 const getters = {
