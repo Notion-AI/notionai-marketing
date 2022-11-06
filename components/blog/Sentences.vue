@@ -14,7 +14,9 @@
                   :key="idx"
                   nuxt
                   :to="{ name: 'blog', query: { ...$route?.query, category, page: 1 }}"
-                  :style="`${$route.query?.category === category ? 'min-width: 74px' : 'min-width: 74px;'}`"
+                  style="min-width: 74px"
+                  @click.native="active = idx"
+                  :class="{'active': active === idx}"
                 >
                   <span>{{ category }}</span>
                 </app-button>
@@ -22,7 +24,9 @@
                 <app-button 
                   nuxt
                   :to="{ name: 'blog', query: { ...$route?.query, category: 'All', page: 1 } }"
-                  :style="`${(!$route.query?.category || $route.query?.category === 'All') ? 'width: 100px' : 'width: 100px;'}`"
+                  style="min-width: 100px"
+                  @click.native="active = 'all'"
+                  :class="{'active': active === 'all'}"
                 >
                   <span>All Topics</span>
                 </app-button>
@@ -34,7 +38,11 @@
 <script>
 import { mapState } from 'vuex'
 export default {
-
+  data() {
+    return {
+      active: null
+    }
+  },
   computed: {
     ...mapState('blog', [
       'tags'

@@ -3,9 +3,12 @@
         <div v-if="isShowAlert" class="header-join">
             {{ alertTitle }} <a :href="alertLink.url" :target="alertLink.target">{{alertTitleLink}}</a>
         </div>
-        <div class="header" id="header" :class="{'transparent': scrollUp}">
+        <div 
+            class="header" id="header" 
+            :class="{'transparent': scrollUp, 'header--blog': isBlog}"
+        >
             <div class="header__logo">
-                <n-link to="/" v-if="scrollUp">
+                <n-link to="/" v-if="scrollUp || isBlog">
                   <nuxt-img provider="prismic" :src="logoBlack.url" :alt="logoBlack.alt"/>
                 </n-link>
                 <n-link to="/" v-else>
@@ -89,7 +92,8 @@ export default {
        return {
            isMenu: false,
            prev: null,
-           scrollUp: false
+           scrollUp: false,
+           isBlog: false
        }
     },
 
@@ -118,39 +122,55 @@ export default {
       }
     },
 
-    watch: { 
-        '$route.name': {
-            handler(value) {
-                value === 'blog' || value === 'blog-id' ? this.scrollUp = true : this.scrollUp = false
-            },
-            deep: true,
-            immediate: true
+    created() {
+        if(this.$route.name === 'blog' || this.$route.name === 'blog-id') {
+            this.isBlog = true
         }
     },
+
+    // watch: { 
+    //     '$route.name': {
+    //         handler(value) {
+    //             value === 'blog' || value === 'blog-id' ? this.scrollUp = true : this.scrollUp = false
+    //         },
+    //         deep: true,
+    //         immediate: true
+    //     }
+    // },
 
     mounted() {
         this.prev = window.scrollY;
         window.addEventListener('scroll', e => this.handleNavigation(e));
-        window.addEventListener('resize', this.windowHeight())
+        // window.addEventListener('resize', this.windowHeight())
     },
 
     methods: {
         handleNavigation(e) {
             const window = e.currentTarget;
 
-            if(this.$route.name === 'blog' || this.$route.name === 'blog-id') {
-                this.scrollUp = true
-            } else {
-                if (this.prev > window.scrollY) {
-                this.scrollUp = true
-                } else if (this.prev < window.scrollY) {
-                    this.scrollUp = false
-                }
+            // if(this.$route.name === 'blog' || this.$route.name === 'blog-id') {
+            //     this.scrollUp = true
+            // } else {
+            //     if (this.prev > window.scrollY) {
+            //     this.scrollUp = true
+            //     } else if (this.prev < window.scrollY) {
+            //         this.scrollUp = false
+            //     }
 
-                if(window.scrollY === 0) {
-                    this.scrollUp = false
-                    document.getElementById('header').classList.remove("transparent")
-                }
+            //     if(window.scrollY === 0) {
+            //         this.scrollUp = false
+            //         document.getElementById('header').classList.remove("transparent")
+            //     }
+            // }
+            if (this.prev > window.scrollY) {
+                this.scrollUp = true
+            } else if (this.prev < window.scrollY) {
+                this.scrollUp = false
+            }
+
+            if(window.scrollY === 0) {
+                this.scrollUp = false
+                document.getElementById('header').classList.remove("transparent")
             }
             this.prev = window.scrollY;
         },
@@ -159,10 +179,10 @@ export default {
             this.isMenu = false
         },
 
-        windowHeight(){
-            const doc = document.documentElement
-            doc.style.setProperty('--window-height', `${window.innerHeight}px`)
-        }
+        // windowHeight(){
+        //     const doc = document.documentElement
+        //     doc.style.setProperty('--window-height', `${window.innerHeight}px`)
+        // }
     }
 }
 </script>
