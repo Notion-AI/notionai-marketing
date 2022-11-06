@@ -85,6 +85,7 @@ export default {
         slidesPerView: 'auto',
         spaceBetween: 25,
         autoplay: true,
+        loop: true,
         breakpoints: {
           '640': {
             slidesPerView: 'auto',
