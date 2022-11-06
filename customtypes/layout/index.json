@@ -71,6 +71,14 @@
           "thumbnails": []
         }
       },
+      "logo_black": {
+        "type": "Image",
+        "config": {
+          "label": "Logo Black",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "alert": {
         "type": "Group",
         "config": {

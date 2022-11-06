@@ -5,8 +5,12 @@
         </div>
         <div class="header" id="header" :class="{'transparent': scrollUp}">
             <div class="header__logo">
-                <n-link to="/" v-if="scrollUp"><img src="~assets/images/logo-black.png" alt=""></n-link>
-                <n-link to="/" v-else><img src="~assets/images/logo.png" alt=""></n-link>
+                <n-link to="/" v-if="scrollUp">
+                  <nuxt-img provider="prismic" :src="logoBlack.url" :alt="logoBlack.alt"/>
+                </n-link>
+                <n-link to="/" v-else>
+                  <nuxt-img provider="prismic" :src="logo.url" :alt="logo.alt"/>
+                </n-link>
             </div>
 
             <div class="header__desktop hidden xl:flex">
@@ -37,12 +41,15 @@
                 <transition name="fade">
                     <div v-if="isMenu" class="mobile-list">
                         <div class="mobile-list__action">
-                            <n-link to="/"><img src="~assets/images/logo-mobile.png" alt="" class="logo-mobile" /></n-link>
+                            <n-link to="/">
+                              <!-- <img src="~assets/images/logo-mobile.png" alt="" class="logo-mobile" /> -->
+                              <nuxt-img provider="prismic" :src="logo.url" :alt="logo.alt" class="logo-mobile"/>
+                            </n-link>
                             <n-link 
-                                to=""
-                                @click.native="isMenu = false"
+                              to=""
+                              @click.native="isMenu = false"
                             >
-                                <img src="~assets/images/icon-close.png" alt="">
+                              <img src="~assets/images/icon-close.png" alt="">
                             </n-link>
                         </div>
 
@@ -90,6 +97,8 @@ export default {
       ...mapGetters([
         'navigator',
         'alert',
+        'logo',
+        'logoBlack'
       ]),
 
       isShowAlert () {
