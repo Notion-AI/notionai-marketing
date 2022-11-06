@@ -143,7 +143,6 @@ export default {
     ...mapMutations(['SET_HEADER_COLOR']),
 
     visibilityChanged (isVisible, entry) {
-      console.log('visibilityChanged', isVisible, entry.target.className)
       if (isVisible) {
         this.SET_HEADER_COLOR(entry.target.className)
       }
