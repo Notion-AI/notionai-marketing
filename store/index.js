@@ -1,5 +1,6 @@
 const state = () => ({
-  layout: {}
+  layout: {},
+  color: 'transparent'
 })
 
 const getters = {
@@ -28,6 +29,9 @@ const actions = {
 const mutations = {
   SET_LAYOUT (state, layout) {
     state.layout = layout
+  },
+  SET_HEADER_COLOR (state, color) {
+    state.color = color
   }
 }
 

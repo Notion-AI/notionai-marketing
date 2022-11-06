@@ -28,7 +28,7 @@
 
     <div class="trusted__carousel" :class="`trusted__carousel--${$route.name}`">
       <client-only>
-        <swiper ref="mySwiper" :options="swiperOptions" @slide-change="handleSwiper">
+        <swiper ref="mySwiper" :options="swiperOptions">
           <swiper-slide 
             v-for="(feedback, idx) in feedbacks"
             :key="idx"
@@ -116,12 +116,6 @@ export default {
     data() {
       return this.layout?.data || {}
     },
-  },
-
-  methods: {
-    handleSwiper() {
-      console.log(1);
-    }
   }
 }
 </script>
