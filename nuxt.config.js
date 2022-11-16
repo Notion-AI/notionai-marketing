@@ -34,11 +34,12 @@ export default {
     { src: '@/plugins/common.js' },
     { src: '@/plugins/vue-scrollto.js' },
     { src: "~/plugins/vue-awesome-swiper.js", mode: "client" },
-    { src: '@/plugins/vue-observe-visibility.js'}
+    { src: '@/plugins/vue-observe-visibility.js'},
+    { src: '@/plugins/section-progress.client.js' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: [{ path: '~/components', extensions: ['vue'] }],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -69,7 +70,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: ["@prismicio/vue"],
+    transpile: ["@prismicio/vue", "three"],
   },
   image: {
     prismic: {}
